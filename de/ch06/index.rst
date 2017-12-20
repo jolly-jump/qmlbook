@@ -29,7 +29,7 @@ Das Konzept
 
 .. issues:: ch06
 
-One of the most important aspects when developing user interfaces, is to keep the representation of the data separate from the visualization. For instance, a phonebook could be arranged as a vertical list of text entries or a grid of pictures of the contacts. In both cases, the data is identical: the phonebook, but the visualization differs. This division is commonly referred to as the model-view pattern. In this pattern the data is referred to as the model, while the visualization is handled by the view.
+Ganz wichtig beim Entwickeln eines User Interfaces ist die Trennung von Daten und Darstellung zu beherzigen. Zum Beispiel könnte man ein Adressbuch als vertikale List von Texteinträgen oder als eine Tabelle von Bildern der Kontakte arrangieren. In beiden Fällen sind die Daten identisch: das Adressbuch aber die Visualisierung ist völlig anders. Die Aufteilung wird üblicherweise  Model-View-Konzept genannt. In dem Konzept ist das Telefonbuch das Modell und die Darstellung ist der "view".
 
 In QML werden Modell und Ansicht über sogenannte Delegaten ("delegates") miteinander verbunden. Die Zuständigkeiten sind so aufgeteilt:
 
@@ -464,6 +464,3 @@ A model can be a single integer, where the ``index`` variable is provided to the
 For static models, a ``Repeater`` can be used as the view. It is easy to combine it with a positioner such as ``Row``, ``Column``, ``Grid`` or ``Flow`` to build user interface parts. For dynamic or large data models, a view such as ``ListView`` or ``GridView`` are more appropriate. These create delegate instances on the fly as they are needed, reducing the number of elements live in the scene at once.
 
 The delegates used in the views can be static items with properties bound to data from the model, or they can be dynamic, with states depending on if they are in focus or not. Using the ``onAdd`` and ``onRemove`` signals of the view, they can even be animated as they appear and disappear.
-==================================
-Modellieren - Ansehen - Delegieren
-==================================
