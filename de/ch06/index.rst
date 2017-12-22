@@ -87,7 +87,7 @@ Elemente unterschieden werden.
 
 Nummerierte Elemente sind zwar schön, aber manchmal möchte man
 komplexere Daten darstellen. Statt einer einfachen Zahl füttern wird
-``model`` mit einem JavaScript array. Der Inhalt eines arrays kann
+``model`` mit einem JavaScript Array. Der Inhalt eines Arrays kann
 alles mögliche sein: Zeichenketten, Zahlen oder Objekte.  Im
 untenstehenden Beispiel wird eine Liste von Zeichenketten
 verwendet. Wir können die ``index``-Variable weiterhin verwenden aber
@@ -119,8 +119,8 @@ d.h. die Variablen ``name`` und ``surfaceColor`` sind dann im Objekt
 ``Rectangle`` und ``Text`` erreichbar und werden als Werte verwendet.
 Man kommt so nicht nur einfach an die Daten, es macht den Quellcode
 auch einfach lesbarer. ``surfaceColor`` ist jetzt die Farbe des
-kleinen Kreises links neben dem Namen und nicht so etwas seltsames wie
-die ``data[i][j]``.
+kleinen Kreises links neben dem Namen und nicht so etwas Seltsames wie
+``data[i][j]``.
 
 .. _ex03:
 
@@ -131,11 +131,12 @@ die ``data[i][j]``.
 .. figure:: assets/automatic/repeater-model.png
     :scale: 50%
 
-Der Inhalt des "Repeater"-View welcher für jedes Datenobjekt erzeugt
-wird, nennt man die Eigenschaft ``delegate``. Das heißt, der
-Beispielcode :ref:`Example 01 <ex01>` ist gleichbedeutend zum
-folgenden Code. Der Unterschied ist, dass der Delegat jetzt explizit
-benannt wurde.
+Der letztendliche Darstellung, welche in einer "Repeater"-Ansicht für
+jedes Datenobjekt erzeugt wird, nennt man Delegat und wird mit der
+Eigenschaft ``delegate`` ausgezeichnet. Bisher wurde dieses
+Schlüsselwort nur nicht verwendet. Das heißt, der Beispielcode
+:ref:`Example 01 <ex01>` ist gleichbedeutend zum folgenden Code. Der
+Unterschied ist, dass der Delegat jetzt explizit benannt wurde.
 
 .. _ex04:
 
@@ -150,9 +151,9 @@ Dynamic Views
 
 Repeater funktionieren zwar gut für begrenzte, nicht veränderbare
 Datensätze aber im wirklichen Leben sind Modelle eher komplexer und
-größer. Es werden bessere Lösungen gebraucht. Qt Quick stell
-``ListView`` und ``GridView`` Elemente bereit. Diese sind von einer
-``Flickable``-Fläche abgeleitet, so dass der Benutzer in Darstellungen
+größer. Es werden bessere Lösungen gebraucht. Qt Quick stellt die
+Elemente ``ListView`` und ``GridView`` bereit. Diese sind von einer
+``Flickable``-Fläche abgeleitet, so dass sich der Benutzer in Darstellungen
 großer Datensätze bewegen kann.  Gleichzeitig begrenzen sie die Anzahl
 gleichzeitig erzeugter und dargestellter Delegaten und das bedeutet
 dass nur wenigen wirklich sichtbaren Elemente aus einem großen
@@ -168,7 +169,10 @@ Beide Elemente sind sehr ähnlich in der Benutzung. Wir beginnen mit
 dem ``ListView`` und beschreiben dann den ``GridView`` um sie beide zu
 vergleichen.
 
-Die Ansicht ``ListView`` ist dem ``Repeater`` Element sehr ähnlich. Es verwendet ein ``model`` und instantiiert einen Delegaten ``delegate`` und zwischen den Delegaten kann es ``spacing`` geben. Der folgende Code zeigt ein einfaches Setup.
+Die Ansicht ``ListView`` ist dem ``Repeater`` Element sehr ähnlich. Es
+verwendet ein ``model`` und instantiiert einen Delegaten ``delegate``
+und zwischen den Delegaten kann es ``spacing`` geben. Der folgende
+Code zeigt ein einfaches Setup.
 
 .. literalinclude:: src/listview/basic.qml
     :start-after: M1>>
@@ -177,23 +181,44 @@ Die Ansicht ``ListView`` ist dem ``Repeater`` Element sehr ähnlich. Es verwende
 .. figure:: assets/automatic/listview-basic.png
     :scale: 50%
 
-Wenn das Modell mehr Daten enthält als auf den Bildschirm passt, zeigt ``ListView`` nur einen Teil der Daten. Das Standardverhalten von Qt Quick beschränkt die Anzeige eines ListView allerdings nicht auf die Bildschirmfläche in der die Delegatenansichten gezeigtwerden. Die Delegaten können ausserhalb der ListView sichtbar sein und immer wenn das Programm dynamisch Delegaten hinzufügt oder löscht, könnten diese für den User sichtbar sein. Um das zu verhindern muss das Abschneiden ("clipping") für das Listview-Element aktiviert werden. Die folgende Illustration zeigt das Ergebnis von clipping (links) im Vergleich zu ohne clipping (rechts).
+Wenn das Modell mehr Daten enthält als auf den Bildschirm passt, zeigt
+``ListView`` nur einen Teil der Daten. Das Standardverhalten von Qt
+Quick beschränkt die Anzeige eines ListView allerdings nicht auf die
+Bildschirmfläche in der die Delegatenansichten gezeigt werden. Die
+Delegaten können ausserhalb der ListView sichtbar sein und immer wenn
+das Programm dynamisch Delegaten hinzufügt oder löscht, könnten diese
+für den User sichtbar sein. Um das zu verhindern muss das Abschneiden
+("clipping") für das Listview-Element aktiviert werden. Die folgende
+Illustration zeigt das Ergebnis von clipping (links) im Vergleich zu
+ohne clipping (rechts).
 
 .. figure:: assets/automatic/listview-clip.png
     :scale: 50%
 
-To the user, the ``ListView`` is a scrollable area. It supports kinetic scrolling, which means that it can be flicked to quickly move through the contents. By default, it also can be stretched beyond the end of contents, and then bounces back, to signal to the user that the end has been reached.
+Für den Benutzer ist die Ansicht ``ListView`` eine scrollbare
+Fläche. Es unterstützt kinetisches Scrollen, d.h. man kann sehr
+schnell durch den Inhalt wischen. Standardmäßig kann es auch über das
+Ende und den Anfang hinaus gezogen werden, worauf es zurückfedert um
+dem Benutzer zu zeigen, dass Anfang oder Ende erreicht wurden.
 
-The behavior at the end of the view is controlled using the ``boundsBehavior`` property. This is an enumerated value and can be configured from the default behavior, ``Flickable.DragAndOvershootBounds``, where the view can be both dragged and flicked outside its boundaries, to ``Flickable.StopAtBounds``, where the view never will move outside its boundaries. The middle ground, ``Flickable.DragOverBounds`` lets the user drag the view outside its boundaries, but flicks will stop at the boundary.
+Das Verhalten am Ende der Ansicht wird über die Eigenschaft
+``boundsBehavior`` gesteuert. Diese Eigentschaft kann zählbare Werte
+enthalten, standardmäßig bedeutet ``Flickable.DragAndOvershootBounds``
+dass die Ansicht sowohl über seine Grenzen gezogen als auch gewischt
+werden kann. Mit ``Flickable.StopAtBounds`` wird die Ansicht nie über
+die Grenze gehen und mit ``Flickable.DragOverBounds`` kann der
+Benutzer durch ziehen über die Grenze treten, nicht allerdings durch
+schnelles Wischen.
+
 
 It is possible to limit the positions where a view is allowed to stop. This is controlled using the ``snapMode`` property. The default behavior, ``ListView.NoSnap``, lets the view stop at any position. By setting the ``snapMode`` property to ``ListView.SnapToItem``, the view will always align the top of an item with its top. Finally, the ``ListView.SnapOneItem``, the view will stop no more than one item from the first visible item when the mouse button or touch was released. The last mode is very handy when flipping through pages.
 
-Orientation
------------
+Hoch- oder Querformat
+---------------------
 
 .. issues:: ch06
 
-The list view provides a vertically scrolling list by default, but horizontal scrolling can be just as useful. The direction of the list view is controlled through the ``orientation`` property. It can be set to either the default value, ``ListView.Vertical``, or to ``ListView.Horizontal``. A horizontal list view is shown below.
+Die "ListView"-Ansicht erlaubt neben vertikaler Anzeige und Scrollen auch horizontales Scrollen, welches genauso nützlich sein kann. Die Ausrichtung der "ListView"-Ansicht wird von der Eigenschaft ``orientation`` gesteuert. Es kann entweder den Standardwert ``ListView.Vertical`` oder den Wert ``ListView.Horizontal`` bekommen. Im folgenden sieht man letzteres.
 
 .. literalinclude:: src/listview/horizontal.qml
     :start-after: M1>>
@@ -202,7 +227,10 @@ The list view provides a vertically scrolling list by default, but horizontal sc
 .. figure:: assets/automatic/listview-horizontal.png
     :scale: 50%
 
-As you can tell, the direction of the horizontal flows from the left to the right by default. This can be controlled through the ``layoutDirection`` property, which can be set to either ``Qt.LeftToRight`` or ``Qt.RightToLeft``, depending on the flow direction.
+Wie man sich vorstellen kann geht die Richtung der horizontalen
+Darstellung von links nach recht. Über die Eigentschaft
+``layoutDirection`` kann man mit ``Qt.LeftToRight`` oder mit
+``Qt.RightToLeft`` die Darstellungrichtung beeinflussen.
 
 Keyboard Navigation and Highlighting
 ------------------------------------
@@ -280,8 +308,8 @@ The orientation is controlled using the ``flow`` property. It can be set to eith
 
 In addition to the ``flow`` property, the ``layoutDirection`` property can adapt the direction of the grid to left-to-right or right-to-left languages, depending on the value used.
 
-Delegate
-========
+Der Delegat
+===========
 
 .. issues:: ch06
 
