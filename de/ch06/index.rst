@@ -144,8 +144,8 @@ Unterschied ist, dass der Delegat jetzt explizit benannt wurde.
     :start-after: M1>>
     :end-before: <<M1
 
-Dynamic Views
-=============
+Dynamische Ansichten
+====================
 
 .. issues:: ch06
 
@@ -183,9 +183,9 @@ Code zeigt ein einfaches Setup.
 
 Wenn das Modell mehr Daten enthält als auf den Bildschirm passt, zeigt
 ``ListView`` nur einen Teil der Daten. Das Standardverhalten von Qt
-Quick beschränkt die Anzeige eines ListView allerdings nicht auf die
+Quick beschränkt die Anzeige eines ``ListView`` allerdings nicht auf die
 Bildschirmfläche in der die Delegatenansichten gezeigt werden. Die
-Delegaten können ausserhalb der ListView sichtbar sein und immer wenn
+Delegaten können ausserhalb der ``ListView`` sichtbar sein und immer wenn
 das Programm dynamisch Delegaten hinzufügt oder löscht, könnten diese
 für den User sichtbar sein. Um das zu verhindern muss das Abschneiden
 ("clipping") für das Listview-Element aktiviert werden. Die folgende
@@ -210,15 +210,27 @@ die Grenze gehen und mit ``Flickable.DragOverBounds`` kann der
 Benutzer durch ziehen über die Grenze treten, nicht allerdings durch
 schnelles Wischen.
 
-
-It is possible to limit the positions where a view is allowed to stop. This is controlled using the ``snapMode`` property. The default behavior, ``ListView.NoSnap``, lets the view stop at any position. By setting the ``snapMode`` property to ``ListView.SnapToItem``, the view will always align the top of an item with its top. Finally, the ``ListView.SnapOneItem``, the view will stop no more than one item from the first visible item when the mouse button or touch was released. The last mode is very handy when flipping through pages.
+Man kann die Positionen an denen die Ansicht gestoppt wird
+einschränken: mit hilfe der Eigenschaft ``snapMode``. Standardmäßig
+bedeutet ``ListView.NoSnap`` dass die Ansicht an jeder Position
+anhalten kann. Setzt man sie auf ``ListView.SnapToItem`` wird die
+Ansicht immer oben am oberen Rand eines Elements
+ausgerichtet. Schließlich wird bei ``ListView.SnapOneItem`` die
+Ansicht immer nur höchstens ein Element vom ersten sichtbaren Element
+anhalten, sobald die Maus oder ein `touch` losgelassen wird. Der
+letzte Modus ist nützlich beim Blättern durch Seiten.
 
 Hoch- oder Querformat
 ---------------------
 
 .. issues:: ch06
 
-Die "ListView"-Ansicht erlaubt neben vertikaler Anzeige und Scrollen auch horizontales Scrollen, welches genauso nützlich sein kann. Die Ausrichtung der "ListView"-Ansicht wird von der Eigenschaft ``orientation`` gesteuert. Es kann entweder den Standardwert ``ListView.Vertical`` oder den Wert ``ListView.Horizontal`` bekommen. Im folgenden sieht man letzteres.
+Die ``ListView``-Ansicht erlaubt neben vertikaler Anzeige und Scrollen
+auch horizontales Scrollen, welches genauso nützlich sein kann. Die
+Ausrichtung der ``ListView``-Ansicht wird von der Eigenschaft
+``orientation`` gesteuert. Es kann entweder den Standardwert
+``ListView.Vertical`` oder den Wert ``ListView.Horizontal``
+bekommen. Im folgenden sieht man letzteres.
 
 .. literalinclude:: src/listview/horizontal.qml
     :start-after: M1>>
@@ -228,22 +240,40 @@ Die "ListView"-Ansicht erlaubt neben vertikaler Anzeige und Scrollen auch horizo
     :scale: 50%
 
 Wie man sich vorstellen kann geht die Richtung der horizontalen
-Darstellung von links nach recht. Über die Eigentschaft
+Darstellung von links nach rechts. Über die Eigentschaft
 ``layoutDirection`` kann man mit ``Qt.LeftToRight`` oder mit
-``Qt.RightToLeft`` die Darstellungrichtung beeinflussen.
+``Qt.RightToLeft`` die Darstellungsrichtung beeinflussen.
 
-Keyboard Navigation and Highlighting
-------------------------------------
+Tasten Navigation and Highlighting
+----------------------------------
 
 .. issues:: ch06
 
-When using a ``ListView`` in a touch based setting, the view itself is enough. In a scenario with a keyboard, or even just arrow keys to select an item, a mechanism to indicate the current item is needed. In QML, this is called highlighting.
+Wenn man eine ``ListView``-Ansicht mit einem touch-fähigen Gerät
+verwendet, reicht die Darstellung aus. Wenn man aber mit einer
+Tastatur oder sogar nur mit Pfeiltasten ein Element auswählen soll,
+braucht man ein Verfahren um das momentan ausgewählte Element
+hervorzuheben. In QML nennt man das "highlighting".
 
-Views support a highlight delegate which is shown in the view together with the delegates. It can be considered an additional delegate, only that it is only instantiated once, and is moved into the same position as the current item.
+Die Ansichten wie ``ListView`` in QML erlauben es eines der gezeigten
+Delegaten hervorheben zu können. Man kann es als zusätzlichen
+Delegaten ansehen, nur dass dieser eben nur einmal erzeugt wird und an
+der Stelle des momentanen Elements angezeigt wird.
 
-In the example below this is demonstrated. There are two properties involved for this to work. First, the ``focus`` property is set to true. This gives the ``ListView`` the keyboard focus. Second, the ``highlight`` property is set to point out the highlighting delegate to use. The highlight delegate is given the ``x``, ``y`` and ``height`` of the current item. If the ``width`` is not specified, the width of the current item is also used.
+Im folgenden Beispiel wird das demonstriert. Man muss zwei Attribute
+dafür verwenden. Erstens, die ``focus``-Eigenschaft muss auf `true`
+gesetzt werden, so bekommt die Tastatur von der ``ListView``-Ansicht
+den Fokus. Zweitens muss die ``highlight``-Eigenschaft auf den
+hervorzugebenden Delegaten gesetzt sein. Der hervorgehobene Delegat
+bekommt die ``x``, ``y`` und die ``height``-Werte des aktuellen
+Elements. Wenn der ``width``-Wert nicht angegeben wird, dan wird auch
+die Breite des aktuellen Elements verwendet.
 
-In the example, the ``ListView.view.width`` attached property is used for width. The attached properties available to delegates are discussed further in the delegate section of this chapter, but it is good to know that the same properties are available to highlight delegates as well.
+Im Beispiel wird angeheftete Eigenschaft ``ListView.view.width`` für
+die Breite verwendet.  Angeheftete Eigenschaften, die für Delegaten
+verfügbar sind werden im Abschnitt zu Delegaten dieses Kapitels
+diskutiert, aber es ist schon jetzt gut zu wissen, dass die gleichen
+Eigenschaften auch hervorgehobenen Delegaten zur Verfügung stehen.
 
 .. literalinclude:: src/listview/highlight.qml
     :start-after: M1>>
