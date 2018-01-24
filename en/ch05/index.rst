@@ -203,7 +203,7 @@ All direct child animations of a parallel animation will run in parallel, when s
 
 A sequential animation will first run the first child animation and then continue from there.
 
-.. literalinclude:: src/animation/SequentialAnimationExample.qml
+.. literalinclude:: src/animation/sequentialanimation.qml
     :start-after: M1>>
     :end-before: <<M1
 
