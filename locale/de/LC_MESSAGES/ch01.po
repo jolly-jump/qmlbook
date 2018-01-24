@@ -1,11 +1,8 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This
-# work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-# International License
-# This file is distributed under the same license as the Qt5 Cadaques Book
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,12 +10,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-24 23:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: German (https://www.transifex.com/qmlbook/teams/82765/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../ch01/index.rst:3
 msgid "Meet Qt 5"
@@ -33,18 +30,18 @@ msgstr ""
 #: ../../ch01/index.rst:13
 msgid ""
 "This book shall provide you a walk through the different aspect of "
-"application development using Qt version 5.x. It focuses on the new Qt "
-"Quick technology but also provides necessary information of writing C++ "
-"back-ends and extension for Qt Quick."
+"application development using Qt version 5.x. It focuses on the new Qt Quick"
+" technology but also provides necessary information of writing C++ back-ends"
+" and extension for Qt Quick."
 msgstr ""
 
 #: ../../ch01/index.rst:15
 msgid ""
-"This chapter provides a high level overview of Qt 5. It shows the "
-"different application models available for developers and a Qt 5 showcase"
-" application to get a sneak preview of things to come. Additionally the "
-"chapter aims to provide a wide overview of the Qt 5 content and how to "
-"get in touch with the makers of Qt 5."
+"This chapter provides a high level overview of Qt 5. It shows the different "
+"application models available for developers and a Qt 5 showcase application "
+"to get a sneak preview of things to come. Additionally the chapter aims to "
+"provide a wide overview of the Qt 5 content and how to get in touch with the"
+" makers of Qt 5."
 msgstr ""
 
 #: ../../ch01/index.rst:19
@@ -58,25 +55,25 @@ msgstr ""
 #: ../../ch01/index.rst:23
 msgid ""
 "Qt 4 has evolved since 2005 and provided a solid ground for thousands of "
-"applications and even full desktop and mobile systems. The usage patterns"
-" of computer users changed in the recent years. From stationary PCs "
-"towards portable notebook and nowadays mobile computers. The classical "
-"desktop is more and more replaced with mobile touch-based always "
-"connected screens. With it the desktop UX paradigms also changes. Where "
-"as in the past Windows UI has dominated the world we spend more time "
-"nowadays on other screens with another UI language."
+"applications and even full desktop and mobile systems. The usage patterns of"
+" computer users changed in the recent years. From stationary PCs towards "
+"portable notebook and nowadays mobile computers. The classical desktop is "
+"more and more replaced with mobile touch-based always connected screens. "
+"With it the desktop UX paradigms also changes. Where as in the past Windows "
+"UI has dominated the world we spend more time nowadays on other screens with"
+" another UI language."
 msgstr ""
 
 #: ../../ch01/index.rst:25
 msgid ""
-"Qt 4 was designed to satisfy the desktop world to have a coherent set of "
-"UI widgets available on all major platforms. The challenge for Qt users "
-"has changed today and it lies more to provide a touch-based user "
-"interface for a customer driven user interface and to enable modern user "
-"interface on all major desktop and mobile systems. Qt 4.7 started to "
-"introduce the Qt Quick technology which allows users to create a set of "
-"user interface components from simple elements to achieve a complete new "
-"UI, driven by customer demands."
+"Qt 4 was designed to satisfy the desktop world to have a coherent set of UI "
+"widgets available on all major platforms. The challenge for Qt users has "
+"changed today and it lies more to provide a touch-based user interface for a"
+" customer driven user interface and to enable modern user interface on all "
+"major desktop and mobile systems. Qt 4.7 started to introduce the Qt Quick "
+"technology which allows users to create a set of user interface components "
+"from simple elements to achieve a complete new UI, driven by customer "
+"demands."
 msgstr ""
 
 #: ../../ch01/index.rst:28
@@ -85,42 +82,41 @@ msgstr ""
 
 #: ../../ch01/index.rst:30
 msgid ""
-"Qt 5 is a complete refreshing of the very successful Qt 4 release. With "
-"Qt 4.8, the Qt 4 release is almost 7 years old. It's time to make an "
-"amazing toolkit even more amazing. Qt 5 is focused on the following:"
+"Qt 5 is a complete refreshing of the very successful Qt 4 release. With Qt "
+"4.8, the Qt 4 release is almost 7 years old. It's time to make an amazing "
+"toolkit even more amazing. Qt 5 is focused on the following:"
 msgstr ""
 
 #: ../../ch01/index.rst:32
 msgid ""
-"**Outstanding Graphics**: Qt Quick 2 is based on OpenGL (ES) using a "
-"scene graph implementation. The recomposed graphics stack allows a new "
-"level of graphic effects combined with an ease of use never seen before "
-"in this field."
+"**Outstanding Graphics**: Qt Quick 2 is based on OpenGL (ES) using a scene "
+"graph implementation. The recomposed graphics stack allows a new level of "
+"graphic effects combined with an ease of use never seen before in this "
+"field."
 msgstr ""
 
 #: ../../ch01/index.rst:34
 msgid ""
-"**Developer Productivity**: QML and JavaScript are the primary means for "
-"UI creation. The back-end will be driven by C++. The split between "
-"JavaScript and C++ allows a fast iteration for front-end developers "
-"concentrating on creating beautiful user interfaces and back-end C++ "
-"developers concentrating on stability, performance and extending the "
-"runtime."
+"**Developer Productivity**: QML and JavaScript are the primary means for UI "
+"creation. The back-end will be driven by C++. The split between JavaScript "
+"and C++ allows a fast iteration for front-end developers concentrating on "
+"creating beautiful user interfaces and back-end C++ developers concentrating"
+" on stability, performance and extending the runtime."
 msgstr ""
 
 #: ../../ch01/index.rst:36
 msgid ""
 "**Cross-platform portability**: With the consolidated Qt Platform "
 "Abstraction, it is now possible to port Qt to a wider range of platforms "
-"easier and faster. Qt 5 is structured around the concept of Qt Essentials"
-" and Add-ons, which allows OS developer to focus on the essentials "
-"modules and leads to a smaller runtime altogether."
+"easier and faster. Qt 5 is structured around the concept of Qt Essentials "
+"and Add-ons, which allows OS developer to focus on the essentials modules "
+"and leads to a smaller runtime altogether."
 msgstr ""
 
 #: ../../ch01/index.rst:38
 msgid ""
-"**Open Development**: Qt is now a truly open-governance project hosted at"
-" `qt.io <http://qt.io>`_. The development is open and community driven."
+"**Open Development**: Qt is now a truly open-governance project hosted at "
+"`qt.io <http://qt.io>`_. The development is open and community driven."
 msgstr ""
 
 #: ../../ch01/index.rst:43
@@ -133,8 +129,8 @@ msgstr ""
 
 #: ../../ch01/index.rst:49
 msgid ""
-"Qt Quick is the umbrella term for the user interface technology used in "
-"Qt 5. Qt Quick itself is a collection of several technologies:"
+"Qt Quick is the umbrella term for the user interface technology used in Qt "
+"5. Qt Quick itself is a collection of several technologies:"
 msgstr ""
 
 #: ../../ch01/index.rst:51
@@ -152,24 +148,24 @@ msgstr ""
 #: ../../ch01/index.rst:58
 msgid ""
 "Similar to HTML, QML is a markup language. It is composed of tags called "
-"elements in Qt Quick enclosed in curly brackets ``Item {}``. It was "
-"designed from the ground up for the creation of user interfaces, speed "
-"and easier reading for developers. The user interface can be enhanced "
-"using JavaScript code. Qt Quick is easily extendable with your own native"
-" functionality using Qt C++. In short the declarative UI is called the "
-"front-end and the native parts are called the back-end. This allows you "
-"to separate the computing intensive and native operation of your "
-"application from the user interface part."
+"elements in Qt Quick enclosed in curly brackets ``Item {}``. It was designed"
+" from the ground up for the creation of user interfaces, speed and easier "
+"reading for developers. The user interface can be enhanced using JavaScript "
+"code. Qt Quick is easily extendable with your own native functionality using"
+" Qt C++. In short the declarative UI is called the front-end and the native "
+"parts are called the back-end. This allows you to separate the computing "
+"intensive and native operation of your application from the user interface "
+"part."
 msgstr ""
 
 #: ../../ch01/index.rst:60
 msgid ""
-"In a typical project the front-end is developed in QML/JavaScript and the"
-" back-end code, which interfaces with the system and does the heavy "
-"lifting, is developed using Qt C++. This allows a natural split between "
-"the more design oriented developers and the functional developers. "
-"Typically the back-end is tested using Qt own unit testing framework and "
-"exported for the front-end developers to be used."
+"In a typical project the front-end is developed in QML/JavaScript and the "
+"back-end code, which interfaces with the system and does the heavy lifting, "
+"is developed using Qt C++. This allows a natural split between the more "
+"design oriented developers and the functional developers. Typically the "
+"back-end is tested using Qt own unit testing framework and exported for the "
+"front-end developers to be used."
 msgstr ""
 
 #: ../../ch01/index.rst:64
@@ -178,56 +174,55 @@ msgstr ""
 
 #: ../../ch01/index.rst:66
 msgid ""
-"Let's create a simple user interface using Qt Quick, which showcases some"
-" aspects of the QML language. At the end we will have a paper windmill "
-"with rotating blades."
+"Let's create a simple user interface using Qt Quick, which showcases some "
+"aspects of the QML language. At the end we will have a paper windmill with "
+"rotating blades."
 msgstr ""
 
 #: ../../ch01/index.rst:73
 msgid ""
-"We start with an empty document called ``main.qml``. All QML files will "
-"have the ending ``.qml``. As a markup language (like HTML) a QML document"
-" needs to have one and only one root element, which in our case is the "
-"``Image`` element with a width and height based on the background image "
-"geometry:"
+"We start with an empty document called ``main.qml``. All QML files will have"
+" the ending ``.qml``. As a markup language (like HTML) a QML document needs "
+"to have one and only one root element, which in our case is the ``Image`` "
+"element with a width and height based on the background image geometry:"
 msgstr ""
 
 #: ../../ch01/index.rst:84
 msgid ""
-"As QML does not make any restriction which element type is the root "
-"element we use an ``Image`` element with the source property set to our "
-"background image as the root element."
+"As QML does not make any restriction which element type is the root element "
+"we use an ``Image`` element with the source property set to our background "
+"image as the root element."
 msgstr ""
 
 #: ../../ch01/index.rst:92
 msgid ""
-"Each element has properties, e.g. an image has a ``width``, ``height`` "
-"but also other properties like a ``source`` property.  The size of the "
-"image element is automatically deduced from the image size. Otherwise we "
-"would need to set the ``width`` and ``height`` property to some useful "
-"pixel values."
+"Each element has properties, e.g. an image has a ``width``, ``height`` but "
+"also other properties like a ``source`` property.  The size of the image "
+"element is automatically deduced from the image size. Otherwise we would "
+"need to set the ``width`` and ``height`` property to some useful pixel "
+"values."
 msgstr ""
 
 #: ../../ch01/index.rst:94
 msgid ""
-"The most standard elements are located in the ``QtQuick`` module which we"
-" include in the first line with the import statement."
+"The most standard elements are located in the ``QtQuick`` module which we "
+"include in the first line with the import statement."
 msgstr ""
 
 #: ../../ch01/index.rst:96
 msgid ""
 "The ``id`` special property is optional and contains an identifier to "
-"reference this element later in other places in the document. Important: "
-"An ``id`` property cannot be changed after it has been set and it cannot "
-"be set during runtime. Using ``root`` as the id for the root-element is "
-"just a habit by the author and makes referencing the top-most element "
-"predictable in larger QML documents."
+"reference this element later in other places in the document. Important: An "
+"``id`` property cannot be changed after it has been set and it cannot be set"
+" during runtime. Using ``root`` as the id for the root-element is just a "
+"habit by the author and makes referencing the top-most element predictable "
+"in larger QML documents."
 msgstr ""
 
 #: ../../ch01/index.rst:98
 msgid ""
-"The foreground elements pole and pin wheel of our user interface are "
-"placed as separate images."
+"The foreground elements pole and pin wheel of our user interface are placed "
+"as separate images."
 msgstr ""
 
 #: ../../ch01/index.rst:103
@@ -247,11 +242,11 @@ msgstr ""
 msgid ""
 "To place the pin wheel at the central location we use a complex property "
 "called ``anchor``. Anchoring allows you to specify geometric relations "
-"between parent and sibling objects. E.g. Place me in the center of "
-"another element ( ``anchors.centerIn: parent`` ). There are left, right, "
-"top, bottom, centerIn, fill, verticalCenter and horizontalCenter "
-"relations on both ends. Sure, they need to match.  It does not make sense"
-" to anchor my left side to the top side of an element."
+"between parent and sibling objects. E.g. Place me in the center of another "
+"element ( ``anchors.centerIn: parent`` ). There are left, right, top, "
+"bottom, centerIn, fill, verticalCenter and horizontalCenter relations on "
+"both ends. Sure, they need to match.  It does not make sense to anchor my "
+"left side to the top side of an element."
 msgstr ""
 
 #: ../../ch01/index.rst:132
@@ -262,45 +257,44 @@ msgstr ""
 msgid ""
 "Sometime you will need to make small adjustments on the exact centering. "
 "This would be possible with ``anchors.horizontalCenterOffset`` or with "
-"``anchors.verticalCenterOffset``. Similar adjustments properties are also"
-" available to all the other anchors. Please consult the documentation for"
-" a full list of anchors properties."
+"``anchors.verticalCenterOffset``. Similar adjustments properties are also "
+"available to all the other anchors. Please consult the documentation for a "
+"full list of anchors properties."
 msgstr ""
 
 #: ../../ch01/index.rst:140
 msgid ""
 "Placing an image as a child element of our root element (the ``Image`` "
-"element) shows an important concept of a declarative language. You "
-"describe the user interface in the order of layers and grouping, where "
-"the topmost layer (our rectangle) is drawn first and the child layers are"
-" drawn on top of it in the local coordinate system of the containing "
-"element."
+"element) shows an important concept of a declarative language. You describe "
+"the user interface in the order of layers and grouping, where the topmost "
+"layer (our rectangle) is drawn first and the child layers are drawn on top "
+"of it in the local coordinate system of the containing element."
 msgstr ""
 
 #: ../../ch01/index.rst:142
 msgid ""
-"To make the showcase a little bit more interesting, we would like to make"
-" the scene interactive. The idea is to rotate the wheel when the user "
-"pressed the mouse somewhere in the scene."
+"To make the showcase a little bit more interesting, we would like to make "
+"the scene interactive. The idea is to rotate the wheel when the user pressed"
+" the mouse somewhere in the scene."
 msgstr ""
 
 #: ../../ch01/index.rst:145
-msgid "We use the ``MouseArea`` element and make it as big as our root element."
+msgid ""
+"We use the ``MouseArea`` element and make it as big as our root element."
 msgstr ""
 
 #: ../../ch01/index.rst:159
 msgid ""
-"The mouse area emit signals when a user clicks inside it covered area. "
-"You can hook onto this signal overriding the ``onClicked`` function. In "
-"this case the reference the wheel image and change its rotation by +90 "
-"degree."
+"The mouse area emit signals when a user clicks inside it covered area. You "
+"can hook onto this signal overriding the ``onClicked`` function. In this "
+"case the reference the wheel image and change its rotation by +90 degree."
 msgstr ""
 
 #: ../../ch01/index.rst:163
 msgid ""
-"This works for every signal, the naming is ``on`` + ``SignalName`` in "
-"title cases. Also all properties emit a signal when their value changed. "
-"The naming is:"
+"This works for every signal, the naming is ``on`` + ``SignalName`` in title "
+"cases. Also all properties emit a signal when their value changed. The "
+"naming is:"
 msgstr ""
 
 #: ../../ch01/index.rst:165
@@ -316,34 +310,33 @@ msgstr ""
 #: ../../ch01/index.rst:169
 msgid ""
 "Now the wheel will rotate, but it is still not fluid yet. The rotation "
-"property changes immediately. What we would like that the property "
-"changes by 90 degree over time. Now animations come into play. An "
-"animation defines how a property change is distributed over a duration. "
-"To enable this we use an animation type called property behavior. The "
-"``Behaviour`` does specify an animation for a defined property for every "
-"change applied to that property. In short every time the property "
-"changes, the animation is run. This is only one of several ways of "
-"declaring an animation in QML."
+"property changes immediately. What we would like that the property changes "
+"by 90 degree over time. Now animations come into play. An animation defines "
+"how a property change is distributed over a duration. To enable this we use "
+"an animation type called property behavior. The ``Behaviour`` does specify "
+"an animation for a defined property for every change applied to that "
+"property. In short every time the property changes, the animation is run. "
+"This is only one of several ways of declaring an animation in QML."
 msgstr ""
 
 #: ../../ch01/index.rst:185
 msgid ""
-"Now whenever the property rotation of the wheel changes it will be "
-"animated using a ``NumberAnimation`` with a duration of 250 ms. So each "
-"90 degree turn will take 250 ms."
+"Now whenever the property rotation of the wheel changes it will be animated "
+"using a ``NumberAnimation`` with a duration of 250 ms. So each 90 degree "
+"turn will take 250 ms."
 msgstr ""
 
 #: ../../ch01/index.rst:190
 msgid ""
-"You will not actually see the wheel blurred. This is just to indicate the"
-" rotation. But a blurred wheel is in the assets folder. Maybe you want to"
-" try to use that."
+"You will not actually see the wheel blurred. This is just to indicate the "
+"rotation. But a blurred wheel is in the assets folder. Maybe you want to try"
+" to use that."
 msgstr ""
 
 #: ../../ch01/index.rst:193
 msgid ""
-"Now the wheel looks already much better. I hope this has given you a "
-"short idea of how Qt Quick programming works."
+"Now the wheel looks already much better. I hope this has given you a short "
+"idea of how Qt Quick programming works."
 msgstr ""
 
 #: ../../ch01/index.rst:196
@@ -352,13 +345,12 @@ msgstr ""
 
 #: ../../ch01/index.rst:198
 msgid ""
-"Qt 5 consists of a large amount of modules. A module in general is a "
-"library for the developer to use. Some modules are mandatory for a Qt "
-"enabled platform. They form a set called *Qt Essentials Modules*. Many "
-"modules are optional and form the *Qt Add-On Modules*. It's expected that"
-" the majority of developers will not have the need to use them, but it's "
-"good to know them as they provide invaluable solutions to common "
-"challenges."
+"Qt 5 consists of a large amount of modules. A module in general is a library"
+" for the developer to use. Some modules are mandatory for a Qt enabled "
+"platform. They form a set called *Qt Essentials Modules*. Many modules are "
+"optional and form the *Qt Add-On Modules*. It's expected that the majority "
+"of developers will not have the need to use them, but it's good to know them"
+" as they provide invaluable solutions to common challenges."
 msgstr ""
 
 #: ../../ch01/index.rst:201
@@ -368,8 +360,7 @@ msgstr ""
 #: ../../ch01/index.rst:203
 msgid ""
 "The Qt Essentials modules are mandatory for a Qt enabled platform. They "
-"offer the foundation to develop a modern Qt 5 Application using Qt Quick "
-"2."
+"offer the foundation to develop a modern Qt 5 Application using Qt Quick 2."
 msgstr ""
 
 #: ../../ch01/index.rst:206
@@ -402,8 +393,7 @@ msgstr ""
 
 #: ../../ch01/index.rst:218
 msgid ""
-"Base classes for graphical user interface (GUI) components. Includes "
-"OpenGL."
+"Base classes for graphical user interface (GUI) components. Includes OpenGL."
 msgstr ""
 
 #: ../../ch01/index.rst:219
@@ -432,8 +422,8 @@ msgstr ""
 
 #: ../../ch01/index.rst:226
 msgid ""
-"declarative framework for building highly dynamic applications with "
-"custom user interfaces."
+"declarative framework for building highly dynamic applications with custom "
+"user interfaces."
 msgstr ""
 
 #: ../../ch01/index.rst:227
@@ -458,8 +448,8 @@ msgstr ""
 
 #: ../../ch01/index.rst:232
 msgid ""
-"Classes for a WebKit2 based implementation and a new QML API. See also Qt"
-" WebKit Widgets in the add-on modules."
+"Classes for a WebKit2 based implementation and a new QML API. See also Qt "
+"WebKit Widgets in the add-on modules."
 msgstr ""
 
 #: ../../ch01/index.rst:233
@@ -485,14 +475,13 @@ msgstr ""
 #: ../../ch01/index.rst:251
 msgid ""
 "Besides the essential modules, Qt offers additional modules for software "
-"developers, which are not part of the release. Here is a short list of "
-"add-on modules available."
+"developers, which are not part of the release. Here is a short list of add-"
+"on modules available."
 msgstr ""
 
 #: ../../ch01/index.rst:253
 msgid ""
-"Qt 3D - A set of APIs to make 3D graphics programming easy and "
-"declarative."
+"Qt 3D - A set of APIs to make 3D graphics programming easy and declarative."
 msgstr ""
 
 #: ../../ch01/index.rst:254
@@ -509,8 +498,8 @@ msgstr ""
 
 #: ../../ch01/index.rst:256
 msgid ""
-"Qt Location - Provides location positioning, mapping, navigation and "
-"place search via QML and C++ interfaces. NMEA backend for positioning"
+"Qt Location - Provides location positioning, mapping, navigation and place "
+"search via QML and C++ interfaces. NMEA backend for positioning"
 msgstr ""
 
 #: ../../ch01/index.rst:257
@@ -529,8 +518,8 @@ msgstr ""
 
 #: ../../ch01/index.rst:260
 msgid ""
-"Qt Service Framework -  Enables applications to read, navigate and "
-"subscribe to change notifications."
+"Qt Service Framework -  Enables applications to read, navigate and subscribe"
+" to change notifications."
 msgstr ""
 
 #: ../../ch01/index.rst:261
@@ -543,8 +532,8 @@ msgstr ""
 
 #: ../../ch01/index.rst:263
 msgid ""
-"Qt Wayland - Linux only. Includes Qt Compositor API (server), and Wayland"
-" platform plugin (clients)"
+"Qt Wayland - Linux only. Includes Qt Compositor API (server), and Wayland "
+"platform plugin (clients)"
 msgstr ""
 
 #: ../../ch01/index.rst:264
@@ -558,8 +547,8 @@ msgstr ""
 #: ../../ch01/index.rst:269
 msgid ""
 "As these modules are not part of the release the state differ between "
-"modules, depending how many contributors are active and how well it's get"
-" tested."
+"modules, depending how many contributors are active and how well it's get "
+"tested."
 msgstr ""
 
 #: ../../ch01/index.rst:272
@@ -568,9 +557,9 @@ msgstr ""
 
 #: ../../ch01/index.rst:274
 msgid ""
-"Qt supports a variety of platforms. All major desktop and embedded "
-"platforms are supported. Through the Qt Application Abstraction, nowadays"
-" it's easier to port Qt over to your own platform if required."
+"Qt supports a variety of platforms. All major desktop and embedded platforms"
+" are supported. Through the Qt Application Abstraction, nowadays it's easier"
+" to port Qt over to your own platform if required."
 msgstr ""
 
 #: ../../ch01/index.rst:276
@@ -591,40 +580,37 @@ msgstr ""
 
 #: ../../ch01/index.rst:286
 msgid ""
-"\"The Qt Project is a meritocratic consensus-based community interested "
-"in Qt. Anyone who shares that interest can join the community, "
-"participate in its decision making processes, and contribute to Qt’s "
-"development.\""
+"\"The Qt Project is a meritocratic consensus-based community interested in "
+"Qt. Anyone who shares that interest can join the community, participate in "
+"its decision making processes, and contribute to Qt’s development.\""
 msgstr ""
 
 #: ../../ch01/index.rst:288
 msgid ""
-"The Qt Project is an organisation which developes the open-source part of"
-" the Qt further. It forms the base for other users to contribute. The "
-"biggest contributor is DIGIA, which holds also the comercial rights to "
-"Qt."
+"The Qt Project is an organisation which developes the open-source part of "
+"the Qt further. It forms the base for other users to contribute. The biggest"
+" contributor is DIGIA, which holds also the comercial rights to Qt."
 msgstr ""
 
 #: ../../ch01/index.rst:290
 msgid ""
 "Qt has an open-source aspect and a comercial aspect for companies. The "
-"comercial aspect is for companies which can not or will not comply with "
-"the open-source licenses. Without the comercial aspect these companies "
-"would not be able to use Qt and it would not allow DIGIA to contribute so"
-" much code to the Qt Project."
+"comercial aspect is for companies which can not or will not comply with the "
+"open-source licenses. Without the comercial aspect these companies would not"
+" be able to use Qt and it would not allow DIGIA to contribute so much code "
+"to the Qt Project."
 msgstr ""
 
 #: ../../ch01/index.rst:292
 msgid ""
 "There are many companies world-wide, which make their living out of "
-"consultancy and product development using Qt on the various platforms. "
-"There are many open-source projects and open-source developers, which "
-"rely on Qt as their major development library. It feels good to be part "
-"of this vibrant community and to work with this awesome tools and "
-"libraries. Does it make you a better person? Maybe:-)"
+"consultancy and product development using Qt on the various platforms. There"
+" are many open-source projects and open-source developers, which rely on Qt "
+"as their major development library. It feels good to be part of this vibrant"
+" community and to work with this awesome tools and libraries. Does it make "
+"you a better person? Maybe:-)"
 msgstr ""
 
 #: ../../ch01/index.rst:294
 msgid "**Contribute here: http://wiki.qt.io/**"
 msgstr ""
-

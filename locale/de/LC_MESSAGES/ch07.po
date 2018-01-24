@@ -1,11 +1,8 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This
-# work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-# International License
-# This file is distributed under the same license as the Qt5 Cadaques Book
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,12 +10,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-24 23:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: German (https://www.transifex.com/qmlbook/teams/82765/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../ch07/index.rst:3
 msgid "Canvas Element"
@@ -36,27 +33,27 @@ msgstr ""
 
 #: ../../ch07/index.rst:21
 msgid ""
-"Early on when QML was introduced in Qt4 there were some discussions about"
-" if Qt Quick needs an ellipse. The problem with the ellipse is that "
-"others can argue other shapes need also be supported. So there is no "
-"ellipse in Qt Quick only rectangular shapes. If you needed one in Qt4 you"
-" would need to use an image or write your own C++ ellipse element."
+"Early on when QML was introduced in Qt4 there were some discussions about if"
+" Qt Quick needs an ellipse. The problem with the ellipse is that others can "
+"argue other shapes need also be supported. So there is no ellipse in Qt "
+"Quick only rectangular shapes. If you needed one in Qt4 you would need to "
+"use an image or write your own C++ ellipse element."
 msgstr ""
 
 #: ../../ch07/index.rst:23
 msgid ""
-"To allow scripted drawings Qt 5 introduces the canvas element. The canvas"
-" elements provides a resolution-dependent bitmap canvas, which can be "
-"used for graphics, games or to paint other visual images on the fly using"
-" JavaScript. The canvas element is based on the HTML5 canvas element."
+"To allow scripted drawings Qt 5 introduces the canvas element. The canvas "
+"elements provides a resolution-dependent bitmap canvas, which can be used "
+"for graphics, games or to paint other visual images on the fly using "
+"JavaScript. The canvas element is based on the HTML5 canvas element."
 msgstr ""
 
 #: ../../ch07/index.rst:25
 msgid ""
 "The fundamental idea of the canvas element is to render paths using a "
-"context 2D object. The context 2D object, contains the necessary graphics"
-" functions, whereas the canvas acts as the drawing canvas. The 2D context"
-" supports strokes, fills, gradients, text and a different sets of path "
+"context 2D object. The context 2D object, contains the necessary graphics "
+"functions, whereas the canvas acts as the drawing canvas. The 2D context "
+"supports strokes, fills, gradients, text and a different sets of path "
 "creation commands."
 msgstr ""
 
@@ -66,8 +63,8 @@ msgstr ""
 
 #: ../../ch07/index.rst:33
 msgid ""
-"This produces a filled rectangle with a starring point at 50,50 and a "
-"size of 100 and a stroke used as a border decoration."
+"This produces a filled rectangle with a starring point at 50,50 and a size "
+"of 100 and a stroke used as a border decoration."
 msgstr ""
 
 #: ../../ch07/index.rst:37
@@ -75,24 +72,24 @@ msgid ""
 "The stroke width is set to 4 and uses a blue color define by "
 "``strokeStyle``. The final shape is setup to be filled through the "
 "``fillStyle`` to a \"steelblue\" color. Only by calling ``stroke`` or "
-"``fill`` the actual path will be drawn and they can be used independently"
-" from each other. A call to ``stroke`` or ``fill`` will draw the current "
-"path. It's not possible to store a path for later reuse only a drawing "
-"state can be stored and restored."
+"``fill`` the actual path will be drawn and they can be used independently "
+"from each other. A call to ``stroke`` or ``fill`` will draw the current "
+"path. It's not possible to store a path for later reuse only a drawing state"
+" can be stored and restored."
 msgstr ""
 
 #: ../../ch07/index.rst:39
 msgid ""
-"In QML the ``Canvas`` element acts as a container for the drawing. The 2D"
-" context object provides the actual drawing operation. The actual drawing"
-" needs to be done inside the ``onPaint`` event handler."
+"In QML the ``Canvas`` element acts as a container for the drawing. The 2D "
+"context object provides the actual drawing operation. The actual drawing "
+"needs to be done inside the ``onPaint`` event handler."
 msgstr ""
 
 #: ../../ch07/index.rst:52
 msgid ""
-"The canvas itself provides a typical two dimensional Cartesian coordinate"
-" system, where the top-left is the (0,0) point. A higher y-value goes "
-"down and a hight x-value goes to the right."
+"The canvas itself provides a typical two dimensional Cartesian coordinate "
+"system, where the top-left is the (0,0) point. A higher y-value goes down "
+"and a hight x-value goes to the right."
 msgstr ""
 
 #: ../../ch07/index.rst:54
@@ -113,14 +110,14 @@ msgstr ""
 
 #: ../../ch07/index.rst:64
 msgid ""
-"This produces a horizontal stroked line from point ``P1(50,50)`` to point"
-" ``P2(150,50)``."
+"This produces a horizontal stroked line from point ``P1(50,50)`` to point "
+"``P2(150,50)``."
 msgstr ""
 
 #: ../../ch07/index.rst:71
 msgid ""
-"Typically you always want to set a start point when you reset your path, "
-"so the first operation after ``beginPath`` is often ``moveTo``."
+"Typically you always want to set a start point when you reset your path, so "
+"the first operation after ``beginPath`` is often ``moveTo``."
 msgstr ""
 
 #: ../../ch07/index.rst:74
@@ -135,8 +132,8 @@ msgstr ""
 
 #: ../../ch07/index.rst:88
 msgid ""
-"The stroke area extends half of the line width on both sides of the path."
-" A 4 px lineWidth will draw 2 px outside the path and 2 px inside."
+"The stroke area extends half of the line width on both sides of the path. A "
+"4 px lineWidth will draw 2 px outside the path and 2 px inside."
 msgstr ""
 
 #: ../../ch07/index.rst:91
@@ -149,21 +146,20 @@ msgstr ""
 
 #: ../../ch07/index.rst:101
 msgid ""
-"The gradient in this example is defined along the starting point (100,0) "
-"to the end point (100,200), which gives a vertical line in the middle of "
-"our canvas. The gradient stops can be define as a color from 0.0 "
-"(gradient start point) to 1.0 (gradient end point). Here we use a "
-"\"blue\" color at 0.0 (100,0) and a \"lightsteelblue\" color at the 0.5 "
-"(100,200) position. The gradient is defined much larger then the "
-"rectangle we want to draw, so the rectangle clips gradient to it's "
-"defined geometry."
+"The gradient in this example is defined along the starting point (100,0) to "
+"the end point (100,200), which gives a vertical line in the middle of our "
+"canvas. The gradient stops can be define as a color from 0.0 (gradient start"
+" point) to 1.0 (gradient end point). Here we use a \"blue\" color at 0.0 "
+"(100,0) and a \"lightsteelblue\" color at the 0.5 (100,200) position. The "
+"gradient is defined much larger then the rectangle we want to draw, so the "
+"rectangle clips gradient to it's defined geometry."
 msgstr ""
 
 #: ../../ch07/index.rst:107
 msgid ""
-"The gradient is defined in canvas coordinates not in coordinates relative"
-" to the path to be painted. A canvas does not have the concept of "
-"relative coordinates, as we are used to by now from QML."
+"The gradient is defined in canvas coordinates not in coordinates relative to"
+" the path to be painted. A canvas does not have the concept of relative "
+"coordinates, as we are used to by now from QML."
 msgstr ""
 
 #: ../../ch07/index.rst:110
@@ -172,19 +168,19 @@ msgstr ""
 
 #: ../../ch07/index.rst:114
 msgid ""
-"A path can be visually enhanced using shadows with the 2D context object."
-" A shadow is an area around the path with an offset, color and specified "
+"A path can be visually enhanced using shadows with the 2D context object. A "
+"shadow is an area around the path with an offset, color and specified "
 "blurring. For this you need can specify a ``shadowColor``, "
-"``shadowOffsetX``, ``shadowOffsetY`` and a ``shadowBlur``. All of this "
-"needs to be defined using the 2D context. The 2D context is your only API"
-" to the drawing operations."
+"``shadowOffsetX``, ``shadowOffsetY`` and a ``shadowBlur``. All of this needs"
+" to be defined using the 2D context. The 2D context is your only API to the "
+"drawing operations."
 msgstr ""
 
 #: ../../ch07/index.rst:116
 msgid ""
-"A shadow can also be used to create a glow effect around a path. In the "
-"next example we create a text \"Canvas\" with a white glow around. All "
-"this on a dark background for better visibility."
+"A shadow can also be used to create a glow effect around a path. In the next"
+" example we create a text \"Canvas\" with a white glow around. All this on a"
+" dark background for better visibility."
 msgstr ""
 
 #: ../../ch07/index.rst:118
@@ -199,8 +195,8 @@ msgstr ""
 
 #: ../../ch07/index.rst:130
 msgid ""
-"Finally we draw our \"Canvas\" text using a large bold 80px font from the"
-" *Ubuntu* font family."
+"Finally we draw our \"Canvas\" text using a large bold 80px font from the "
+"*Ubuntu* font family."
 msgstr ""
 
 #: ../../ch07/index.rst:140
@@ -209,20 +205,20 @@ msgstr ""
 
 #: ../../ch07/index.rst:144
 msgid ""
-"The QML canvas supports image drawing from several sources. To use an "
-"image inside the canvas the image needs to be loaded first. We will use "
-"the ``Component.onCompleted`` handler to load the image in our example."
+"The QML canvas supports image drawing from several sources. To use an image "
+"inside the canvas the image needs to be loaded first. We will use the "
+"``Component.onCompleted`` handler to load the image in our example."
 msgstr ""
 
 #: ../../ch07/index.rst:150
 msgid ""
-"The left shows our ball image painted at the top-left position of 10x10. "
-"The right image shows the ball with a clip path applied. Images and any "
-"other path can be clipped using another path. The clipping is applied by "
-"defining a path and calling the ``clip()`` function. All following "
-"drawing operations will now be clipped by this path. The clipping is "
-"disabled again by restoring the previous state or by setting the clip "
-"region to the whole canvas."
+"The left shows our ball image painted at the top-left position of 10x10. The"
+" right image shows the ball with a clip path applied. Images and any other "
+"path can be clipped using another path. The clipping is applied by defining "
+"a path and calling the ``clip()`` function. All following drawing operations"
+" will now be clipped by this path. The clipping is disabled again by "
+"restoring the previous state or by setting the clip region to the whole "
+"canvas."
 msgstr ""
 
 #: ../../ch07/index.rst:156
@@ -231,28 +227,27 @@ msgstr ""
 
 #: ../../ch07/index.rst:160
 msgid ""
-"The canvas allows you to transform the coordinate system in several ways."
-" This is very similar to the transformation offered by QML items. You "
-"have the possibility to ``scale``, ``rotate``, ``translate`` the "
-"coordinate system. In difference to QML the transform origin is always "
-"the canvas origin. For example to scale a path around it's center you "
-"would need to translate the canvas origin to the center of the path. It "
-"is also possible to apply a more complex transformation using the "
-"transform method."
+"The canvas allows you to transform the coordinate system in several ways. "
+"This is very similar to the transformation offered by QML items. You have "
+"the possibility to ``scale``, ``rotate``, ``translate`` the coordinate "
+"system. In difference to QML the transform origin is always the canvas "
+"origin. For example to scale a path around it's center you would need to "
+"translate the canvas origin to the center of the path. It is also possible "
+"to apply a more complex transformation using the transform method."
 msgstr ""
 
 #: ../../ch07/index.rst:168
 msgid ""
 "Besides translate the canvas allows also to scale using ``scale(x,y)`` "
-"around x and y axis, to rotate using ``rotate(angle)``, where the angle "
-"is given in radius (*360 degree = 2*Math.PI*) and to use a matrix "
+"around x and y axis, to rotate using ``rotate(angle)``, where the angle is "
+"given in radius (*360 degree = 2*Math.PI*) and to use a matrix "
 "transformation using the ``setTransform(m11, m12, m21, m22, dx, dy)``."
 msgstr ""
 
 #: ../../ch07/index.rst:172
 msgid ""
-"To reset any transformation you can call the ``resetTransform()`` "
-"function to set the transformation matrix back to the identity matrix::"
+"To reset any transformation you can call the ``resetTransform()`` function "
+"to set the transformation matrix back to the identity matrix::"
 msgstr ""
 
 #: ../../ch07/index.rst:178
@@ -284,8 +279,8 @@ msgstr ""
 
 #: ../../ch07/index.rst:194
 msgid ""
-"This little examples iterates over a list of composite modes and "
-"generates a rectangle with a circle."
+"This little examples iterates over a list of composite modes and generates a"
+" rectangle with a circle."
 msgstr ""
 
 #: ../../ch07/index.rst:201
@@ -294,36 +289,35 @@ msgstr ""
 
 #: ../../ch07/index.rst:205
 msgid ""
-"When working with the canvas you are able to retrieve pixel data from the"
-" canvas to read or manipulate the pixels of your canvas. To read the "
-"image data use ``createImageData(sw,sh)`` or "
-"``getImageData(sx,sy,sw,sh)``. Both functions return an ``ImageData`` "
-"object with a ``width``, ``height`` and a ``data`` variable. The data "
-"variable contains a one-dimensional array of the pixel data retrieved in "
-"the *RGBA* format, where each value varies in the range of 0 to 255. To "
-"set pixels on the canvas you can use the ``putImageData(imagedata,, dx, "
-"dy)`` function."
+"When working with the canvas you are able to retrieve pixel data from the "
+"canvas to read or manipulate the pixels of your canvas. To read the image "
+"data use ``createImageData(sw,sh)`` or ``getImageData(sx,sy,sw,sh)``. Both "
+"functions return an ``ImageData`` object with a ``width``, ``height`` and a "
+"``data`` variable. The data variable contains a one-dimensional array of the"
+" pixel data retrieved in the *RGBA* format, where each value varies in the "
+"range of 0 to 255. To set pixels on the canvas you can use the "
+"``putImageData(imagedata,, dx, dy)`` function."
 msgstr ""
 
 #: ../../ch07/index.rst:207
 msgid ""
-"Another way to retrieve the content of the canvas is to store the data "
-"into an image. This can be achieved with the ``Canvas`` functions "
-"``save(path)`` or ``toDataURL(mimeType)``, where the later function "
-"returns an image url, which can be used to be loaded by an ``Image`` "
-"element."
+"Another way to retrieve the content of the canvas is to store the data into "
+"an image. This can be achieved with the ``Canvas`` functions ``save(path)`` "
+"or ``toDataURL(mimeType)``, where the later function returns an image url, "
+"which can be used to be loaded by an ``Image`` element."
 msgstr ""
 
 #: ../../ch07/index.rst:213
 msgid ""
 "In our little example we paint every second a small circle in the left "
-"canvas. When the use clicks on the mouse area the canvas content is "
-"stored and a image url is retrieved. On the right side of our example the"
-" image is then displayed."
+"canvas. When the use clicks on the mouse area the canvas content is stored "
+"and a image url is retrieved. On the right side of our example the image is "
+"then displayed."
 msgstr ""
 
 #: ../../ch07/index.rst:215
-msgid "Retrieving image data seems not to work currently in the Qt 5 Alpha SDK."
+msgid ""
+"Retrieving image data seems not to work currently in the Qt 5 Alpha SDK."
 msgstr ""
 
 #: ../../ch07/index.rst:218
@@ -332,15 +326,15 @@ msgstr ""
 
 #: ../../ch07/index.rst:222
 msgid ""
-"In this example we would like to create a small paint application using "
-"the ``Canvas`` element."
+"In this example we would like to create a small paint application using the "
+"``Canvas`` element."
 msgstr ""
 
 #: ../../ch07/index.rst:226
 msgid ""
-"For this we arrange four color squares on the top of our scene using a "
-"row positioner. A color square is a simple rectangle filled with a mouse "
-"area to detect clicks."
+"For this we arrange four color squares on the top of our scene using a row "
+"positioner. A color square is a simple rectangle filled with a mouse area to"
+" detect clicks."
 msgstr ""
 
 #: ../../ch07/index.rst:232
@@ -352,25 +346,24 @@ msgstr ""
 
 #: ../../ch07/index.rst:234
 msgid ""
-"To enable tracking of the mouse events on the canvas we have a "
-"``MouseArea`` covering the canvas element and hooked up the pressed and "
-"position changed handlers."
+"To enable tracking of the mouse events on the canvas we have a ``MouseArea``"
+" covering the canvas element and hooked up the pressed and position changed "
+"handlers."
 msgstr ""
 
 #: ../../ch07/index.rst:240
 msgid ""
-"A mouse press stores the initial mouse position into the *lastX* and "
-"*lastY* properties. Every change on the mouse position triggers a paint "
-"request on the canvas, which will result into calling the *onPaint* "
-"handler."
+"A mouse press stores the initial mouse position into the *lastX* and *lastY*"
+" properties. Every change on the mouse position triggers a paint request on "
+"the canvas, which will result into calling the *onPaint* handler."
 msgstr ""
 
 #: ../../ch07/index.rst:242
 msgid ""
-"To finally draw the users stroke, in the *onPaint* handler we begin a new"
-" path and move to the last position. Then we gather the new position from"
-" the mouse area and draw a line with the selected color to the new "
-"position. The mouse position is stored as the new *last* position."
+"To finally draw the users stroke, in the *onPaint* handler we begin a new "
+"path and move to the last position. Then we gather the new position from the"
+" mouse area and draw a line with the selected color to the new position. The"
+" mouse position is stored as the new *last* position."
 msgstr ""
 
 #: ../../ch07/index.rst:246
@@ -388,8 +381,7 @@ msgstr ""
 #: ../../ch07/index.rst:253
 msgid ""
 "It is fairly easy to port a HTML5 canvas graphics over to use the QML "
-"canvas. From the thousands of examples, we picked one and tried it "
-"ourself."
+"canvas. From the thousands of examples, we picked one and tried it ourself."
 msgstr ""
 
 #: ../../ch07/index.rst:255
@@ -398,9 +390,9 @@ msgstr ""
 
 #: ../../ch07/index.rst:257
 msgid ""
-"We use a `spiro graph <http://en.wikipedia.org/wiki/Spirograph>`_ example"
-" from the Mozilla project as our foundation. The original HTML5 was "
-"posted as part of the `canvas tutorial "
+"We use a `spiro graph <http://en.wikipedia.org/wiki/Spirograph>`_ example "
+"from the Mozilla project as our foundation. The original HTML5 was posted as"
+" part of the `canvas tutorial "
 "<https://developer.mozilla.org/en/Canvas_tutorial/Transformations>`_."
 msgstr ""
 
@@ -410,8 +402,8 @@ msgstr ""
 
 #: ../../ch07/index.rst:261
 msgid ""
-"Qt Quick requires you to declare variable, so we needed to add some *var*"
-" declarations"
+"Qt Quick requires you to declare variable, so we needed to add some *var* "
+"declarations"
 msgstr ""
 
 #: ../../ch07/index.rst:269
@@ -419,17 +411,19 @@ msgid "Adapted the draw method to receive the Context2D object"
 msgstr ""
 
 #: ../../ch07/index.rst:277
-msgid "we needed to adapt the translation for each spiro due to different sizes"
+msgid ""
+"we needed to adapt the translation for each spiro due to different sizes"
 msgstr ""
 
 #: ../../ch07/index.rst:283
 msgid ""
-"Finally we inmpleted our ``onPaint`` handler. Inside we acquire a context"
-" and call our draw function."
+"Finally we inmpleted our ``onPaint`` handler. Inside we acquire a context "
+"and call our draw function."
 msgstr ""
 
 #: ../../ch07/index.rst:289
-msgid "The result is a ported spiro graph graphics running using the QML canvas"
+msgid ""
+"The result is a ported spiro graph graphics running using the QML canvas"
 msgstr ""
 
 #: ../../ch07/index.rst:294
@@ -443,46 +437,46 @@ msgstr ""
 #: ../../ch07/index.rst:299
 msgid ""
 "Here is another more complicated port from the W3C organization. The "
-"original `pretty glowing lines "
-"<http://www.w3.org/TR/2dcontext/#examples>`_ has some pretty nice "
-"aspects, which makes the porting more challenging."
+"original `pretty glowing lines <http://www.w3.org/TR/2dcontext/#examples>`_ "
+"has some pretty nice aspects, which makes the porting more challenging."
 msgstr ""
 
 #: ../../ch07/index.rst:376
 msgid ""
-"In HTML5 the Context2D object can paint at any time on the canvas. In QML"
-" it can only point inside the ``onPaint`` handler. The timer in usage "
-"with ``setInterval`` triggers in HTML5 the stroke of the line or to blank"
-" the screen. Due to the different handling in QML it's not possible to "
-"just call these functions, because we need to go through the ``onPaint`` "
-"handler. Also the color presentations needs to be adapted. Let's go "
-"through the changes on by one."
+"In HTML5 the Context2D object can paint at any time on the canvas. In QML it"
+" can only point inside the ``onPaint`` handler. The timer in usage with "
+"``setInterval`` triggers in HTML5 the stroke of the line or to blank the "
+"screen. Due to the different handling in QML it's not possible to just call "
+"these functions, because we need to go through the ``onPaint`` handler. Also"
+" the color presentations needs to be adapted. Let's go through the changes "
+"on by one."
 msgstr ""
 
 #: ../../ch07/index.rst:378
 msgid ""
-"Everything starts with the canvas element. For simplicity we just use the"
-" ``Canvas`` element as the root element of our QML file."
+"Everything starts with the canvas element. For simplicity we just use the "
+"``Canvas`` element as the root element of our QML file."
 msgstr ""
 
 #: ../../ch07/index.rst:393
 msgid ""
-"To untangle the direct call of the functions through the ``setInterval``,"
-" we replace the ``setInterval`` calls with two timers which will request "
-"a repaint. A ``Timer`` is triggered after a short interval and allows us "
-"to execute some code. As we can't tell the paint function which operation"
-" we would like trigger we define for each operation a bool flag request "
-"an operation and trigger then a repaint request."
+"To untangle the direct call of the functions through the ``setInterval``, we"
+" replace the ``setInterval`` calls with two timers which will request a "
+"repaint. A ``Timer`` is triggered after a short interval and allows us to "
+"execute some code. As we can't tell the paint function which operation we "
+"would like trigger we define for each operation a bool flag request an "
+"operation and trigger then a repaint request."
 msgstr ""
 
 #: ../../ch07/index.rst:395
-msgid "Here is the code for the line operation. The blank operation is similar."
+msgid ""
+"Here is the code for the line operation. The blank operation is similar."
 msgstr ""
 
 #: ../../ch07/index.rst:419
 msgid ""
-"Now we have a an indication which (line or blank or even both) operation "
-"we need to perform during the ``onPaint`` operation. As we enter the "
+"Now we have a an indication which (line or blank or even both) operation we "
+"need to perform during the ``onPaint`` operation. As we enter the "
 "``onPaint`` handler for each paint request we need to extract the "
 "initialization of the variable into the canvas element."
 msgstr ""
@@ -497,9 +491,9 @@ msgstr ""
 
 #: ../../ch07/index.rst:478
 msgid ""
-"The biggest change was the use of the QML ``Qt.rgba()`` and ``Qt.hsla()``"
-" functions, which required to adapt the values to the used 0.0 ... 1.0 "
-"range in QML."
+"The biggest change was the use of the QML ``Qt.rgba()`` and ``Qt.hsla()`` "
+"functions, which required to adapt the values to the used 0.0 ... 1.0 range "
+"in QML."
 msgstr ""
 
 #: ../../ch07/index.rst:480
@@ -525,4 +519,3 @@ msgstr ""
 #: ../../ch07/index.rst:498
 msgid "`HTML5 Canvas Tutorial <http://www.html5canvastutorials.com/>`_"
 msgstr ""
-

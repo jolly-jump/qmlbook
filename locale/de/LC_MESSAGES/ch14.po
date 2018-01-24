@@ -1,11 +1,8 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This
-# work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-# International License
-# This file is distributed under the same license as the Qt5 Cadaques Book
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,12 +10,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-24 23:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: German (https://www.transifex.com/qmlbook/teams/82765/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../ch14/index.rst:3
 msgid "JavaScript"
@@ -36,22 +33,21 @@ msgstr ""
 
 #: ../../ch14/index.rst:16
 msgid ""
-"JavaScript is the lingua-franca on web client development. It also starts"
-" to get traction on web server development mainly by node js. As such it "
-"is a well suited addition as an imperative language onto the side of "
-"declarative QML language. QML itself as a declarative language is used to"
-" express the user interface hierachy but is limited to express "
-"operational code. Sometimes you need a way to express operations, here "
-"JavaScript comes into play."
+"JavaScript is the lingua-franca on web client development. It also starts to"
+" get traction on web server development mainly by node js. As such it is a "
+"well suited addition as an imperative language onto the side of declarative "
+"QML language. QML itself as a declarative language is used to express the "
+"user interface hierachy but is limited to express operational code. "
+"Sometimes you need a way to express operations, here JavaScript comes into "
+"play."
 msgstr ""
 
 #: ../../ch14/index.rst:20
 msgid ""
-"There is an open question in the Qt community about the right mixture "
-"about QML/JS/QtC++ in a modern Qt application. The commonly agreed "
-"recommended mixture is to limit the JS part of your application to a "
-"minimum and do your business logic inside QtC++ and the UI logic inside "
-"QML/JS."
+"There is an open question in the Qt community about the right mixture about "
+"QML/JS/QtC++ in a modern Qt application. The commonly agreed recommended "
+"mixture is to limit the JS part of your application to a minimum and do your"
+" business logic inside QtC++ and the UI logic inside QML/JS."
 msgstr ""
 
 #: ../../ch14/index.rst:22
@@ -78,21 +74,21 @@ msgid ""
 "functional. So how much JavaScript should you write? It depends on your "
 "style and how familar you are with JS development. JS is a loosely typed "
 "language, which makes it difficult to spot type defects. Also functions "
-"expect all argument variations, which can be a very nasty bug to spot. "
-"The way to spot defects is rigorous unit testing or acceptance testing. "
-"So if you develop real logic (not some glue lines of code) in JS you "
-"should really start using the test-first approach. In general mixed teams"
-" (Qt/C++ and QML/JS) are very successfull when they minimize the amount "
-"of JS in the frontend as the domain logic and do the heavy lifting in Qt "
-"C++ in the backend. The backend should then be rigorous unit tested so "
-"that the frontend developers can trust the code and focus on all these "
-"little user interface requirements."
+"expect all argument variations, which can be a very nasty bug to spot. The "
+"way to spot defects is rigorous unit testing or acceptance testing. So if "
+"you develop real logic (not some glue lines of code) in JS you should really"
+" start using the test-first approach. In general mixed teams (Qt/C++ and "
+"QML/JS) are very successfull when they minimize the amount of JS in the "
+"frontend as the domain logic and do the heavy lifting in Qt C++ in the "
+"backend. The backend should then be rigorous unit tested so that the "
+"frontend developers can trust the code and focus on all these little user "
+"interface requirements."
 msgstr ""
 
 #: ../../ch14/index.rst:70
 msgid ""
-"In general: backend developers are functional driven and frontend "
-"developers are user story driven."
+"In general: backend developers are functional driven and frontend developers"
+" are user story driven."
 msgstr ""
 
 #: ../../ch14/index.rst:73
@@ -102,33 +98,32 @@ msgstr ""
 #: ../../ch14/index.rst:75
 msgid ""
 "The browser is the runtime to render HTML and execute the Javascript "
-"associated with the HTML. Nowadays modern web applications contain much "
-"more JavaScript then HTML. The Javascript inside the browser is a "
-"standard ECMAScript environment with some browser additions. A typical JS"
-" environment inside the browser knows the ``window`` object to access the"
-" browser window. There are also the basic DOM selectors which are used by"
-" jQuery to provide the CSS selectors. Additional there is a "
-"``setTimeout`` function to call a function after a certain time. Besides "
-"these the environment is a standard JavaScript environment similar to "
-"QML/JS."
+"associated with the HTML. Nowadays modern web applications contain much more"
+" JavaScript then HTML. The Javascript inside the browser is a standard "
+"ECMAScript environment with some browser additions. A typical JS environment"
+" inside the browser knows the ``window`` object to access the browser "
+"window. There are also the basic DOM selectors which are used by jQuery to "
+"provide the CSS selectors. Additional there is a ``setTimeout`` function to "
+"call a function after a certain time. Besides these the environment is a "
+"standard JavaScript environment similar to QML/JS."
 msgstr ""
 
 #: ../../ch14/index.rst:77
 msgid ""
-"What is also different is where JS can appear inside HTML and QML. In "
-"HTML you can only add JS on event handlers (e.g. page loaded, mouse "
-"pressed). For example your JS initializes normally on page load, which is"
-" comparable to ``Component.onCompleted`` in QML. For example you can not "
-"use JS for property bindings (at least not directly, AngularJS enhances "
-"the DOM tree to allow these, but this is far away from standard HTML)."
+"What is also different is where JS can appear inside HTML and QML. In HTML "
+"you can only add JS on event handlers (e.g. page loaded, mouse pressed). For"
+" example your JS initializes normally on page load, which is comparable to "
+"``Component.onCompleted`` in QML. For example you can not use JS for "
+"property bindings (at least not directly, AngularJS enhances the DOM tree to"
+" allow these, but this is far away from standard HTML)."
 msgstr ""
 
 #: ../../ch14/index.rst:79
 msgid ""
-"So in QML JS is much more a first-class citizen and much deeper "
-"integrated into the QML render tree. Which makes the syntax much more "
-"readable. Besides this people which have developed HTML/JS applications "
-"will feel at home inside QML/JS."
+"So in QML JS is much more a first-class citizen and much deeper integrated "
+"into the QML render tree. Which makes the syntax much more readable. Besides"
+" this people which have developed HTML/JS applications will feel at home "
+"inside QML/JS."
 msgstr ""
 
 #: ../../ch14/index.rst:82
@@ -137,8 +132,8 @@ msgstr ""
 
 #: ../../ch14/index.rst:84
 msgid ""
-"This chapter will not give you a general introducton to JavaScript. There"
-" are other books out there for for a general introduction to JavaScript, "
+"This chapter will not give you a general introducton to JavaScript. There "
+"are other books out there for for a general introduction to JavaScript, "
 "please visit this great side on `Mozilla Developer Network "
 "<https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-"
 "introduction_to_JavaScript>`_."
@@ -146,8 +141,8 @@ msgstr ""
 
 #: ../../ch14/index.rst:86
 msgid ""
-"On the surface JavaScript is a very common language and does not differ a"
-" lot from other languages::"
+"On the surface JavaScript is a very common language and does not differ a "
+"lot from other languages::"
 msgstr ""
 
 #: ../../ch14/index.rst:101
@@ -160,19 +155,19 @@ msgstr ""
 #: ../../ch14/index.rst:103
 msgid ""
 "The statements ``if ... else``, ``break``, ``continue`` also work as "
-"expected. The switch case can also compare other types and not just "
-"integer values::"
+"expected. The switch case can also compare other types and not just integer "
+"values::"
 msgstr ""
 
 #: ../../ch14/index.rst:116
 msgid ""
-"JS knows several values which can be false, e.g. ``false``, ``0``, "
-"``\"\"``, ``undefined``, ``null``). For example a function returns by "
-"default ``undefined``. To test for false use the ``===`` identity "
-"operator. The ``==`` equality operator will do type conversion to test "
-"for equality. If possible use the faster and better ``===`` strict "
-"equality operator which will test for identity (see `Comparison operators"
-" <https://developer.mozilla.org/en-"
+"JS knows several values which can be false, e.g. ``false``, ``0``, ``\"\"``,"
+" ``undefined``, ``null``). For example a function returns by default "
+"``undefined``. To test for false use the ``===`` identity operator. The "
+"``==`` equality operator will do type conversion to test for equality. If "
+"possible use the faster and better ``===`` strict equality operator which "
+"will test for identity (see `Comparison operators "
+"<https://developer.mozilla.org/en-"
 "US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators>`_."
 msgstr ""
 
@@ -184,11 +179,11 @@ msgstr ""
 
 #: ../../ch14/index.rst:133
 msgid ""
-"Also for people coming from C++ or Java which are used to a OO language "
-"JS just works different. JS is not purely an OO language it is a so "
-"called prototype based language. Each object has a prototype object. An "
-"object is created based on his prototype object. Please read more about "
-"this in the book `Javascript the Good Parts by Douglas Crockford "
+"Also for people coming from C++ or Java which are used to a OO language JS "
+"just works different. JS is not purely an OO language it is a so called "
+"prototype based language. Each object has a prototype object. An object is "
+"created based on his prototype object. Please read more about this in the "
+"book `Javascript the Good Parts by Douglas Crockford "
 "<http://javascript.crockford.com>`_ or watch the video below."
 msgstr ""
 
@@ -210,8 +205,8 @@ msgstr ""
 
 #: ../../ch14/index.rst:158
 msgid ""
-"``Math.floor(v)``, ``Math.ceil(v)``, ``Math.round(v)`` - largest, "
-"smallest, rounded integer from float"
+"``Math.floor(v)``, ``Math.ceil(v)``, ``Math.round(v)`` - largest, smallest, "
+"rounded integer from float"
 msgstr ""
 
 #: ../../ch14/index.rst:159
@@ -224,8 +219,8 @@ msgstr ""
 
 #: ../../ch14/index.rst:161
 msgid ""
-"``JSON.parse(s)``, ``JSON.stringify(o)`` - conversion between JS object "
-"and JSON string"
+"``JSON.parse(s)``, ``JSON.stringify(o)`` - conversion between JS object and "
+"JSON string"
 msgstr ""
 
 #: ../../ch14/index.rst:162
@@ -271,26 +266,26 @@ msgstr ""
 #: ../../ch14/index.rst:245
 msgid ""
 "As a little example we will create a JS console. We need an input field "
-"where the user can enter his JS expressions and ideally there should be a"
-" list of output results. As this should more look like a desktop "
-"application we use the QtQuick Controls module."
+"where the user can enter his JS expressions and ideally there should be a "
+"list of output results. As this should more look like a desktop application "
+"we use the QtQuick Controls module."
 msgstr ""
 
 #: ../../ch14/index.rst:250
 msgid ""
-"A JS console inside your next project can be really beneficial for "
-"testing. Enhanced with a Quake-Terminal effect it is also good to impress"
-" customers. To use it wisely you need to control the scope the JS console"
-" evaluates in, e.g. the current visible screen, the main data model, a "
-"singleton core object or all together."
+"A JS console inside your next project can be really beneficial for testing. "
+"Enhanced with a Quake-Terminal effect it is also good to impress customers. "
+"To use it wisely you need to control the scope the JS console evaluates in, "
+"e.g. the current visible screen, the main data model, a singleton core "
+"object or all together."
 msgstr ""
 
 #: ../../ch14/index.rst:256
 msgid ""
-"We use Qt Creator to create a Qt Quick UI project using QtQuick controls."
-" We call the project `JSConsole`. After the wizard has finished we have "
-"already a basic structure for the application with an application window "
-"and a menu to exit the application."
+"We use Qt Creator to create a Qt Quick UI project using QtQuick controls. We"
+" call the project `JSConsole`. After the wizard has finished we have already"
+" a basic structure for the application with an application window and a menu"
+" to exit the application."
 msgstr ""
 
 #: ../../ch14/index.rst:258
@@ -303,28 +298,26 @@ msgstr ""
 
 #: ../../ch14/index.rst:336
 msgid ""
-"The evaluation function ``jsCall`` does the evaluation not by itself this"
-" has been moved to a JS module (``jsconsole.js``) for clearer separation."
+"The evaluation function ``jsCall`` does the evaluation not by itself this "
+"has been moved to a JS module (``jsconsole.js``) for clearer separation."
 msgstr ""
 
 #: ../../ch14/index.rst:358
 msgid ""
-"For safety we do not use the ``eval`` function from JS as this would "
-"allow the user to modify the local scope. We use the Function constructor"
-" to create a JS function on runtime and pass in our scope as this "
-"variable. As the function is created every time it does not act as a "
-"closure and stores its own scope, we need to use ``this.a = 10`` to store"
-" the value inside the this scope of the function. The this scope is set "
-"by the script to the scope variable."
+"For safety we do not use the ``eval`` function from JS as this would allow "
+"the user to modify the local scope. We use the Function constructor to "
+"create a JS function on runtime and pass in our scope as this variable. As "
+"the function is created every time it does not act as a closure and stores "
+"its own scope, we need to use ``this.a = 10`` to store the value inside the "
+"this scope of the function. The this scope is set by the script to the scope"
+" variable."
 msgstr ""
 
 #: ../../ch14/index.rst:386
 msgid ""
 "The data return from the call function is a JS object with a result, "
-"expression and error property: ``data: { expression: {}, result: {}, "
-"error: {} }``. We can use this JS object directly inside the ListModel "
-"and access it then from the delegate, e.g. ``model.expression`` gives us "
-"the input expression. For the simplicity of the example we ignore the "
-"error result."
+"expression and error property: ``data: { expression: {}, result: {}, error: "
+"{} }``. We can use this JS object directly inside the ListModel and access "
+"it then from the delegate, e.g. ``model.expression`` gives us the input "
+"expression. For the simplicity of the example we ignore the error result."
 msgstr ""
-
