@@ -33,7 +33,6 @@ We are heavily working on this book and that means several things:
 
 
 .. toctree::
-    :numbered:
     :maxdepth: 2
 
     ch01/index
