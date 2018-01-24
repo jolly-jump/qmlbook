@@ -36,22 +36,22 @@ We are heavily working on this book and that means several things:
     :numbered:
     :maxdepth: 2
 
-    en/ch01/index
-    en/ch02/index
-    en/ch03/index
-    en/ch04/index
-    en/ch05/index
-    en/ch06/index
-    en/ch07/index
-    en/ch08/index
-    en/ch09/index
-    en/ch10/index
-    en/ch11/index
-    en/ch12/index
-    en/ch13/index
-    en/ch14/index
-    en/ch15/index
-    en/ch16/index
+    ch01/index
+    ch02/index
+    ch03/index
+    ch04/index
+    ch05/index
+    ch06/index
+    ch07/index
+    ch08/index
+    ch09/index
+    ch10/index
+    ch11/index
+    ch12/index
+    ch13/index
+    ch14/index
+    ch15/index
+    ch16/index
     assets/index
 
 
