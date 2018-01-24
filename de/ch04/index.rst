@@ -67,48 +67,124 @@ Beginnen wir mit einem einfachen Beispiel einer QML-Datei um die zu HTML untersc
 
 .. hint::
 
-    Jetzt kann man das Beispiel mit der Qt Quick runtime von der Kommandozeile starten::
+    Jetzt kann man das Beispiel mit der Qt Quick runtime von der Kommandozeile starten
 
+.. code-block:: console
+      
         $ $QTDIR/<version>/<target>/bin/qmlscene RectangleExample.qml
 
     wobei du *$QTDIR* durch den Pfad zu deiner Qt installation ersetzen musst, *<version* durch die Version von Qt und *<target>* z.B durch *gcc_64*. Die *qmlscene* Date initialisiert die Runtim und interpretiert die angegebene QML Datei
 
     In Qt Creator kannst du das ensprechende Projekt öffnen und das Dokument ``RectangleExample.qml`` ausführen.
 
-Properties
-----------
+Eigenschaften
+-------------
 
 .. issues:: ch04
 
-Elements are declared by using their element name but are defined by using their properties or by creating custom properties. A property is a simple key-value pair, e.g. ``width : 100``, ``text: 'Greetings'``, ``color: '#FF0000'``. A property has a well-defined type and can have an initial value.
+Elemente werden über deren Elementname deklariert, aber erst die
+Benutzung der Eigenschaften oder durch selbst erstellte Eigenschaften
+sind Elemente richtig definiert. Eine Eigenschaft ist eine einfaches
+Schlüssel-Wert Paar, z.B.
+
+.. code::
+
+   width : 100
+   text: 'Hallo'
+   color: '#FF0000'
+
+Eine Eigenschaft hat einen wohldefinierten Datentyp und kann einen
+Initialwert zugewiesen bekommen (Im Beispiel jeweils die rechte
+Seite).
 
 .. literalinclude:: ../../en/ch04/src/concepts/PropertiesExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
-Let's go through the different features of properties:
+Schauen wir uns die verschiedenen Eigenheiten von Eigenschaften an:
 
-(1) ``id`` is a very special property-like value, it is used to reference elements inside a QML file (called "document" in QML). The ``id`` is not a string type but rather an identifier and part of the QML syntax. An ``id`` needs to be unique inside a document and it can't be re-set to a different value, nor may it be queried. (It behaves more like a pointer in the C++ world.)
+(1) ``id`` ist ein sehr spezieller Wert mit dem man innerhalb einer
+    QML-Datei ("document") genau ein Element ansteuern
+    ("referenzieren") kann. Die ``id`` ist nicht vom Typ einer
+    Zeichenkette sondern ein Bezeichner und Teil der QML Syntax. Eine
+    ``id`` muss einmalig in einem Dokument sein und ihm kann nicht ein
+    anderer Wert zugewiesen werden, noch kann nach ihm gesucht
+    werden. (Es benimmt sich eher wie ein Zeiger aus der C++-Welt).
 
-(2) A property can be set to a value, depending on its type. If no value is given for a property, an initial value will be chosen. You need to consult the documentation of the particular element for more information about the initial value of a property.
+(2) Eine Eigenschaft kann auf einen Wert gesetzt werden, abhängig von
+    seinem Datentyp. Wenn kein Wert für eine Eigenschaft vergeben
+    wurde, wird vom System ein erstmaliger Wert gewählt. Man muss die
+    Dokumentation des jeweiligen Elements anschauen um diesen
+    Initialwert herauszubekommen.
 
-(3) A property can depend on one or many other properties. This is called *binding*. A bound property is updated, when its dependent properties change. It works like a contract, in this case the ``height`` should always be two times the ``width``.
+(3) Eine Eigenschaft kann von einer oder vielen anderen Eigenschaften
+    abhängen.  Das nennt man *binding* ("Bindung"). Eine gebundene
+    Eigenschaft wird immer aktualisiert wenn sich die andere
+    Eigenschaft (von der der Wert abhängt) ändert. Man kann es sich
+    wie einen Vertrag vorstellen, in diesem Beispiel ist die Höhe
+    ``height`` immer zwei mal der Breite ``width``.
 
-(4) Adding own properties to an element is done using the ``property`` qualifier followed by the type, the name and the optional initial value (``property <type> <name> : <value>``). If no initial value is given a system initial value is chosen.
+(4) Eigene Eigenschaft kann man zu einem Element hinzufügen in dem man
+    den Bezeichner ``property`` gefolgt von dem Datentyp, dem Namen
+    der Eigenschaft und - wenn man will - einem initialen Wert
+    verwendet (``property <type> <name> : <value>``). Falls kein Wert
+    angegeben wird, wählt das System einen.
 
-    .. note:: You can also declare one property to be the default property if no property name is given by prepending the property declaration with the ``default`` keyword. This is used for example when you add child elements, the child elements are added automatically to the default property ``children`` of type list if they are visible elements.
+    .. note:: You can also declare one property to be the default
+              property if no property name is given by prepending the
+              property declaration with the ``default`` keyword. This
+              is used for example when you add child elements, the
+              child elements are added automatically to the default
+              property ``children`` of type list if they are visible
+              elements.
 
-(5) Another important way of declaring properties is using the ``alias`` keyword (``property alias <name> : <reference>``). The ``alias`` keyword allows us to forward a property of an object or an object itself from within the type to an outer scope. We will use this technique later when defining components to export the inner properties or element ids to the root level. A property alias does not need a type, it uses the type of the referenced property or object.
+(5) Eine weitere Möglichkeit, Eigenschaften zu definieren ist über das
+    Schlüsselwort ``alias`` (``property alias <name> :
+    <reference>``). Das ``alias`` Schlüsselwort erlaubt uns eine
+    Eigenschaft eines anderen Elements oder ein Element selbst
+    weiterzuleiten, d.h. hier verwendbar zu machen. Wir werden diese
+    Technik später nutzen, wenn wir Komponenten definiteren, die
+    innere Eigenschaften besitzen, die wir aber im Wurzelelement
+    verwenden wollen. Ein ``property alias`` braucht keinen Typ, denn
+    es verwendet den Typ der Referenzeigenschaft oder des
+    Referenzelements.
 
-(6) The ``text`` property depends on the custom property ``times`` of type int. The ``int`` based value is automatically converted to a ``string`` type. The expression itself is another example of binding and results into the text being updated every time the ``times`` property changes.
+(6) Die ``text``-Eigenschaft hängt hier von der erfundenen Eigenschaft
+    ``times`` ab, welche vom Typ ``int`` (Ganzzahl) ist. Der
+    ``int``-Wert wird dann automatisch in einen ``string``-Typ
+    konvertiert. Der Ausdruck ist ein Beispiel einer Bindung und hat
+    zur Folge, dass immer automatisch wenn ``times`` sich ändert, der
+    Text geändert wird.
 
-(7) Some properties are grouped properties. This feature is used when a property is more structured and related properties should be grouped together. Another way of writing grouped properties is ``font { family: "Ubuntu"; pixelSize: 24 }``.
+(7) Einige Eigenschaften können gruppiert werden. Dieses Feature wird
+    verwendet, wenn eine Eigenschaft strukturiert werden soll und
+    verwandte Eigenschaften gruppiert werden sollen. Gruppen von
+    Eigenschaften kann man auch so schreiben: ``font { family:
+    "Ubuntu"; pixelSize: 24 }``.
 
-(8) Some properties are attached to the element itself. This is done for global relevant elements which appear only once in the application (e.g. keyboard input). The writing is ``<Element>.<property>: <value>``.
+(8) Einige Eigenschaften sind an ein Element geheftetet. Das macht man
+    für globale Elemente, die nur einmalig in der Applikation
+    vorkommen (z.B: Tastatureingaben). Die Syntax dazu ist
+    ``<Element>.<property>: <value>``.
 
-(9) For every property you can provide a signal handler. This handler is called after the property changes. For example here we want to be notified whenever the height changes and use the built-in console to log a message to the system.
+(9) Für jede Eigenschaft kann man signal handler zur Verfügung
+    stellen. Diese Funktion wird dann aufgerufen, sobald die
+    Eigenschaft sich ändert. Hier beispielsweise wird man über die
+    eingebaute Funktion ``console.log`` immer dann informiert, wenn
+    sich de Höhe ändert.
 
-.. warning:: An element id should only be used to reference elements inside your document (e.g. the current file). QML provides a mechanism called dynamic-scoping where later loaded documents overwrite the element id's from earlier loaded documents. This makes it possible to reference element id's from earlier loaded documents, if they are not yet overwritten. It's like creating global variables. Unfortunately this frequently leads to really bad code in practice, where the program depends on the order of execution. Unfortunately this can't be turned off. Please only use this with care or even better don't use this mechanism at all. It's better to export the element you want to provide to the outside world using properties on the root element of your document.
+.. warning:: Eine Element-ID sollte man nur innerhalb seines Dokuments
+             (also der aktuellen Datei) verwenden. QML erlaubt zwar
+             mit dem Mechanismus "dynamic-scoping", dass später
+             geladene Dokumente die IDs von früher geladenen
+             Dokumenten überschreiben und entspricht so etwas wie
+             globalen Variablen. Leider führt das häufig zu sehr
+             schlecht funktionierendem Code, bei dem der Ausgang von
+             der Reihenfolge der Ausführung abhängt. Daher sollte man
+             eine ID von außerhalb nicht direkt verwenden, sondern
+             besser ein Element, dass man nach außen exporieren will
+             über Eigenschaften des Wurzelelements des aktuellen
+             Dokuments zur Verfügung stellen.
 
 Scripting
 ---------
@@ -117,7 +193,7 @@ Scripting
 
 QML and JavaScript (also known as ECMAScript) are best friends. In the *JavaScript* chapter we will go into more detail on this symbiosis. Currently we just want to make you aware about this relationship.
 
-.. literalinclude:: src/concepts/ScriptingExample.qml
+.. literalinclude:: ../../en/ch04/src/concepts/ScriptingExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -149,19 +225,23 @@ Basiselemente
 
 Elemente kann man in visuelle und nicht-visuelle Elemente
 gruppieren. Ein visuelles Elemente (wie z.B. ``Rectangle``) hat eine
-Geometrie und wird überlicherweise auf einem Gebiet des Bildschirms
+Geometrie und wird üblicherweise auf einem Gebiet des Bildschirms
 angezeigt. Ein nicht-visuelles Elemente (wie z.B. ein ``Timer``)
-bringt allgemeine Funktionalität mit sich, die man überlicherweise
-verwendet um die visuellen Elemente zu manipulieren.
+bringt allgemeine Funktionalität mit sich, die man oft verwendet um
+die visuellen Elemente zu manipulieren.
 
-Wir fokussieren uns hier mal auf die fundamentalen visuellen Elemente, wie  ``Item``, ``Rectangle``, ``Text``, ``Image`` und ``MouseArea``.
+Wir fokussieren uns hier mal auf die fundamentalen visuellen Elemente,
+wie ``Item``, ``Rectangle``, ``Text``, ``Image`` und ``MouseArea``.
 
 Das ``Item`` Element
 --------------------
 
 .. issues:: ch04
 
-``Item`` ist das Basiselement für alle visuellen Elemente weil alle anderen visuellen Elemente von ihm abstammen. Es zeichnet zunächst nichts selbst aber es definiert alle Eigenschaft, die für alle visuellen Elemente gelten:
+``Item`` ist das Basiselement für alle visuellen Elemente weil alle
+anderen visuellen Elemente von ihm abstammen. Es zeichnet zunächst
+nichts selbst auf den Schirm, aber es definiert Eigenschaften, die für
+alle visuellen Elemente gelten:
 
 .. list-table::
     :widths: 20,80
@@ -169,41 +249,57 @@ Das ``Item`` Element
 
     *   - Gruppe
         - Eigenschaften
-    *   - die Geometrie
+    *   - Geometrie
         - ``x`` und ``y`` definieren die Position oben-links,
           ``width`` und ``height`` stehen für die Ausmaße des Elements
           und ``z`` beschreibt wie die Elemente gestapelt werden und
           welches vor anderen angezeigt wird.
     *   - Layout
-        - ``anchors`` (left, right, top, bottom, vertical und horizontal center) werden verwendet umd die Elemente relativ zu anderen Elementen ....to position elements relative to other elements with their ``margins``
+        - ``anchors`` (left, right, top, bottom, vertical und
+          horizontal center) werden verwendet um die Elemente relativ
+          zu anderen Elementen mit deren jeweiligen Rändern
+          (``margins``) zu positionieren
     *   - Tastatur
-        - attached ``Key`` and ``KeyNavigation`` properties to control
-          key handling and the input ``focus`` property to enable key
-          handling in the first place
-    *   - Transformation
+        - Die angehefteten ``Key`` und ``KeyNavigation`` Eigenschaften
+          verwalten die Tasten und die Eingabeeigenschaft ``focus``
+          macht die Tastenverwendung überhaupt erst möglich. 
+    *   - Transformationen
         - ``scale`` und ``rotate`` transformieren wie der Name es
-          sagt, generell kann die ``transform`` Eigenschaftenliste für
+          sagt, generell ist die ``transform``-Eigenschaftenliste für
           *x,y,z* beliebige Transformation um deren
-          ``transformOrigin`` Punkt
+          ``transformOrigin`` Punkt zuständig
     *   - Sichtbarkeit
-        - ``opacity`` to control transparency, ``visible`` to show/hide elements, ``clip`` to restrain paint operations to the element boundary and ``smooth`` to enhance the rendering quality
-    *   - State definition
-        - ``states`` list property with the supported list of states and the current ``state`` property as also the ``transitions`` list property to animate state changes.
+        - ``opacity`` verwaltet die Transparenz, ``visible`` um
+          Elemente anzuzeigen/zu verbergen, ``clip`` um die
+          Zeichentätigkeit auf die Elementmaße einzugrenzen und
+          ``smooth`` um die Qualität der Darstellung zu verbessern
+    *   - Zustandsdefinition
+        - Die ``states``-Eigenschaftenliste mit der unterstützten Liste
+          von Zuständen und dem aktuellen Zustand in der Eigenschaft
+          ``state``, ebenso wie man Übergänge  mit Hilfe der
+          Eigenschaftenliste ``transistions`` animieren kann.
 
-To better understand the different properties we will try to introduce them throughout this chapter in context of the element presented. Please remember these fundamental properties are available on every visual element and work the same across these elements.
+Um die verschiedenen Eigenschaften besser zu verstehen, werden wir sie
+im Zusammenhang mit einem Element genauer vorstellen. Merke dir, dass
+dieses Basiseigenschaften in jedem sichtbaren Element vorhanden sind
+und überall dort gleich funktionieren.
 
 .. note::
 
-    The ``Item`` element is often used as a container for other elements, similar to the *div* element in HTML.
+    Das ``Item``-Element wird oft als Container für andere Elemente
+    verwendet, genau wie das ``div``-Element in HTML.
 
-Rectangle Element
------------------
+Das ``Rectangle`` Element
+-------------------------
 
 .. issues:: ch04
 
-The ``Rectangle`` extends ``Item`` and adds a fill color to it. Additionally it supports borders defined by ``border.color`` and ``border.width``. To create rounded rectangles you can use the ``radius`` property.
+Das Rechteckelement ``Rectangle`` beerbt und erweitert das ``Item``
+Element und fügt eine Füllfarbe und Ränder hinzu über ``border.color``
+and ``border.width``. Für abgerundete Ecken ist die ``radius``
+Eigenschaft zuständig.
 
-.. literalinclude:: ../../en/ch04/src/concepts/RectanglesExample2.qml
+.. literalinclude:: ../../en/ch04/src/concepts/RectangleExample2.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -211,26 +307,42 @@ The ``Rectangle`` extends ``Item`` and adds a fill color to it. Additionally it 
 
 .. note::
 
-    Valid colors values are colors from the SVG color names (see  http://www.w3.org/TR/css3-color/#svg-color). You can provide colors in QML in different ways, but the most common way is an RGB string ('#FF4444') or as a color name (e.g. 'white').
+    Gültige Farbwerte sind Farben der SVG Farbnamen (siehe
+    http://www.w3.org/TR/css3-color/#svg-color). Man kann Farben in
+    QML auf verschiedene Weisen produzieren, der übliche Weg ist ein
+    RGB-Farbwert ('#FF4444') oder über einen englischen Farbnamen
+    (z.B. 'white').
 
-Besides a fill color and a border the rectangle also supports custom gradients.
+Neben der Füllfarbe und einem Rand unterstützt ein Rechteck noch
+selbsterstellte Gradienten.
 
-
-.. literalinclude:: ../../en/ch04/src/concepts/RectanglesExample3.qml
+.. literalinclude:: ../../en/ch04/src/concepts/RectangleExample3.qml
     :start-after: M1>>
     :end-before: <<M1
 
 .. figure:: ../../en/ch04/assets/rectangle3.png
 
-A gradient is defined by a series of gradient stops. Each stop has a position and a color. The position marks the position on the y-axis (0 = top, 1 = bottom). The color of the ``GradientStop`` marks the color at that position.
+Ein Gradient wird über eine Folge von Gradientenmarken
+``GradientStop`` definiert. Jede Marke hat eine Position und eine
+Farbe. Die Position legt die Marke auf der y-Achse fest (0=oben,
+1=unten) und ``color`` die Farbe an dieser Position.
 
 .. note::
 
-    A rectangle with no *width/height* set will not be visible. This happens often when you have several rectangles width (height) depending on each other and something went wrong in your composition logic. So watch out!
+    Ein Rechteck mit keiner Höhe/Breite wird nicht sichrbar sein. Das
+    kann oft dann passieren, wenn man mehrere Rechtecksbreiten
+    (-höhen) von einander abhängig definiert hat und irgendetwas in
+    der Logik des Zusammenbaus schief ging.
 
 .. note::
 
-    It is not possible to create an angled gradient. For this it's better to use predefined images. One possibility would be to just rotate the rectangle with the gradient, but be aware the geometry of an rotated rectangle will not change and thus will lead to confusion as the geometry of the element is not the same as the visible area. From the authors perspective it's really better to use designed gradient images in that case.
+    Man kann keinen schrägen Gradienten erzeugen. Dann ist es besser,
+    vordefinierte Bilder zu verwenden. Man könnte zwar die Rechtecke
+    mit Gradient drehen, aber dann stimmt die Geometrie des gedrehten
+    Rechtecks wird nicht geändert und wird daher zu Verwirrung führen,
+    weil die Geometrie des Elements dann nicht mehr mit der Geometrie
+    der sichtbaren Fläche zusammenpasst. Der Autor meint, es sei
+    besser, vordesignte Gradientenbilder zu verwenden.
 
 Text Element
 ------------
@@ -331,7 +443,7 @@ A component is a reusable element and QML provides different ways to create comp
 For example, let's create a rectangle containing a text componenet and a mouse area. This resembles a simple button and doesn't need to be more complicated for our purposes.
 
 
-.. literalinclude:: ../../en/ch04/src/elements/InlinedComponentsExample.qml
+.. literalinclude:: ../../en/ch04/src/elements/InlinedComponentExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -358,7 +470,7 @@ I would like to set the text using a ``text`` property and to implement my own c
 
 To achieve this we create a ``Button.qml`` file and copy our button UI inside. Additionally we need to export the properties a user might want to change on the root level.
 
-.. literalinclude:: src/elements/Button.qml
+.. literalinclude:: ../../en/ch04/src/elements/Button.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -366,7 +478,7 @@ We have exported the text and clicked signal on the root level. Typically we nam
 
 To use our new ``Button`` element we can simply declare it in our file. So the earlier example will become a little bit simplified.
 
-.. literalinclude:: src/elements/ReusableComponentExample.qml
+.. literalinclude:: ../../en/ch04/src/elements/ReusableComponentExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -412,21 +524,21 @@ A simple translation is done via changing the ``x,y`` position. A rotation is do
 
 Before we show off the example I would like to introduce a little helper: The ``ClickableImage`` element. The ``ClickableImage`` is just an image with a mouse area. This brings up a useful rule of thumb - if you have copied a chunk of code three times, extract it into a component.
 
-.. literalinclude:: src/transformation/ClickableImage.qml
+.. literalinclude:: ../../en/ch04/src/transformation/ClickableImage.qml
     :start-after: M1>>
     :end-before: <<M1
 
 
-.. figure:: assets/objects.png
+.. figure:: ../../en/ch04/assets/objects.png
 
 We use our clickable image to present three objects (box, circle, triangle). Each object performs a simple transformation when clicked. Clicking the background will reset the scene.
 
 
-.. literalinclude:: src/transformation/TransformationExample.qml
+.. literalinclude:: ../../en/ch04/src/transformation/TransformationExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
-.. figure:: assets/objects_transformed.png
+.. figure:: ../../en/ch04/assets/objects_transformed.png
 
 The circle increments the x-position on each click and the box will rotate on each click. The triangle will rotate and scale the image down on each click, to demonstrate a combined transformation. For the scaling and rotation operation we set ``antialiasing: true`` to enable anti-aliasing, which is switched off (same as the clipping property ``clip``) for performance reasons.  In your own work, when you see some rasterized edges in your graphics, then you should probably switch smooth on.
 
@@ -442,7 +554,7 @@ The background ``MouseArea`` covers the whole background and resets the object v
 
     Elements which appear earlier in the code have a lower stacking order (called z-order). If you click long enough on ``circle`` you will see it moves below ``box``. The z-order can also be manipulated by the ``z-property`` of an Item.
 
-    .. figure:: assets/objects_overlap.png
+    .. figure:: ../../en/ch04/assets/objects_overlap.png
 
     This is because ``box`` appears later in the code. The same applies also to mouse areas. A mouse area later in the code will overlap (and thus grab the mouse events) of a mouse area earlier in the code.
 
@@ -463,7 +575,7 @@ There are a number of QML elements used to position items. These are called posi
 
     Before we go into details, let me introduce some helper elements. The red, blue, green, lighter and darker squares. Each of these components contains a 48x48 pixels colorized rectangle. As reference here is the source code for the ``RedSquare``:
 
-    .. literalinclude:: src/positioners/RedSquare.qml
+    .. literalinclude:: ../../en/ch04/src/positioners/RedSquare.qml
         :start-after: M1>>
         :end-before: <<M1
 
@@ -472,41 +584,41 @@ There are a number of QML elements used to position items. These are called posi
 
 The ``Column`` element arranges child items into a column by stacking them on top of each other. The ``spacing`` property can be used to distance each of the child elements from each other.
 
-.. figure:: assets/column.png
+.. figure:: ../../en/ch04/assets/column.png
 
-.. literalinclude:: src/positioners/ColumnExample.qml
+.. literalinclude:: ../../en/ch04/src/positioners/ColumnExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
 The ``Row`` element places its child items next to each other, either from the left to the right, or from the right to the left, depending on the ``layoutDirection`` property. Again, ``spacing`` is used to separate child items.
 
-.. figure:: assets/row.png
+.. figure:: ../../en/ch04/assets/row.png
 
-.. literalinclude:: src/positioners/RowExample.qml
+.. literalinclude:: ../../en/ch04/src/positioners/RowExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
 The ``Grid`` element arranges its children in a grid, by setting the ``rows`` and ``columns`` properties, the number or rows or columns can be constrained. By not setting either of them, the other is calculated from the number of child items. For instance, setting rows to 3 and adding 6 child items will result in 2 columns. The properties ``flow`` and ``layoutDirection`` are used to control the order in which the items are added to the grid, while ``spacing`` controls the amount of space separating the child items.
 
-.. figure:: assets/grid.png
+.. figure:: ../../en/ch04/assets/grid.png
 
-.. literalinclude:: src/positioners/GridExample.qml
+.. literalinclude:: ../../en/ch04/src/positioners/GridExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
 The final positioner is ``Flow``. It adds its child items in a flow. The direction of the flow is controlled using ``flow`` and ``layoutDirection``. It can run sideways or from the top to the bottom. It can also run from left to right or in the opposite direction. As the items are added in the flow, they are wrapped to form new rows or columns as needed. In order for a flow to work, it must have a width or a height. This can be set either directly, or though anchor layouts.
 
-.. figure:: assets/flow.png
+.. figure:: ../../en/ch04/assets/flow.png
 
-.. literalinclude:: src/positioners/FlowExample.qml
+.. literalinclude:: ../../en/ch04/src/positioners/FlowExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
 An element often used with positioners is the ``Repeater``. It works like a for-loop and iterates over a model. In the simplest case a model is just a value providing the amount of loops.
 
-.. figure:: assets/repeater.png
+.. figure:: ../../en/ch04/assets/repeater.png
 
-.. literalinclude:: src/positioners/RepeaterExample.qml
+.. literalinclude:: ../../en/ch04/src/positioners/RepeaterExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -529,48 +641,48 @@ Layout Items
 
 QML provides a flexible way to layout items using anchors. The concept of anchoring is part of the ``Item`` fundamental properties and available to all visual QML elements. An anchors acts like a contract and is stronger than competing geometry changes. Anchors are expressions of relativeness, you always need a related element to anchor with.
 
-.. figure:: assets/anchors.png
+.. figure:: ../../en/ch04/assets/anchors.png
 
 An element has 6 major anchor lines (top, bottom, left, right, horizontalCenter, verticalCenter). Additional there is the baseline anchor for text in Text elements. Each anchor line comes with an offset. In the case of top, bottom, left and right they are called margins. For horizontalCenter, verticalCenter and baseline they are called offsets.
 
-.. figure:: assets/anchorgrid.png
+.. figure:: ../../en/ch04/assets/anchorgrid.png
 
 #. An element fills a parent element
 
-    .. literalinclude:: src/anchors/AnchorsExample.qml
+    .. literalinclude:: ../../en/ch04/src/anchors/AnchorsExample.qml
         :start-after: M1>>
         :end-before: <<M1
 
 
 #. An element is left aligned to the parent
 
-    .. literalinclude:: src/anchors/AnchorsExample.qml
+    .. literalinclude:: ../../en/ch04/src/anchors/AnchorsExample.qml
         :start-after: M2>>
         :end-before: <<M2
 
 #. An element left side is aligned to the parents right side
 
-    .. literalinclude:: src/anchors/AnchorsExample.qml
+    .. literalinclude:: ../../en/ch04/src/anchors/AnchorsExample.qml
         :start-after: M3>>
         :end-before: <<M3
 
 #. Center aligned elements. ``Blue1`` is horizontal centered  on the parent. ``Blue2`` is also horizontal centered but on ``Blue1`` and it's top is aligned to the ``Blue1`` bottom line.
 
-    .. literalinclude:: src/anchors/AnchorsExample.qml
+    .. literalinclude:: ../../en/ch04/src/anchors/AnchorsExample.qml
         :start-after: M4>>
         :end-before: <<M4
 
 
 #. An element is centered on a parent element
 
-    .. literalinclude:: src/anchors/AnchorsExample.qml
+    .. literalinclude:: ../../en/ch04/src/anchors/AnchorsExample.qml
         :start-after: M5>>
         :end-before: <<M5
 
 
 #. An element is centered with an left-offset on a parent element using horizontal and vertical center lines
 
-    .. literalinclude:: src/anchors/AnchorsExample.qml
+    .. literalinclude:: ../../en/ch04/src/anchors/AnchorsExample.qml
         :start-after: M6>>
         :end-before: <<M6
 
@@ -593,15 +705,15 @@ TextInput
 
 The ``TextInput`` allows the user to enter a line of text. The element supports input constraints such as ``validator``, ``inputMask``, and ``echoMode``.
 
-.. literalinclude:: src/input/TextInputExample.qml
+.. literalinclude:: ../../en/ch04/src/input/TextInputExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
-.. figure:: assets/textinput.png
+.. figure:: ../../en/ch04/assets/textinput.png
 
 The user can click inside a ``TextInput`` to change the focus. To support switching the focus by keyboard, we can use the ``KeyNavigation`` attached property.
 
-.. literalinclude:: src/input/TextInputExample2.qml
+.. literalinclude:: ../../en/ch04/src/input/TextInputExample2.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -611,7 +723,7 @@ A text input element comes with no visual presentation besides a blinking cursor
 
 We move this piece of code into our own component called ``TLineEditV1`` for reuse.
 
-.. literalinclude:: src/input/TLineEditV1.qml
+.. literalinclude:: ../../en/ch04/src/input/TLineEditV1.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -636,7 +748,7 @@ We rewrite our ``KeyNavigation`` example with the new ``TLineEditV1`` component.
         }
     }
 
-.. figure:: assets/textinput3.png
+.. figure:: ../../en/ch04/assets/textinput3.png
 
 And try the tab key for navigation. You will experience the focus does not change to ``input2``. The simple use of ``focus:true`` is not sufficient. The problem arises, that the focus was transferred to the ``input2`` element the top-level item inside the TlineEditV1 (our Rectangle) received focus and did not forward the focus to the TextInput. To prevent this QML offers the FocusScope.
 
@@ -647,7 +759,7 @@ FocusScope
 
 A focus scope declares that the last child element with ``focus:true`` receives the focus if the focus scope receives the focus. So it's forward the focus to the last focus requesting child element. We will create a 2nd version of our TLineEdit component called TLineEditV2 using the focus scope as root element.
 
-.. literalinclude:: src/input/TLineEditV2.qml
+.. literalinclude:: ../../en/ch04/src/input/TLineEditV2.qml
     :start-after: M1>>
     :end-before: <<M1
 
@@ -677,17 +789,17 @@ TextEdit
 
 The ``TextEdit`` is very similar to ``TextInput`` and support a multi-line text edit field. It doesn't have the text constraint properties as this depends on querying the painted size of the text (``paintedHeight``, ``paintedWidth``). We also create our own component called ``TTextEdit`` to provide a edit background and use the focus scope for better focus forwarding.
 
-.. literalinclude:: src/input/TTextEdit.qml
+.. literalinclude:: ../../en/ch04/src/input/TTextEdit.qml
     :start-after: M1>>
     :end-before: <<M1
 
 You can use it like the ``TLineEdit`` component
 
-.. literalinclude:: src/input/TextEditExample.qml
+.. literalinclude:: ../../en/ch04/src/input/TextEditExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
-.. figure:: assets/textedit.png
+.. figure:: ../../en/ch04/assets/textedit.png
 
 Keys Element
 ------------
@@ -696,11 +808,11 @@ Keys Element
 
 The attached property ``Keys`` allows executing code based on certain key presses. For example to move a square around and scale we can hook into the up, down, left and right keys to translate the element and the plus, minus key to scale the element.
 
-.. literalinclude:: src/input/KeysExample.qml
+.. literalinclude:: ../../en/ch04/src/input/KeysExample.qml
     :start-after: M1>>
     :end-before: <<M1
 
-.. figure:: assets/keys.png
+.. figure:: ../../en/ch04/assets/keys.png
 
 
 Advanced Techniques
