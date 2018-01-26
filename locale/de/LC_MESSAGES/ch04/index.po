@@ -10,6 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-25 23:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: T Küchel <devel@zukuul.de>, 2018\n"
 "Language-Team: German (https://www.transifex.com/qmlbook/teams/82765/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,17 +20,19 @@ msgstr ""
 
 #: ../../ch04/index.rst:3
 msgid "Quick Starter"
-msgstr ""
+msgstr "Ein Schneller Einstieg"
 
 #: ../../ch04/index.rst:11
 msgid "Last Build: |today|"
-msgstr ""
+msgstr "Letzter Build: |today|"
 
 #: ../../ch04/index.rst:13
 msgid ""
 "The source code for this chapter can be found in the `assets folder "
 "<../../assets>`_."
 msgstr ""
+"Der Quellcode für dieses Kapitel befindet sich im `assets Verzeichnis "
+"<../../assets>`_."
 
 #: ../../ch04/index.rst:16
 msgid ""
@@ -41,10 +44,18 @@ msgid ""
 "Towards the end we will look how to arrange elements together in a layout "
 "and finally have a look at elements where the user can provide input."
 msgstr ""
+"Dieses Kapitel gibt einen Überblick über QML, die Beschreibungssprache für "
+"das Benutzerinterface in Qt 5. Wir diskutieren die QML Syntax, die aus einer"
+" baumartigen Struktur von Elementen besteht und es folgt ein Überblick über "
+"die wichtigsten Grundelemente. Später schauen wir uns kurz an, wie man "
+"eigene Elemente erstellt, so genannte \"components\" und wie man Elemente "
+"verändert mit Hilfe von Manipulationen von Eigenschaften. Zum Schluss "
+"behandeln wir Layouts, die Elemente arrangieren können und in welche "
+"Elemente der Benutzer Eingaben machen kann."
 
 #: ../../ch04/index.rst:19
 msgid "QML Syntax"
-msgstr ""
+msgstr "Die QML Syntax"
 
 #: ../../ch04/index.rst:25
 msgid ""
@@ -56,6 +67,15 @@ msgid ""
 " In this perspective it follows the HTML-JavaScript pattern but QML is "
 "designed from the ground up to describe user interfaces not text-documents."
 msgstr ""
+"QML ist eine Auszeichnungs- oder Beschreibungssprache mit deren Hilfe das "
+"Benutzerinterface deiner Anwendung beschrieben wird. Das Benutzerinterface "
+"wird durch kleine Elemente beschrieben, die in größere Komponenten "
+"zusammengefasst werden. QML beschreibt dabei das Aussehen und das Verhalten "
+"der Interfaceelemente. Das Benutzerinterface kann dann mit Hilfe von "
+"JavaScript Code erweitert werden um einfache oder komplexe Programmlogik "
+"hinzuzufügen. Diese Art und Weise folgt dem HTML-JavaScript Muster, aber QML"
+" ist im Gegensatz zu HTML von Grund auf darauf ausgelegt, "
+"Benutzerschnittstellen statt Text-Dokumente zu beschreiben."
 
 #: ../../ch04/index.rst:27
 msgid ""
@@ -63,48 +83,66 @@ msgid ""
 "the coordinate system from the parent. An ``x,y`` coordinate is always "
 "relative to the parent."
 msgstr ""
+"In ihrer einfachsten Form ist QML eine Hierarchie von Elementen. Kinder-"
+"Elemente erben das Koordinatensystem von ihren Eltern. Eine ``x,y`` "
+"Koordinate ist immer relativ zum Elternelement."
 
 #: ../../ch04/index.rst:31
 msgid ""
 "Let's start with a simple example of a QML file to explain the different "
 "syntax."
 msgstr ""
+"Beginnen wir mit einem einfachen Beispiel einer QML-Datei um die zu HTML "
+"unterschiedliche Syntax zu erklären:"
 
 #: ../../ch04/index.rst:37
 msgid ""
 "The ``import`` statement imports a module in a specific version. In general "
 "you always want to import *QtQuick 2.0* as your initial set of elements"
 msgstr ""
+"Der ``import`` Befehl importiert ein Modul in einer speziellen Version. "
+"Grundsätzlich ist der Import von *QtQuick 2.0* ein guter Start."
 
 #: ../../ch04/index.rst:38
 msgid ""
 "Comments can be made using ``//`` for single line comments or ``/* */`` for "
 "multi-line comments. Just like in C/C++ and JavaScript"
 msgstr ""
+"Einzeilige Kommentare kann man mit Hilfe von ``//`` oder mehrzeilige mit "
+"Hilfe von ``/* */`` eingeben, genau wir in C/C++ und JavaScript"
 
 #: ../../ch04/index.rst:39
 msgid "Every QML file needs to have exactly one root element, like HTML"
 msgstr ""
+"Jede QML-Datei benötigt genau ein Wurzelelement wie in HTML (hier: "
+"\"Rectangle\")"
 
 #: ../../ch04/index.rst:40
 msgid "An element is declared by its type followed by ``{ }``"
-msgstr ""
+msgstr "Ein Element wird über sein Typ gefolgt von ``{ }`` definiert."
 
 #: ../../ch04/index.rst:41
 msgid "Elements can have properties, they are in the form ``name : value``"
 msgstr ""
+"Elemente können Eigenschaften haben, die in der Form ``name : value`` "
+"geschrieben werden."
 
 #: ../../ch04/index.rst:42
 msgid ""
 "Arbitrary elements inside a QML document can be accessed by using their "
 "``id`` (an unquoted identifier)"
 msgstr ""
+"Beliebige Elemente innerhalb eines QML-Dokuments können über ihre ``id`` "
+"(ein Bezeichner ohne Anführungszeichen) angesprochen werden."
 
 #: ../../ch04/index.rst:43
 msgid ""
 "Elements can be nested, meaning a parent element can have child elements. "
 "The parent element can be accessed using the ``parent`` keyword"
 msgstr ""
+"Elemente können verschachtelt werden, was dann bedeutet, dass ein "
+"Elternelement Kindelemente hat. Die Elternelemente kann man über das "
+"Schlüsselwort ``parent`` ansprechen."
 
 #: ../../ch04/index.rst:47
 msgid ""
@@ -119,6 +157,8 @@ msgid ""
 "You can run the example using the Qt Quick runtime from the command line "
 "from your OS like this::"
 msgstr ""
+"Jetzt kann man das Beispiel mit der Qt Quick runtime von der Kommandozeile "
+"starten"
 
 #: ../../ch04/index.rst:55
 msgid ""
@@ -126,16 +166,22 @@ msgid ""
 "The *qmlscene* executable initializes the Qt Quick runtime and interprets "
 "the provided QML file."
 msgstr ""
+"wobei du *$QTDIR* durch den Pfad zu deiner Qt installation ersetzen musst, "
+"*<version* durch die Version von Qt und *<target>* z.B durch *gcc_64*. Die "
+"*qmlscene* Date initialisiert die Runtime und interpretiert die angegebene "
+"QML Datei."
 
 #: ../../ch04/index.rst:57
 msgid ""
 "In Qt Creator you can open the corresponding project file and run the "
 "document ``RectangleExample.qml``."
 msgstr ""
+"In Qt Creator kannst du das ensprechende Projekt öffnen und das Dokument "
+"``RectangleExample.qml`` ausführen."
 
 #: ../../ch04/index.rst:60 ../../ch04/index.rst:147
 msgid "Properties"
-msgstr ""
+msgstr "Eigenschaften"
 
 #: ../../ch04/index.rst:64
 msgid ""
@@ -145,10 +191,16 @@ msgid ""
 "'#FF0000'``. A property has a well-defined type and can have an initial "
 "value."
 msgstr ""
+"Elemente werden über deren Elementname deklariert, aber erst die Benutzung "
+"der Eigenschaften oder durch selbst erstellte Eigenschaften sind Elemente "
+"richtig definiert. Eine Eigenschaft ist eine einfaches Schlüssel-Wert Paar, "
+"z.B. ``width : 100``, ``text: 'Hallo'`` oder ``color: '#FF0000'``. Eine "
+"Eigenschaft hat einen wohldefinierten Datentyp und kann einen Initialwert "
+"zugewiesen bekommen (Im Beispiel jeweils die rechte Seite)."
 
 #: ../../ch04/index.rst:70
 msgid "Let's go through the different features of properties:"
-msgstr ""
+msgstr "Schauen wir uns die verschiedenen Eigenheiten von Eigenschaften an:"
 
 #: ../../ch04/index.rst:72
 msgid ""
@@ -159,6 +211,12 @@ msgid ""
 "value, nor may it be queried. (It behaves more like a pointer in the C++ "
 "world.)"
 msgstr ""
+"``id`` ist ein sehr spezieller Wert mit dem man innerhalb einer  QML-Datei "
+"(\"document\") genau ein Element ansteuern  (\"referenzieren\") kann. Die "
+"``id`` ist nicht vom Typ einer  Zeichenkette sondern ein Bezeichner und Teil"
+" der QML Syntax. Eine ``id`` muss einmalig in einem Dokument sein und ihm "
+"kann nicht ein anderer Wert zugewiesen werden, noch kann nach ihm gesucht "
+"werden. (Es benimmt sich eher wie ein Zeiger aus der C++-Welt)."
 
 #: ../../ch04/index.rst:74
 msgid ""
@@ -167,6 +225,10 @@ msgid ""
 "the documentation of the particular element for more information about the "
 "initial value of a property."
 msgstr ""
+"Eine Eigenschaft kann auf einen Wert gesetzt werden, abhängig von seinem "
+"Datentyp. Wenn kein Wert für eine Eigenschaft vergeben wurde, wird vom "
+"System ein erstmaliger Wert gewählt. Man muss die Dokumentation des "
+"jeweiligen Elements anschauen um diesen Initialwert herauszubekommen."
 
 #: ../../ch04/index.rst:76
 msgid ""
@@ -175,6 +237,11 @@ msgid ""
 "change. It works like a contract, in this case the ``height`` should always "
 "be two times the ``width``."
 msgstr ""
+"Eine Eigenschaft kann von einer oder vielen anderen Eigenschaften abhängen. "
+"Das nennt man *binding* (\"Bindung\"). Eine gebundene Eigenschaft wird immer"
+" aktualisiert wenn sich die andere Eigenschaft (von der der Wert abhängt) "
+"ändert. Man kann es sich wie einen Vertrag vorstellen, in diesem Beispiel "
+"ist die Höhe ``height`` immer zwei mal der Breite ``width``."
 
 #: ../../ch04/index.rst:78
 msgid ""
@@ -183,6 +250,10 @@ msgid ""
 "<type> <name> : <value>``). If no initial value is given a system initial "
 "value is chosen."
 msgstr ""
+"Eigene Eigenschaft kann man zu einem Element hinzufügen in dem man den "
+"Bezeichner ``property`` gefolgt von dem Datentyp, dem Namen der Eigenschaft "
+"und - wenn man will - einem initialen Wert verwendet (``property <type> "
+"<name> : <value>``). Falls kein Wert angegeben wird, wählt das System einen."
 
 #: ../../ch04/index.rst:80
 msgid ""
@@ -203,6 +274,14 @@ msgid ""
 " alias does not need a type, it uses the type of the referenced property or "
 "object."
 msgstr ""
+"Eine weitere Möglichkeit, Eigenschaften zu definieren ist über das "
+"Schlüsselwort ``alias`` (``property alias <name> : <reference>``). Das "
+"``alias`` Schlüsselwort erlaubt uns eine Eigenschaft eines anderen Elements "
+"oder ein Element selbst weiterzuleiten, d.h. hier verwendbar zu machen. Wir "
+"werden diese Technik später nutzen, wenn wir Komponenten definiteren, die "
+"innere Eigenschaften besitzen, die wir aber im Wurzelelement verwenden "
+"wollen. Ein ``property alias`` braucht keinen Typ, denn es verwendet den Typ"
+" der Referenzeigenschaft oder des Referenzelements."
 
 #: ../../ch04/index.rst:84
 msgid ""
@@ -211,6 +290,11 @@ msgid ""
 " expression itself is another example of binding and results into the text "
 "being updated every time the ``times`` property changes."
 msgstr ""
+"Die ``text``-Eigenschaft hängt hier von der erfundenen Eigenschaft ``times``"
+" ab, welche vom Typ ``int`` (Ganzzahl) ist. Der ``int``-Wert wird dann "
+"automatisch in einen ``string``-Typ konvertiert. Der Ausdruck ist ein "
+"Beispiel einer Bindung und hat zur Folge, dass immer automatisch wenn "
+"``times`` sich ändert, der Text geändert wird."
 
 #: ../../ch04/index.rst:86
 msgid ""
@@ -219,6 +303,10 @@ msgid ""
 "Another way of writing grouped properties is ``font { family: \"Ubuntu\"; "
 "pixelSize: 24 }``."
 msgstr ""
+"Einige Eigenschaften können gruppiert werden. Dieses Feature wird verwendet,"
+" wenn eine Eigenschaft strukturiert werden soll und verwandte Eigenschaften "
+"gruppiert werden sollen. Gruppen von Eigenschaften kann man auch so "
+"schreiben: ``font { family:  \"Ubuntu\"; pixelSize: 24 }``."
 
 #: ../../ch04/index.rst:88
 msgid ""
@@ -226,6 +314,9 @@ msgid ""
 "relevant elements which appear only once in the application (e.g. keyboard "
 "input). The writing is ``<Element>.<property>: <value>``."
 msgstr ""
+"Einige Eigenschaften sind an ein Element geheftetet. Das macht man für "
+"globale Elemente, die nur einmalig in der Applikation vorkommen (z.B: "
+"Tastatureingaben). Die Syntax dazu ist ``<Element>.<property>: <value>``."
 
 #: ../../ch04/index.rst:90
 msgid ""
@@ -234,6 +325,10 @@ msgid ""
 " the height changes and use the built-in console to log a message to the "
 "system."
 msgstr ""
+"Für jede Eigenschaft kann man signal handler zur Verfügung stellen. Diese "
+"Funktion wird dann aufgerufen, sobald die Eigenschaft sich ändert. Hier "
+"beispielsweise wird man über die eingebaute Funktion ``console.log`` immer "
+"dann informiert, wenn sich de Höhe ändert."
 
 #: ../../ch04/index.rst:92
 msgid ""
@@ -249,6 +344,15 @@ msgid ""
 "to provide to the outside world using properties on the root element of your"
 " document."
 msgstr ""
+"Eine Element-ID sollte man nur innerhalb seines Dokumens (also der aktuellen"
+" Datei) verwenden. QML erlaubt zwar mit dem Mechanismus \"dynamic-scoping\","
+" dass später geladene Dokumente die IDs von früher geladenen Dokumenten "
+"überschreiben und entspricht so etwas wie globalen Variablen. Leider führt "
+"das häufig zu sehr schlecht funktionierendem Code, bei dem der Ausgang von "
+"der Reihenfolge der Ausführung abhängt. Daher sollte man eine ID von "
+"außerhalb nicht direkt verwenden, sondern besser ein Element, dass man nach "
+"außen exporieren will über Eigenschaften des Wurzelelements des aktuellen "
+"Dokuments zur Verfügung stellen."
 
 #: ../../ch04/index.rst:95
 msgid "Scripting"
@@ -311,7 +415,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:125
 msgid "Basic Elements"
-msgstr ""
+msgstr "Basiselemente"
 
 #: ../../ch04/index.rst:131
 msgid ""
@@ -320,16 +424,23 @@ msgid ""
 "area on the screen. A non-visual element (like a ``Timer``) provides general"
 " functionality, normally used to manipulate the visual elements."
 msgstr ""
+"Elemente kann man in visuelle und nicht-visuelle Elemente gruppieren. Ein "
+"visuelles Elemente (wie z.B. ``Rectangle``) hat eine Geometrie und wird "
+"üblicherweise auf einem Gebiet des Bildschirms angezeigt. Ein nicht-"
+"visuelles Elemente (wie z.B. ein ``Timer``) bringt allgemeine Funktionalität"
+" mit sich, die man oft verwendet um die visuellen Elemente zu manipulieren."
 
 #: ../../ch04/index.rst:133
 msgid ""
 "Currently, we will focus on the fundamental visual elements, such as "
 "``Item``, ``Rectangle``, ``Text``, ``Image`` and ``MouseArea``."
 msgstr ""
+"Wir fokussieren uns hier mal auf die fundamentalen visuellen Elemente, wie "
+"``Item``, ``Rectangle``, ``Text``, ``Image`` und ``MouseArea``."
 
 #: ../../ch04/index.rst:136
 msgid "Item Element"
-msgstr ""
+msgstr "Das ``Item`` Element"
 
 #: ../../ch04/index.rst:140
 msgid ""
@@ -337,14 +448,18 @@ msgid ""
 "visual elements inherit from ``Item``. It doesn't paint anything by itself "
 "but defines all properties which are common across all visual elements:"
 msgstr ""
+"``Item`` ist das Basiselement für alle visuellen Elemente weil alle anderen "
+"visuellen Elemente von ihm abstammen. Es zeichnet zunächst nichts selbst auf"
+" den Schirm, aber es definiert Eigenschaften, die für alle visuellen "
+"Elemente gelten:"
 
 #: ../../ch04/index.rst:146
 msgid "Group"
-msgstr ""
+msgstr "Gruppe"
 
 #: ../../ch04/index.rst:148
 msgid "Geometry"
-msgstr ""
+msgstr "Geometrie"
 
 #: ../../ch04/index.rst:149
 msgid ""
@@ -352,40 +467,52 @@ msgid ""
 "for the expand of the element and also the ``z`` stacking order to lift "
 "elements up or down from their natural ordering"
 msgstr ""
+"``x`` und ``y`` definieren die Position oben-links, ``width`` und ``height``"
+" stehen für die Ausmaße des Elements und ``z`` beschreibt wie die Elemente "
+"gestapelt werden und welches vor anderen angezeigt wird."
 
 #: ../../ch04/index.rst:150
 msgid "Layout handling"
-msgstr ""
+msgstr "Layout"
 
 #: ../../ch04/index.rst:151
 msgid ""
 "``anchors`` (left, right, top, bottom, vertical and horizontal center) to "
 "position elements relative to other elements with their ``margins``"
 msgstr ""
+"``anchors`` (left, right, top, bottom, vertical und horizontal center) "
+"werden verwendet um die Elemente relativ zu anderen Elementen mit deren "
+"jeweiligen Rändern (``margins``) zu positionieren"
 
 #: ../../ch04/index.rst:152
 msgid "Key handling"
-msgstr ""
+msgstr "Tastatur"
 
 #: ../../ch04/index.rst:153
 msgid ""
 "attached ``Key`` and ``KeyNavigation`` properties to control key handling "
 "and the input ``focus`` property to enable key handling in the first place"
 msgstr ""
+" Die angehefteten ``Key`` und ``KeyNavigation`` Eigenschaften verwalten die "
+"Tasten und die Eingabeeigenschaft ``focus`` macht die Tastenverwendung "
+"überhaupt erst möglich."
 
 #: ../../ch04/index.rst:154
 msgid "Transformation"
-msgstr ""
+msgstr "Transformationen"
 
 #: ../../ch04/index.rst:155
 msgid ""
 "``scale`` and ``rotate`` transformation and the generic ``transform`` "
 "property list for *x,y,z* transformation and their ``transformOrigin`` point"
 msgstr ""
+"``scale`` und ``rotate`` transformieren wie der Name es sagt, generell ist "
+"die ``transform``-Eigenschaftenliste für *x,y,z* beliebige Transformation um"
+" deren ``transformOrigin`` Punkt zuständig"
 
 #: ../../ch04/index.rst:156
 msgid "Visual"
-msgstr ""
+msgstr "Sichtbarkeit"
 
 #: ../../ch04/index.rst:157
 msgid ""
@@ -393,10 +520,13 @@ msgid ""
 "``clip`` to restrain paint operations to the element boundary and ``smooth``"
 " to enhance the rendering quality"
 msgstr ""
+"``opacity`` verwaltet die Transparenz, ``visible`` um Elemente anzuzeigen/zu"
+" verbergen, ``clip`` um die Zeichentätigkeit auf die Elementmaße "
+"einzugrenzen und ``smooth`` um die Qualität der Darstellung zu verbessern"
 
 #: ../../ch04/index.rst:158
 msgid "State definition"
-msgstr ""
+msgstr "Zustandsdefinition"
 
 #: ../../ch04/index.rst:159
 msgid ""
@@ -404,6 +534,9 @@ msgid ""
 "``state`` property as also the ``transitions`` list property to animate "
 "state changes."
 msgstr ""
+"``states`` list property with the supported list of states and the current "
+"``state`` property as also the ``transitions`` list property to animate "
+"state changes."
 
 #: ../../ch04/index.rst:161
 msgid ""
@@ -412,16 +545,22 @@ msgid ""
 " these fundamental properties are available on every visual element and work"
 " the same across these elements."
 msgstr ""
+"Um die verschiedenen Eigenschaften besser zu verstehen, werden wir sie im "
+"Zusammenhang mit einem Element genauer vorstellen. Merke dir, dass dieses "
+"Basiseigenschaften in jedem sichtbaren Element vorhanden sind und überall "
+"dort gleich funktionieren."
 
 #: ../../ch04/index.rst:165
 msgid ""
 "The ``Item`` element is often used as a container for other elements, "
 "similar to the *div* element in HTML."
 msgstr ""
+"Das ``Item``-Element wird oft als Container für andere Elemente verwendet, "
+"genau wie das ``div``-Element in HTML."
 
 #: ../../ch04/index.rst:168
 msgid "Rectangle Element"
-msgstr ""
+msgstr "Das ``Rectangle`` Element"
 
 #: ../../ch04/index.rst:172
 msgid ""
@@ -429,6 +568,10 @@ msgid ""
 " it supports borders defined by ``border.color`` and ``border.width``. To "
 "create rounded rectangles you can use the ``radius`` property."
 msgstr ""
+"Das Rechteckelement ``Rectangle`` beerbt und erweitert das ``Item`` Element "
+"und fügt eine Füllfarbe und Ränder hinzu über ``border.color`` and "
+"``border.width``. Für abgerundete Ecken ist die ``radius`` Eigenschaft "
+"zuständig."
 
 #: ../../ch04/index.rst:182
 msgid ""
@@ -437,12 +580,18 @@ msgid ""
 "in different ways, but the most common way is an RGB string ('#FF4444') or "
 "as a color name (e.g. 'white')."
 msgstr ""
+"Gültige Farbwerte sind Farben der SVG Farbnamen (siehe "
+"http://www.w3.org/TR/css3-color/#svg-color). Man kann Farben in QML auf "
+"verschiedene Weisen produzieren, der übliche Weg ist ein RGB-Farbwert "
+"('#FF4444') oder über einen englischen Farbnamen (z.B. 'white')."
 
 #: ../../ch04/index.rst:184
 msgid ""
 "Besides a fill color and a border the rectangle also supports custom "
 "gradients."
 msgstr ""
+"Neben der Füllfarbe und einem Rand unterstützt ein Rechteck noch "
+"selbsterstellte Gradienten."
 
 #: ../../ch04/index.rst:193
 msgid ""
@@ -451,6 +600,10 @@ msgid ""
 "top, 1 = bottom). The color of the ``GradientStop`` marks the color at that "
 "position."
 msgstr ""
+"Ein Gradient wird über eine Folge von Gradientenmarken ``GradientStop`` "
+"definiert. Jede Marke hat eine Position und eine Farbe. Die Position legt "
+"die Marke auf der y-Achse fest (0=oben, 1=unten) und ``color`` die Farbe an "
+"dieser Position."
 
 #: ../../ch04/index.rst:197
 msgid ""
@@ -458,6 +611,10 @@ msgid ""
 "often when you have several rectangles width (height) depending on each "
 "other and something went wrong in your composition logic. So watch out!"
 msgstr ""
+"Ein Rechteck mit keiner Höhe/Breite wird nicht sichrbar sein. Das kann oft "
+"dann passieren, wenn man mehrere Rechtecksbreiten (-höhen) von einander "
+"abhängig definiert hat und irgendetwas in der Logik des Zusammenbaus schief "
+"ging."
 
 #: ../../ch04/index.rst:201
 msgid ""
@@ -468,6 +625,13 @@ msgid ""
 " not the same as the visible area. From the authors perspective it's really "
 "better to use designed gradient images in that case."
 msgstr ""
+"Man kann keinen schrägen Gradienten erzeugen. Dann ist es besser, "
+"vordefinierte Bilder zu verwenden. Man könnte zwar die Rechtecke  mit "
+"Gradient drehen, aber dann stimmt die Geometrie des gedrehten Rechtecks wird"
+" nicht geändert und wird daher zu Verwirrung führen, weil die Geometrie des "
+"Elements dann nicht mehr mit der Geometrie der sichtbaren Fläche "
+"zusammenpasst. Der Autor meint, es sei besser, vordesignte Gradientenbilder "
+"zu verwenden."
 
 #: ../../ch04/index.rst:204
 msgid "Text Element"
