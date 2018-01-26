@@ -1,0 +1,109 @@
+[main]
+host = https://www.transifex.com
+type = PO
+
+[qt5-cadaques.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = _build/locale/index.pot
+source_lang = en
+
+[qt5-cadaques.ch01--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch01/index.po
+source_file = _build/locale/ch01/index.pot
+source_lang = en
+
+[qt5-cadaques.ch16--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch16/index.po
+source_file = _build/locale/ch16/index.pot
+source_lang = en
+
+[qt5-cadaques.ch08--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch08/index.po
+source_file = _build/locale/ch08/index.pot
+source_lang = en
+
+[qt5-cadaques.ch10--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch10/index.po
+source_file = _build/locale/ch10/index.pot
+source_lang = en
+
+[qt5-cadaques.ch14--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch14/index.po
+source_file = _build/locale/ch14/index.pot
+source_lang = en
+
+[qt5-cadaques.assets--index]
+file_filter = locale/<lang>/LC_MESSAGES/assets/index.po
+source_file = _build/locale/assets/index.pot
+source_lang = en
+
+[qt5-cadaques.ch15--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch15/index.po
+source_file = _build/locale/ch15/index.pot
+source_lang = en
+
+[qt5-cadaques.ch04--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch04/index.po
+source_file = _build/locale/ch04/index.pot
+source_lang = en
+
+[qt5-cadaques.ch12--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch12/index.po
+source_file = _build/locale/ch12/index.pot
+source_lang = en
+
+[qt5-cadaques.ch03--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch03/index.po
+source_file = _build/locale/ch03/index.pot
+source_lang = en
+
+[qt5-cadaques.ch09--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch09/index.po
+source_file = _build/locale/ch09/index.pot
+source_lang = en
+
+[qt5-cadaques.ch05--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch05/index.po
+source_file = _build/locale/ch05/index.pot
+source_lang = en
+
+[qt5-cadaques.ch02--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch02/index.po
+source_file = _build/locale/ch02/index.pot
+source_lang = en
+
+[qt5-cadaques.pages--contributors]
+file_filter = locale/<lang>/LC_MESSAGES/pages/contributors.po
+source_file = _build/locale/pages/contributors.pot
+source_lang = en
+
+[qt5-cadaques.pages--feedback]
+file_filter = locale/<lang>/LC_MESSAGES/pages/feedback.po
+source_file = _build/locale/pages/feedback.pot
+source_lang = en
+
+[qt5-cadaques.pages--todos]
+file_filter = locale/<lang>/LC_MESSAGES/pages/todos.po
+source_file = _build/locale/pages/todos.pot
+source_lang = en
+
+[qt5-cadaques.ch11--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch11/index.po
+source_file = _build/locale/ch11/index.pot
+source_lang = en
+
+[qt5-cadaques.ch13--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch13/index.po
+source_file = _build/locale/ch13/index.pot
+source_lang = en
+
+[qt5-cadaques.ch07--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch07/index.po
+source_file = _build/locale/ch07/index.pot
+source_lang = en
+
+[qt5-cadaques.ch06--index]
+file_filter = locale/<lang>/LC_MESSAGES/ch06/index.po
+source_file = _build/locale/ch06/index.pot
+source_lang = en
+
