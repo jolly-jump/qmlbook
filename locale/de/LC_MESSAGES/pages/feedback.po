@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qt5 Cadaques Book 2015-03\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-25 23:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: German (https://www.transifex.com/qmlbook/teams/82765/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../pages/feedback.rst:5
+msgid "Giving Feedback"
+msgstr ""
+
+#: ../../pages/feedback.rst:7
+msgid ""
+"We would love to receive your feedback. To be enable to make it as easy for "
+"you to provide feedback and for us to track the feedback we setup a github "
+"project to host the issue tracker."
+msgstr ""
+
+#: ../../pages/feedback.rst:9
+msgid ""
+"You will see throughout the chapter a small highlighted box named *Issues*. "
+"There you have the create and view link. The create link creates a issue "
+"with the current chapter set as the label and pre-populates the body with "
+"the current document as a backlink. The view link allows you to see all "
+"issues recorded for this chapter. It filters the issues based on the current"
+" chapter."
+msgstr ""
