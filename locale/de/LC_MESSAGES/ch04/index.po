@@ -356,7 +356,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:95
 msgid "Scripting"
-msgstr ""
+msgstr "Mit Skripten programmieren"
 
 #: ../../ch04/index.rst:99
 msgid ""
@@ -364,12 +364,19 @@ msgid ""
 "*JavaScript* chapter we will go into more detail on this symbiosis. "
 "Currently we just want to make you aware about this relationship."
 msgstr ""
+"QML und JavaScript (eigentlich offiziell \"ECMAScript\") passen bestens "
+"zusammen. Im Kapitel *JavaScript* werden wir zu dieser Symbiose mehr ins "
+"Detail gehen. An dieser Stelle wollen wir bloß mal auf diese Beziehung "
+"aufmerksam machen."
 
 #: ../../ch04/index.rst:105
 msgid ""
 "The text changed handler ``onTextChanged`` prints the current text every-"
 "time the text changed due to a space-bar key pressed"
 msgstr ""
+"Der Handler, der bei Textänderungen aufgerufen wird, ``onTextChanged`` gibt "
+"den aktuellen Text jedes Mal dann aus, wenn der Text durch ein Betätigen der"
+" Leertaste geändert wurde."
 
 #: ../../ch04/index.rst:107
 msgid ""
@@ -377,6 +384,9 @@ msgid ""
 "the space-bar on the keyboard) we call a JavaScript function "
 "``increment()``."
 msgstr ""
+"Immer wenn das Textelement die Leertaste empfängt (weil der Benutzer eben "
+"die Tastatur bedient hat) rufen wir die JavaScript funktion ``increment()`` "
+"auf."
 
 #: ../../ch04/index.rst:109
 msgid ""
@@ -385,6 +395,10 @@ msgid ""
 "``spacePressed``. Every time ``spacePressed`` is incremented, bound "
 "properties will also be updated."
 msgstr ""
+"Die Definition der JavaScript Funktion in der Form ``function () { ... }``, "
+"die unseren Zähler ``spacePressed``  erhöht. Jedes Mal  wenn "
+"``spacePressed`` erhöht wird, werden auch die angebundenen Eigenschaften "
+"aktualisiert."
 
 #: ../../ch04/index.rst:113
 msgid ""
@@ -396,6 +410,14 @@ msgid ""
 "property. For example a key handler setting the text property to an empty "
 "string would destroy our increment display::"
 msgstr ""
+"Der Unterschied zwischen dem QML ``:`` (Bindung) und dem JavaScript ``=`` "
+"(Zuweisung) ist, dass die Bindung ein fester Vertrag ist und über die "
+"Laufzeit der Programms so bleibt, während eine JavaScript-Zuweisung eine "
+"einmallige Wertzuweisung. Die Bindung endet erst, wenn eine neue Bindung für"
+" die Eigenschaft gesetzt wird oder sogar, wenn ein JavaScript-Wert der "
+"Eigenschaft zugewiesen wird. Das Setzen eines Tasten-Handlers beispielsweise"
+" auf eine leere Zeichenkette würde unser bisheriges Anzeigen des "
+"Zählerstandes zerstören::"
 
 #: ../../ch04/index.rst:120
 msgid ""
@@ -403,6 +425,9 @@ msgid ""
 "anymore as the previous binding of the ``text`` property (*text: \"Space "
 "pressed: \" + spacePresses + \" times\"*) was destroyed."
 msgstr ""
+"Nachdem man Escape gedrückt hat, wird die Leertaste die Anzeige nicht mehr "
+"aktualisieren, weil die Bindung der ``text`` Eigenschaft (*text: \"Space "
+"pressed: \"+ spacePresses + \"times\"*) aufgelöst wurde."
 
 #: ../../ch04/index.rst:122
 msgid ""
@@ -412,6 +437,11 @@ msgid ""
 " use assignment on both property change paths as the binding will be "
 "destroyed by the assignment (broken contract!)."
 msgstr ""
+"Wenn man zwei verschiedene Strategien hat, eine Eigenschaft zu ändern "
+"(Textaktualisierung über eine Bindung und Textlöschen über eine JavaScript-"
+"Zuweisung) dann kannst du keine Bindungen verwenden. Du musst dann immer "
+"Zuweisungen bei beiden Veränderung verwenden, weil durch eine Zuweisung eine"
+" Bindung aufgelöst wird (der Vertrag wird gebrochen)."
 
 #: ../../ch04/index.rst:125
 msgid "Basic Elements"
@@ -635,7 +665,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:204
 msgid "Text Element"
-msgstr ""
+msgstr "Das ``Text`` Element"
 
 #: ../../ch04/index.rst:208
 msgid ""
