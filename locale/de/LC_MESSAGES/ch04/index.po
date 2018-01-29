@@ -803,7 +803,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:270
 msgid "MouseArea Element"
-msgstr ""
+msgstr "Das ``MouseArea`` Element"
 
 #: ../../ch04/index.rst:274
 msgid ""
@@ -812,6 +812,11 @@ msgid ""
 "area is often used together with a visible item to execute commands when the"
 " user interacts with the visual part."
 msgstr ""
+"Um mit einem der bisherigen Elemente zu interagieren wird man oft ein "
+"``MouseArea``-Element verwenden. Das ist ein rechteckiges unsichtbares "
+"Objekt in dem man Maussignale auffangen kann. Dieses maussensitive Gebiet "
+"wird oft zusammen mit einem sichtbaren Element verwendet um Befehle "
+"auszuführen, wenn der Benutzer mit dem sichtbaren Teil interagieren will."
 
 #: ../../ch04/index.rst:288
 msgid ""
@@ -819,10 +824,14 @@ msgid ""
 "from the visual presentation. By this it allows you to show the user an "
 "interface element, but the interaction area can be larger."
 msgstr ""
+"Ein wichtiger Bestandteil von Qt Quick ist, dass die Verarbeitung von "
+"Eingaben von der visuellen Darstellung getrennt ist. Dadurch kann man dem "
+"Benutzer ein Element anzeigen, aber das Gebiet der Interaktion kann größer "
+"sein."
 
 #: ../../ch04/index.rst:291
 msgid "Components"
-msgstr ""
+msgstr "(Eigene) Komponenten"
 
 #: ../../ch04/index.rst:297
 msgid ""
@@ -833,6 +842,13 @@ msgid ""
 "the component like every other element from the QtQuick module, in our case "
 "you would use this in your code as ``Button { ... }``."
 msgstr ""
+"Eine Komponente ist ein wiederverwendbares Element und QML bietet mehrere "
+"Möglichkeiten, diese zu erzeugen. Hier schauen wir uns die einfachste "
+"Möglichkeit an - eine Komponente, die über eine Datei erzeugt wird. Dazu "
+"wird ein QML Element in einer Datei angelegt und der Datei den Elementnamen "
+"gegeben (z.B. ``Button.qml``). Man kann die Komponente dann wie jedes andere"
+" Element aus den QtQuick Modulen verwenden, in unserem Fall würde man in "
+"seinem Code ``Button { ... }`` verwenden."
 
 #: ../../ch04/index.rst:299
 msgid ""
@@ -840,12 +856,18 @@ msgid ""
 "mouse area. This resembles a simple button and doesn't need to be more "
 "complicated for our purposes."
 msgstr ""
+"Lass' uns beispielsweise ein Rechteck mit einem Textelement und einer "
+"\"MouseArea\". Das erinnert an einen einfachen Knopf und muss für die "
+"Demonstrationszwecke nicht komplizierter sein."
 
 #: ../../ch04/index.rst:306
 msgid ""
 "The UI will look similar to this. On the left the UI in the initial state, "
 "on the right after the button has been clicked."
 msgstr ""
+"Das Userinterface wird so oder ähnlich aussehen. Auf der linken Seite das "
+"Userinterface im Anfangszustand, auf der rechten Seite, nachdem die "
+"Schaltfläche geklickt wurde."
 
 #: ../../ch04/index.rst:315
 msgid ""
@@ -854,6 +876,11 @@ msgid ""
 "imagining how someone else should use your button. Here's what I came up "
 "with:"
 msgstr ""
+"Unsere Aufgabe ist es jetzt dieses Userinterface der Schaltfläche in eine "
+"wiederverwendbare Komponente zu extrahieren. Daher denken wir mal kurz "
+"darübernach, welche mögliche API (welche Funktionalität) die Schaltfläche "
+"haben sollte. Am besten überlegt man sich, wie jemand anderes deine "
+"Schaltfläche verwenden sollte. Hier sind mal meine Ideen: "
 
 #: ../../ch04/index.rst:325
 msgid ""
@@ -861,6 +888,11 @@ msgid ""
 "own click handler. Also I would expect the button to have a sensible initial"
 " size, which I can overwrite (e.g. with ``width: 240`` for example)."
 msgstr ""
+"I würde als Benutzer gerne den Text der Schaltfläche über eine "
+"``text``-Eigenschaft und meinen eigenen Handler für die Klickaktion "
+"festlegen können. Außerdem würd eich erwarten dass die Schalfläche eine "
+"sinnvolle Anfangsgröße besitzt, werde ich aber überschreiben kann, z.B. mit "
+"``width: 240``."
 
 #: ../../ch04/index.rst:327
 msgid ""
@@ -868,6 +900,10 @@ msgid ""
 "inside. Additionally we need to export the properties a user might want to "
 "change on the root level."
 msgstr ""
+"Um das zu erreichen erstellen wir eine Datei ``Button.qml`` und kopieren "
+"unser Schaltflächen-UserInterface hinein. Zusätzlich müssen wir noch die "
+"Eigenschaften exportieren, die ein Benutzer auf unterster Ebene eben ändern "
+"können möchte."
 
 #: ../../ch04/index.rst:333
 msgid ""
@@ -878,12 +914,22 @@ msgid ""
 "world. It is important to know, that only the root level properties can be "
 "accessed from outside this file by other components."
 msgstr ""
+"Wir haben jetzt den Text exporiert und eine Klick-Signal auf Wurzelebene. "
+"Typischerweise bennen wir unser Wurzelelement \"root\" um es mit dem Bezug "
+"auf unsere Kompontente einfacher zu haben. Wir verwenden dazu das ``alias`` "
+"Feature von QML als ein Weg die Eigenschaften von innerhalb des "
+"verschachtelten QML-Elements auf Wurzelebene zu haben und für die Außenwelt "
+"verfügbar zu machen, denn nur auf Eigenschaften auf Wurzelebene der "
+"Komponente können von außen zugegriffen werden."
 
 #: ../../ch04/index.rst:335
 msgid ""
 "To use our new ``Button`` element we can simply declare it in our file. So "
 "the earlier example will become a little bit simplified."
 msgstr ""
+"Um unsere neue Schaltfläche als Element verwenden zu können, müssen wir es "
+"einfach nur in unserer Datei deklarieren. Auf diese Weise ist unsere "
+"ursprüngliches Beispiel ein bisschen übersichtlicher geworden."
 
 #: ../../ch04/index.rst:341
 msgid ""
@@ -891,6 +937,10 @@ msgid ""
 "``Button { ... }``. A real button could be more complex, e.g providing "
 "feedback when clicked or showing a nicer decoration."
 msgstr ""
+"Jetzt kann man so viele Schaltflächen wie man will im Userinterface "
+"verwenden indem man einfach ``Button { ... }`` verwendet. Eine echte "
+"Schaltfläche würde etwas komplexer sein, z.B. etwas rückmelden wenn sie "
+"angeklickt wurde oder etwas schöner dekoriert sein."
 
 #: ../../ch04/index.rst:345
 msgid ""
@@ -901,12 +951,21 @@ msgid ""
 "root ``Rectangle`` with an ``Item`` and make the rectangle a nested element "
 "in the root item."
 msgstr ""
+"Ich finde es noch besser einen Schritt weiter zu gehen und ein "
+"``Item`-Element als das Wurzelelement zu definieren. Das gibt uns mehr "
+"Kontrolle über die exportierten Funktionen (die API der Komponente) und "
+"verhindert z.B. dass die Farbe unserer Schaltfläche verändert werden kann. "
+"Das Ziel sollte es sein, einen kleinstmöglichen Funktionsumfang zu "
+"exportieren. Das bedeutet ganz praktisch, das ``Rectangle``-Element in ein "
+"``Item``-Element zu packen."
 
 #: ../../ch04/index.rst:366
 msgid ""
 "With this technique, it is easy to create a whole series of reusable "
 "components."
 msgstr ""
+"Mit Hilfe dieses Verfahrens ist es sehr einfach, eine eigene Serie von "
+"wiederverwendbaren Komponenten herzustellen."
 
 #: ../../ch04/index.rst:369
 msgid "Simple Transformations"
