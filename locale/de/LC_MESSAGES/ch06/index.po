@@ -543,7 +543,7 @@ msgstr ""
 
 #: ../../ch06/index.rst:217
 msgid "Delegate"
-msgstr ""
+msgstr "Der Delegat"
 
 #: ../../ch06/index.rst:221
 msgid ""
@@ -552,6 +552,10 @@ msgid ""
 "are visualized through a delegate, what is actually visible to the user are "
 "the delegates."
 msgstr ""
+"Wenn man Modelle und Ansichten in einem eigenen Userinterface verwendet, "
+"spielt der Delegat eine große Rolle für das Erscheinungsbild. Jedes Teil in "
+"einem Modell wird nämlich über einen Delegaten visualisiert, was also am "
+"Ende beim Benutzer sichtbar wird, sind die Delegaten."
 
 #: ../../ch06/index.rst:223
 msgid ""
@@ -560,6 +564,11 @@ msgid ""
 "data for each item to the delegate. From the view, the properties convey "
 "state information related to the delegate within the view."
 msgstr ""
+"Jeder Delegat bekommt Zugriff auf eine Reihe von zugeordneten Eigenschaften,"
+" einige vom Datenmodell, andere von der Ansicht. Vom Modell bekommt der "
+"Delegat die Daten für jeden Datenpunkt in einer Eigenschaft. Von der Ansicht"
+" bekommt der Delegat wichtige Informationen zum Zustand innerhalb der "
+"Ansicht."
 
 #: ../../ch06/index.rst:225
 msgid ""
@@ -573,6 +582,16 @@ msgid ""
 "``color`` of each delegate depends on the attached "
 "``ListView.isCurrentItem`` property."
 msgstr ""
+"Die am meisten genutzte Eigenschaft aus der Ansicht ist "
+"``ListView.isCurrentItem`` und ``ListView.view``. Die erste ist ein "
+"Bool'scher Wert, der anzeigt ob das Element aktuelle Element ist, während "
+"die zweite nur eine lesbare Referenz auf die Ansicht selbst ist. Über den "
+"Zugriff auf die Ansicht ist es mögliche generische, wiederverwendbare "
+"Delegaten zu erzeugen, die sich an die Größe und Art der Ansicht anpassen in"
+" der sie sich befinden. Im Beispiel unten ist die ``width`` jedes Delegaten "
+"begrenzt durch die Breite der Ansicht, während die Hintergrundfarbe "
+"``color`` jedes Delegaten von der zugehörigen Eigenschaft "
+"``ListView.isCurrentItem`` abhängt."
 
 #: ../../ch06/index.rst:234
 msgid ""
@@ -582,6 +601,11 @@ msgid ""
 "the navigation between items in the view, and the delegate which handles "
 "actions on a specific item."
 msgstr ""
+"Wenn jeder Datenpunkt in einem Modell mit einer Aktion verknüpft ist, z.B. "
+"das Klicken auf ein Teil löst eine Aktion aus, dann wird diese "
+"Funktionalität jedem Delegaten übertragen. Das teilt somit das Event-"
+"Management zwischen Ansicht, die die Navigation zwischen den Daten und dem "
+"Delegaten auf, der die Reaktion auf spezielle Elemente verarbeitet."
 
 #: ../../ch06/index.rst:236
 msgid ""
@@ -589,6 +613,9 @@ msgid ""
 "delegate and act on the ``onClicked`` signal. This is demonstrated in the "
 "example in the next section of this chapter."
 msgstr ""
+"Der einfachste Weg das zu erreichen ist eine ``MouseArea`` innerhalb jedes "
+"Delegaten zu erzeugen und auf das ``onClicked``-Signal zu reagieren. Das "
+"wird im Beispiel des nächsten Abschnitts dieses Kapitels demonstriert."
 
 #: ../../ch06/index.rst:239
 msgid "Animating Added and Removed Items"
