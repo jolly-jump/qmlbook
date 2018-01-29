@@ -752,7 +752,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:245
 msgid "Image Element"
-msgstr ""
+msgstr "Das ``Image``-Element"
 
 #: ../../ch04/index.rst:249
 msgid ""
@@ -762,12 +762,20 @@ msgid ""
 "provide the image URL it contains a ``fillMode`` which controls the resizing"
 " behavior."
 msgstr ""
+"Ein ``Image``-Element kann Bilder verschiedener Formate anzeigen (z.B.  PNG,"
+" JPG, GIF, BMP, WEBP). *Für eine vollständige Liste, konsultiere bitte die "
+"Qt Dokumentation.* Neben der ``source``-Eigenschaft die den URL des Bildes "
+"enthalten sollte, gibt es einen  Modus``fillMode``, der das Verhalten bei "
+"Größenänderungen festlegt."
 
 #: ../../ch04/index.rst:259
 msgid ""
 "A URL can be a local path with forward slashes ( \"./images/home.png\" ) or "
 "a web-link (e.g. \"http://example.org/home.png\")."
 msgstr ""
+"Ein URL kann ein lokaler Pfad mit Schrägstrichen (z.B. "
+"\"./images/home.png\") oder ein HTTP-Link (z.B. "
+"\"http://example.org/home.png\")."
 
 #: ../../ch04/index.rst:263
 msgid ""
@@ -777,6 +785,11 @@ msgid ""
 " enable clipping (``clip : true``) to constrain the painting to the elements"
 " bounding rectangle. This can be used on any visual element."
 msgstr ""
+"``Image``-Elemente die ``PreserveAspectCrop``  verwenden, sollten auch "
+"Abschneiden (clipping) verwenden, um zu vermeiden, dass das Bild außerhalb "
+"der Grenzen des Elements angezeigt wird. Standardmäßig ist Abschneiden "
+"ausgeschalten (``clip : false``), die muss man mit (``clip : true``) "
+"einschalten. Das gilt im Übrigen für jegliche sichtbare Elemente."
 
 #: ../../ch04/index.rst:267
 msgid ""
@@ -784,6 +797,9 @@ msgid ""
 ":qt5:`QQmlImageProvider <qqmlimageprovider>`. This allows you to create "
 "images on the fly and threaded image loading."
 msgstr ""
+"Verwendest du C++, dann kannst du deine eigenen Bilder \"on the fly\" und "
+"auch multithreaded erstellen. Verwende dafür den Provider "
+":qt5:`QQmlImageProviderBase <qqmlimageprovider>`. "
 
 #: ../../ch04/index.rst:270
 msgid "MouseArea Element"
