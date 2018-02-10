@@ -211,6 +211,9 @@ msgid ""
 "aspects of the QML language. At the end we will have a paper windmill with "
 "rotating blades."
 msgstr ""
+"Erstellen wir ein einfaches Userinterface mit Qt Quick, welches ein paar "
+"Eigenschaften der QML Sprache präsentieren soll. Am Ende haben wir eine "
+"Papierwindmühle mit sich drehenden Rotorblättern."
 
 #: ../../ch01/index.rst:73
 msgid ""
@@ -219,6 +222,11 @@ msgid ""
 "to have one and only one root element, which in our case is the ``Image`` "
 "element with a width and height based on the background image geometry:"
 msgstr ""
+"Wir starten mit einem leeren Dokument, das wir ``main.qml`` nennen. Alle "
+"QML-Dateien bekommen die Endung ``.qml``. Als Auszeichnungssprache (ebenso "
+"wie HTML) braucht ein QML-Dokument genau ein Wurzelelement, welches in "
+"unserem Beispiel das ``Image``-Element mit einer Breite und einer Höhe sein "
+"wird, die auf der Geometrie des als Hintergrund verwendeten Bildes basiert:"
 
 #: ../../ch01/index.rst:84
 msgid ""
@@ -226,6 +234,9 @@ msgid ""
 "we use an ``Image`` element with the source property set to our background "
 "image as the root element."
 msgstr ""
+"Weil QML keine Einschränkungen macht, welches Element die Wurzel darstellt, "
+"verwenden wir das ``Image``-Element als Wurzel, für das wir die "
+"``source``-Eigenschaft auf das Hintergrundbild setzen."
 
 #: ../../ch01/index.rst:92
 msgid ""
@@ -235,12 +246,19 @@ msgid ""
 "need to set the ``width`` and ``height`` property to some useful pixel "
 "values."
 msgstr ""
+"Jedes Element hat Eigenschaften, wie z.B. ein Bild eine Höhe und Breite, "
+"aber eben auch andere Eigenschaften wie die ``source``-Eigenschaft. Die "
+"Größe des ``Image``-Elements wird automatisch aus der Bildgröße abgeleitet. "
+"Andernfalls müssten wir die Breite und Höhe auf sinnvolle Pixelanzahlen "
+"setzen."
 
 #: ../../ch01/index.rst:94
 msgid ""
 "The most standard elements are located in the ``QtQuick`` module which we "
 "include in the first line with the import statement."
 msgstr ""
+"Die meisten Standardelemente finden sich im ``QtQuick`` Modul welches wir in"
+" der ersten Zeile einbinden."
 
 #: ../../ch01/index.rst:96
 msgid ""
@@ -251,12 +269,21 @@ msgid ""
 "habit by the author and makes referencing the top-most element predictable "
 "in larger QML documents."
 msgstr ""
+"Die ``id``-Eigenschaft ist eine spezielle, optionale Eigenschaft die einen "
+"eindeutigen Schlüssel (Identität, ID) enthält, mit dem man auf dieses "
+"Element an anderer Stelle im Dokument verweisen kann. Wichtig: Eine "
+"``id``-Eigenschaft kann nicht mehr geändert werden, sobald sie gesetzt wurde"
+" und kann nicht während der Laufzeit gesetzt werden. Den Wert ``root`` für "
+"die ID des Wurzelelements zu verwenden mache ich üblicherweise so, damit das"
+" Wurzelelement in großen Dokumenten vorhersagbar verwendet werden können."
 
 #: ../../ch01/index.rst:98
 msgid ""
 "The foreground elements pole and pin wheel of our user interface are placed "
 "as separate images."
 msgstr ""
+"Die Elemente Stab und Windrad im Vordergrund  unseres Userintefaces werde "
+"als eigene Bilder platziert."
 
 #: ../../ch01/index.rst:103
 msgid ""
@@ -264,12 +291,16 @@ msgid ""
 "towards the bottom. And the pinwheel can be placed in the center of the "
 "background."
 msgstr ""
+"Der Stab muss horizontal mittig unten platziert werden und das Windrad kann "
+"in der Bildmitte des Hintergrunds erscheinen."
 
 #: ../../ch01/index.rst:105
 msgid ""
 "Normally your user interface will be composed of many different element "
 "types and not only image elements like in this example."
 msgstr ""
+"Normalerweise besteht dein Userinterface aus vielen verschiedenen "
+"Elementtypen und nicht nur aus ``image``-Elementen wie in diesem Beispiel."
 
 #: ../../ch01/index.rst:130
 msgid ""
@@ -281,10 +312,20 @@ msgid ""
 "both ends. Sure, they need to match.  It does not make sense to anchor my "
 "left side to the top side of an element."
 msgstr ""
+"Um das Windrad mittig zu plazieren verwenden wir eine komplexe Eigenschaft "
+"mit dem Namen ``anchor`` (\"Anker\"). Das Verankern erlaubt dir eine "
+"geometrische Beziehung zwischen Eltern- und Geschwisterobjekten festzulegen."
+" Beispielsweise bedeutet ``anchors.centerIn: parent`` \"plaziere mich im "
+"Zentrum des Elternelements. Es gibt die Beziehungen \"left\", \"right\", "
+"\"top\", \"bottom\", \"centerIn\", \"fill\", \"verticalCenter\" und "
+"\"horizontalCenter\" auf beiden Seiten. Natürlich müssen diese "
+"zusammenpassen. Es ergibt keinen Sinn meine linke Seite an der Oberseite "
+"eines anderen Elements zu verankern."
 
 #: ../../ch01/index.rst:132
 msgid "So we set the pinwheel to be centered in the parent our background."
 msgstr ""
+"So setzen wir das Windrad mittig auf den Hintergrund des Elternelements."
 
 #: ../../ch01/index.rst:136
 msgid ""
@@ -294,6 +335,11 @@ msgid ""
 "available to all the other anchors. Please consult the documentation for a "
 "full list of anchors properties."
 msgstr ""
+"Manchmal will man kleine Anpassungen zur exakten Zentrierung machen. Dies "
+"wäre dann mit der Eigenschaft ``anchors.horizontalCenterOffset`` oder mit "
+"``anchors.verticalCenterOffset`` möglich. Ähnliche Eigenschaften zur "
+"Anpassung gibt es ebenso für alle anderen Anker. Bitte schau in der "
+"Dokumentation für eine vollständige Liste nach."
 
 #: ../../ch01/index.rst:140
 msgid ""
@@ -332,7 +378,7 @@ msgstr ""
 
 #: ../../ch01/index.rst:165
 msgid "``on`` + ``PropertyName`` + ``Changed``"
-msgstr ""
+msgstr "``on`` + ``PropertyName`` + ``Changed``"
 
 #: ../../ch01/index.rst:167
 msgid ""
