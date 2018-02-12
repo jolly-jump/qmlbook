@@ -640,66 +640,83 @@ msgstr ""
 msgid ""
 "Qt 3D - A set of APIs to make 3D graphics programming easy and declarative."
 msgstr ""
+"Qt 3D - Eine Menge von APIs um graphische 3D Programmierung einfach und "
+"beschreibend zu machen."
 
 #: ../../ch01/index.rst:254
 msgid ""
 "Qt Bluetooth - C++ and QML APIs for platforms using Bluetooth wireless "
 "technology."
 msgstr ""
+"Qt Bluetooth - C++ und QML APIs für Plattformen, die Bluetooth Technologie "
+"verwenden."
 
 #: ../../ch01/index.rst:255
 msgid ""
 "Qt Contacts - C++ and QML APIs for accessing addressbooks / contact "
 "databases"
 msgstr ""
+"Qt Contacts - C++ und QML APIs um Adressbücher und Kontaktdatenbanken "
+"anzusprechen."
 
 #: ../../ch01/index.rst:256
 msgid ""
 "Qt Location - Provides location positioning, mapping, navigation and place "
 "search via QML and C++ interfaces. NMEA backend for positioning"
 msgstr ""
+"Qt Location - Erlaubt die Posititionierung, Kartierung, Navigation und "
+"Ortssuche über QML und eine C++ Schnittstelle. Es wird ein NMEA backend für "
+"die Positionierung verwendet."
 
 #: ../../ch01/index.rst:257
 msgid ""
 "Qt Organizer - C++ and QML APIs for accessing organizer events (todos, "
 "events, etc.)"
 msgstr ""
+"Qt Organizer - C++ und QML APIs um auf eine persönliche "
+"Informationsverwaltung (Organizer, Todos, Veranstaltungen, etc.) "
+"zuzugreifen."
 
 #: ../../ch01/index.rst:258
 msgid "Qt Publish and Subscribe"
-msgstr ""
+msgstr "Qt Publish and Subscribe"
 
 #: ../../ch01/index.rst:259
 msgid "Qt Sensors - Access to sensors via QML and C++ interfaces."
-msgstr ""
+msgstr "Qt Sensors - Zugriff auf Sensoren über ein QML und C++ Interface."
 
 #: ../../ch01/index.rst:260
 msgid ""
 "Qt Service Framework -  Enables applications to read, navigate and subscribe"
 " to change notifications."
 msgstr ""
+"Qt Service Framework - Anwendungen sollen Zugriff auf Änderungsnachrichten "
+"lesbar, navigierbar und abonnierbar haben."
 
 #: ../../ch01/index.rst:261
 msgid "Qt System Info - Discover system related information and capabilities."
 msgstr ""
+"Qt System Info - Entdecke systembezogene Informationen und Fähigkeiten."
 
 #: ../../ch01/index.rst:262
 msgid "Qt Versit - Support for vCard and iCalendar formats"
-msgstr ""
+msgstr "Qt Versit - Unterstützung für vCard und iCalender Formate."
 
 #: ../../ch01/index.rst:263
 msgid ""
 "Qt Wayland - Linux only. Includes Qt Compositor API (server), and Wayland "
 "platform plugin (clients)"
 msgstr ""
+"Qt Wayland - Nur unter Linux. Enthält eine Qt Compositor API (server) und "
+"Wayland Plattform Plugins (clients)."
 
 #: ../../ch01/index.rst:264
 msgid "Qt Feedback - Tactile and audio feedback to user actions."
-msgstr ""
+msgstr "Qt Feedback - Fühlbare und Audio-Rückkopplung auf Benutzeraktionen."
 
 #: ../../ch01/index.rst:265
 msgid "Qt JSON DB - A no-SQL object store for Qt."
-msgstr ""
+msgstr "Qt JSON DB - Ein no-SQL Objektspeicher für Qt."
 
 #: ../../ch01/index.rst:269
 msgid ""
@@ -707,6 +724,9 @@ msgid ""
 "modules, depending how many contributors are active and how well it's get "
 "tested."
 msgstr ""
+"Weil diese Module nicht Teil der Veröffentlichung sind, unterscheidet sich "
+"der Zustand der Module, abhängig davon wie viele Beitragende sich beteiligen"
+" und wie gut das Modul getestet wird."
 
 #: ../../ch01/index.rst:272
 msgid "Supported Platforms"
