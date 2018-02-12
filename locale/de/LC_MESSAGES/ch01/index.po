@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../../ch01/index.rst:28
 msgid "Qt 5 Focus"
-msgstr ""
+msgstr "Worauf sich Qt 5 fokussiert"
 
 #: ../../ch01/index.rst:30
 msgid ""
@@ -118,6 +118,10 @@ msgid ""
 "4.8, the Qt 4 release is almost 7 years old. It's time to make an amazing "
 "toolkit even more amazing. Qt 5 is focused on the following:"
 msgstr ""
+"Qt 5 ist eine komplette Überarbeitung der schon sehr erfolgreichen Qt 4 "
+"Veröffentlichung. Mit Qt 4.8, das Qt 4 Release ist fast 7 Jahre alt. Zeit um"
+" die beeindruckende Werkzeugsammlung noch beeindruckender zu machen. Qt 5 "
+"fokussiert sich auf folgendes:"
 
 #: ../../ch01/index.rst:32
 msgid ""
@@ -126,6 +130,10 @@ msgid ""
 "graphic effects combined with an ease of use never seen before in this "
 "field."
 msgstr ""
+"**Herausragende Grafik**: Qt Quick 2 basiert auf OpenGL (ES) und nutzt eine "
+"scene graph Implementierung. Der Grafikstack erlaubt ein neues Level an "
+"Grafikeffekten, die zusammen mit der einfachen Nutzung bisland unerreicht "
+"sind."
 
 #: ../../ch01/index.rst:34
 msgid ""
@@ -135,6 +143,12 @@ msgid ""
 "creating beautiful user interfaces and back-end C++ developers concentrating"
 " on stability, performance and extending the runtime."
 msgstr ""
+"**Developer Productivity**: QML und JavaScript werden als die Hauptwerkzeuge"
+" für die UI Erstellung gesehen. Das Backend wird in C++ realisiert. Die "
+"Trennung zwischen JavaScript und C++ erlaubt schnellere Zyklen sowohl "
+"Fronend-Entwickler, die sich auf hübsche Userinterfaces, als auch für "
+"Backend-Entwickler, die sich auf Stabilität, Performanz und das "
+"Laufzeitverhalten konzentrieren."
 
 #: ../../ch01/index.rst:36
 msgid ""
@@ -144,12 +158,21 @@ msgid ""
 "and Add-ons, which allows OS developer to focus on the essentials modules "
 "and leads to a smaller runtime altogether."
 msgstr ""
+"**Cross-Plattform Portabilität**: Über die konsolidiert Qt Plattform "
+"Abstraktion ist es jetzt möglich, Qt auf eine größere Anzahl an Plattformen "
+"zu portieren. Qt 5 ist um das Konzept von Qt Essentials und Qt Add-ons "
+"strukturiert, welches Betriebssystementwicklern erlaubt sich auf die "
+"notwendigen Module zu konzentrieren, was dann zu einer schnelleren Laufzeit "
+"führt."
 
 #: ../../ch01/index.rst:38
 msgid ""
 "**Open Development**: Qt is now a truly open-governance project hosted at "
 "`qt.io <http://qt.io>`_. The development is open and community driven."
 msgstr ""
+"**Open Development**: Qt ist jetzt ein wirklich open-governance Projekt, das"
+" unter `qt.io <http://qt.io>`_ gehostet wird. Die Entwicklung steht offen "
+"und wird von einer Community vorangebracht."
 
 #: ../../ch01/index.rst:43
 msgid "Qt 5 Introduction"
