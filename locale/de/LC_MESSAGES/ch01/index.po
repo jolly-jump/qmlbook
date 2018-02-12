@@ -76,6 +76,16 @@ msgid ""
 "UI has dominated the world we spend more time nowadays on other screens with"
 " another UI language."
 msgstr ""
+"Qt 4 hat sich weiterentwickelt seit 2005 und stellt ein solide Basis für "
+"tausende von Anwendungen oder sogar ganze PC-Oberflächen (Desktops)  und "
+"mobilen Systemen bereit. Die Muster mit denen Computer verwendet werden, "
+"habe sich in letzten Jahren geändert. Von stationären PCs hin zu portablen "
+"Laptops und mobilen Computern. Die klassischen Desktops sind mehr und mehr "
+"von mobilen Touch-basierten, immer verbundenen mobilen Bildschirmen "
+"verdrängt worden. Dadurch hat sich auch das UX (User experience, "
+"Nutzererlebnis) Paradigma verändert. Wo in der Vergangenheit ein Fenster-"
+"basiertes Userinterface dominierte, verwenden wir heutzutage viel mehr Zeit"
+"  an anderen Bildschirmen mit einer anderen Userinterface Sprache."
 
 #: ../../ch01/index.rst:25
 msgid ""
@@ -88,6 +98,15 @@ msgid ""
 "from simple elements to achieve a complete new UI, driven by customer "
 "demands."
 msgstr ""
+"Qt 4 wurde entwickelt, die Desktop-Welt zu bedienen und eine einheitliche "
+"Menge an Userinterface Elementen (Widgets) auf allen wichtigen Plattformen "
+"zu bieten. Die Herausforderung für Qt Entwickler hat sich geändert und liegt"
+" heute eher darin, ein touch-basiertes Userinterface für einen "
+"Benutzerabhängiges Verhalten zu bieten und diese modernen Userinterface auf "
+"allen wichtigen mobilen  und Desktopsystemen zu erlauben. Qt 4.7 hat mit der"
+" Einführung von Qt Quick Technologie damit beonnen und erlaubt Entwicklern "
+"aus einfache Elementen ein komplettes neues Userinterface zu erschaffen, "
+"welches sich am Bedarf der Endnutzer orientiert."
 
 #: ../../ch01/index.rst:28
 msgid "Qt 5 Focus"
@@ -349,6 +368,12 @@ msgid ""
 "layer (our rectangle) is drawn first and the child layers are drawn on top "
 "of it in the local coordinate system of the containing element."
 msgstr ""
+"Ein Bild als Kindelement des Wurzelelements (auch ein ``Image`` Element) "
+"festzulegen zeigt ein wichtiges Konzept dieser Beschreibungssprache. Man "
+"beschreibt das Userinterface über Ebenen und Gruppierungen, bei der die "
+"oberste Ebene (unser Rechteck) zuerst gezeichnet wird und dann alle "
+"Kindebenen darüber gezeichnet werden im lokalen Koordinatensystem des oberen"
+" Elements."
 
 #: ../../ch01/index.rst:142
 msgid ""
@@ -356,11 +381,16 @@ msgid ""
 "the scene interactive. The idea is to rotate the wheel when the user pressed"
 " the mouse somewhere in the scene."
 msgstr ""
+"Um dieses Beispielprojekt ein bisschen interessanter zu gestalten, wollen "
+"wir die Szene interaktiv machen. Die Idee ist, dass das Rad sich dreht, wenn"
+" der Benutzer mit der Maus irgendwo in der Szene klickt."
 
 #: ../../ch01/index.rst:145
 msgid ""
 "We use the ``MouseArea`` element and make it as big as our root element."
 msgstr ""
+"Wir verwenden das ``MouseArea`` Element und machen es so groß wie unser "
+"Wurzelelement."
 
 #: ../../ch01/index.rst:159
 msgid ""
@@ -368,6 +398,10 @@ msgid ""
 "can hook onto this signal overriding the ``onClicked`` function. In this "
 "case the reference the wheel image and change its rotation by +90 degree."
 msgstr ""
+"Die Mausfläche sendet ein Signal sobald der Benutzer innerhalb der bedeckten"
+" Fläche klickt. Man kann sich in dieses Signal einklinken, indem man die "
+"``onClicked`` Funktion überschreibt. In diesem Fall binden daran das Bild "
+"des Rades und ändern dessen Drehung um +90 Grad."
 
 #: ../../ch01/index.rst:163
 msgid ""
@@ -375,16 +409,21 @@ msgid ""
 "cases. Also all properties emit a signal when their value changed. The "
 "naming is:"
 msgstr ""
+"Das funktioniert für jedes Signal, die Namensgebung ist immer ``on`` + "
+"``SignalName`` in Großschreibung. Ebenso senden alle Eigenschaften Signale "
+"wenn deren Wert sich ändern, die Namensgebung ist hier:"
 
 #: ../../ch01/index.rst:165
 msgid "``on`` + ``PropertyName`` + ``Changed``"
-msgstr "``on`` + ``PropertyName`` + ``Changed``"
+msgstr "``on`` + ``EigenschaftsName`` + ``Changed``"
 
 #: ../../ch01/index.rst:167
 msgid ""
 "If a ``width`` property is changing you can observe it with "
 "``onWidthChanged: print(width)`` for example."
 msgstr ""
+"Wenn sich eine ``width``-Eigenschaft ändert, kann man das über die Funktion "
+"``onWidthChanged: print(width)`` beispielsweise beobachten."
 
 #: ../../ch01/index.rst:169
 msgid ""
@@ -397,6 +436,16 @@ msgid ""
 "property. In short every time the property changes, the animation is run. "
 "This is only one of several ways of declaring an animation in QML."
 msgstr ""
+"Jetzt wird sich das Rad drehen, aber das funktioniert noch nicht flüssig. "
+"Die Drehung ändert sich sofort. Wir hätten aber lieber, dass sich die "
+"Eigenschaft mit der Zeit um 90 Grad ändert. Hier kommen Animationen ins "
+"Spiel. Eine Animation definiert wie sich eine Eigenschaft ändert über eine "
+"gewisse Zeitspanne. Dafür verwenden wir einen Animationstyp mit dem Namen "
+"`Behaviour``. Dieses Verhalten einer Eigenschaft gibt genau an, wie die "
+"zugehörige Eigenschaft animiert werden soll, wenn eine Änderung für diese "
+"Eigenschaft ansteht. Kurz gesagt, sobald sich die Eigenschaft ändert, läuft "
+"die Animation los. Das ist nur eine von mehreren Möglichkeiten, eine "
+"Animation in QML zu definieren. "
 
 #: ../../ch01/index.rst:185
 msgid ""
@@ -404,6 +453,9 @@ msgid ""
 "using a ``NumberAnimation`` with a duration of 250 ms. So each 90 degree "
 "turn will take 250 ms."
 msgstr ""
+"Immer wenn sich die Drehungseigenschaft des Rades ändert, wird dies über "
+"``NumberAnimation`` animiert mit einer Dauer von 250ms, also wird jede 90 "
+"Grad-Drehung 250ms dauern."
 
 #: ../../ch01/index.rst:190
 msgid ""
@@ -411,16 +463,21 @@ msgid ""
 "rotation. But a blurred wheel is in the assets folder. Maybe you want to try"
 " to use that."
 msgstr ""
+"Man sieht nicht wirklich ein verschwommenes Rad, das soll nur die Animation "
+"verdeutlichen. Aber ein verschwommenes Rad ist auch im Unterverzeichnis "
+"\"assets\". Vielleicht willst du das mal ausprobieren."
 
 #: ../../ch01/index.rst:193
 msgid ""
 "Now the wheel looks already much better. I hope this has given you a short "
 "idea of how Qt Quick programming works."
 msgstr ""
+"Jetzt sieht das Rad viel besser aus. Ich hoffe, dieses Beispiel hat dir ein "
+"bisschen geholfen, die Programmierung mit Qt Quick zu verstehen."
 
 #: ../../ch01/index.rst:196
 msgid "Qt Building Blocks"
-msgstr ""
+msgstr "Qts Legosteine"
 
 #: ../../ch01/index.rst:198
 msgid ""
@@ -431,6 +488,13 @@ msgid ""
 "of developers will not have the need to use them, but it's good to know them"
 " as they provide invaluable solutions to common challenges."
 msgstr ""
+"Qt 5 besteht aus einer großen Anzahl von Modulen. Ein Modul ist eine "
+"Bibliothek für die Entwickler. Manche Module sind für eine für Qt "
+"spezifizierte Plattform verpflichtend. Diese Menge an Modulen heißt ``Qt "
+"Essentials`` Module. Viele Module sind aber optional und bilden die Menge "
+"``Qt Add-On`` Module. Man erwartet, dass die Mehrheit der Entwickler diese "
+"nicht braucht aber es ist gut zu wissen, dass es sie gibt, denn dort sind "
+"wertvolle Lösungen zu üblichen Problemen programmiert."
 
 #: ../../ch01/index.rst:201
 msgid "Qt Modules"
@@ -646,7 +710,7 @@ msgstr ""
 
 #: ../../ch01/index.rst:272
 msgid "Supported Platforms"
-msgstr ""
+msgstr "Unterstützte Plattformen"
 
 #: ../../ch01/index.rst:274
 msgid ""
@@ -654,6 +718,10 @@ msgid ""
 " are supported. Through the Qt Application Abstraction, nowadays it's easier"
 " to port Qt over to your own platform if required."
 msgstr ""
+"Qt unterstützt eine Reihe von Plattformen. Alle größeren Desktops und "
+"eingebettete Systeme werde unterstützt. Über die Abstraktion einer Qt "
+"Anwendung ist es heutzutage einfacher wenn nötig eine Qt auf deine eigene "
+"Plattform zu portieren."
 
 #: ../../ch01/index.rst:276
 msgid ""
@@ -662,14 +730,18 @@ msgid ""
 "platforms are thoroughly tested through the system testing to ensure the "
 "best quality. Mind you though: no code is error free."
 msgstr ""
+"Das Testen von Qt 5 auf einer Plattform ist zeitraubend. Eine Untermenge "
+"wurde vom Qt Projekt ausgesucht und bildet die Menge an Referenzplattformen."
+" Diese Referenzplattformen wurden ausgiebig getestet um beste Qualität zu "
+"garantieren. Aber Vorsicht: kein Code ist fehlerfrei."
 
 #: ../../ch01/index.rst:282
 msgid "Qt Project"
-msgstr ""
+msgstr "Qt Projekt"
 
 #: ../../ch01/index.rst:284
 msgid "From the `Qt Project wiki <http://wiki.qt.io/>`_:"
-msgstr ""
+msgstr "Ein Auszug aus dem  `Qt Project wiki <http://wiki.qt.io/>`_:"
 
 #: ../../ch01/index.rst:286
 msgid ""
@@ -677,6 +749,10 @@ msgid ""
 "Qt. Anyone who shares that interest can join the community, participate in "
 "its decision making processes, and contribute to Qt’s development.\""
 msgstr ""
+"(Übersetzung) \"Das Qt Projekt ist eine meritokratische auf Übereinstimmung "
+"basierendehe Gemeinschaft die sich an Qt interessiert. Jeder der dieses "
+"Interesse teilt kann der Gemeinschaft beitreten, an deren "
+"Entscheidungsprozesse teilnemen und zur Entwicklung von Qt beitragen.\""
 
 #: ../../ch01/index.rst:288
 msgid ""
@@ -684,6 +760,10 @@ msgid ""
 "the Qt further. It forms the base for other users to contribute. The biggest"
 " contributor is DIGIA, which holds also the comercial rights to Qt."
 msgstr ""
+"Das Qt Projekt ist eine Organisation die den Open-Source Teil von Qt "
+"weiterentwickelt. Es bildet die Basis für andere Benutzer, die beitragen "
+"wollen. Der größte Beitrag kommt von DIGIA, die auch die kommerziellen "
+"Rechte zu Qt hält."
 
 #: ../../ch01/index.rst:290
 msgid ""
@@ -693,6 +773,11 @@ msgid ""
 " be able to use Qt and it would not allow DIGIA to contribute so much code "
 "to the Qt Project."
 msgstr ""
+"Qt hat einen Open-Source Aspekt und einen kommerziellen Aspekt. Der "
+"kommerzielle Aspekt existiert für Firmen, die die Open-Source Lizenzen nicht"
+" einhalten können oder einhalten werden. Ohne diesen kommerziellen Askpekt "
+"wäre es für Firmen nicht möglich Qt zu verwenden und auch nicht DIGIA "
+"erlauben, so viel Quellcode dem Qt Projekt beizusteuern."
 
 #: ../../ch01/index.rst:292
 msgid ""
@@ -703,7 +788,14 @@ msgid ""
 " community and to work with this awesome tools and libraries. Does it make "
 "you a better person? Maybe:-)"
 msgstr ""
+"Viele Firmen weltweit die von Beratung oder Produktentwicklung leben "
+"verwenden Qt auf mehreren Plattformen. Es gibt viele Open-Source Projekte "
+"und Open-Source Entwickler, die sich auf Qt als deren hauptsächlicher "
+"Bibliothek zur Entwicklung verlassen. Es fühlt sich gut an, Teil dieser "
+"lebhaften Gemeinschaft zu sein und mit diesen fantastischen Werkzeugen und "
+"Bibliotheken zu arbeiten. Macht es dich zu einem besseren Menschen? "
+"Vielleicht :)"
 
 #: ../../ch01/index.rst:294
 msgid "**Contribute here: http://wiki.qt.io/**"
-msgstr ""
+msgstr "**Trage hier bei: http://wiki.qt.io/**"
