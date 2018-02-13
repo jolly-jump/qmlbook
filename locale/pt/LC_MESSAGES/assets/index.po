@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This
+# work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+# International License
+# This file is distributed under the same license as the Qt5 Cadaques Book
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qt5 Cadaques Book 2015-03\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-13 22:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../assets/index.rst:2
+msgid "Assets"
+msgstr ""
+
+#: ../../assets/index.rst:4
+msgid ""
+"The assets contain all files for reading the book offline and also the "
+"chapter examples as downloadable format."
+msgstr ""
+
+#: ../../assets/index.rst:7
+msgid "Offline Books"
+msgstr ""
+
+#: ../../assets/index.rst:9
+msgid "`Book as eBook <qt5_cadaques.epub>`_"
+msgstr ""
+
+#: ../../assets/index.rst:10
+msgid "`Book as PDF <qt5_cadaques.pdf>`_"
+msgstr ""
+
+#: ../../assets/index.rst:11
+msgid "`Book as QtHelp <Qt5CadaquesBook.qch>`_"
+msgstr ""
+
+#: ../../assets/index.rst:14
+msgid "Source Code Examples"
+msgstr ""
+
+#: ../../assets/index.rst:16
+msgid "`Chapter 01 examples (ch01-assets.tgz) <ch01-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:17
+msgid "`Chapter 04 examples (ch04-assets.tgz) <ch04-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:18
+msgid "`Chapter 05 examples (ch05-assets.tgz) <ch05-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:19
+msgid "`Chapter 06 examples (ch06-assets.tgz) <ch06-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:20
+msgid "`Chapter 07 examples (ch07-assets.tgz) <ch07-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:21
+msgid "`Chapter 08 examples (ch08-assets.tgz) <ch08-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:22
+msgid "`Chapter 09 examples (ch09-assets.tgz) <ch09-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:23
+msgid "`Chapter 10 examples (ch10-assets.tgz) <ch10-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:24
+msgid "`Chapter 11 examples (ch11-assets.tgz) <ch11-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:25
+msgid "`Chapter 12 examples (ch12-assets.tgz) <ch12-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:26
+msgid "`Chapter 13 examples (ch13-assets.tgz) <ch13-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:27
+msgid "`Chapter 14 examples (ch14-assets.tgz) <ch14-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:28
+msgid "`Chapter 15 examples (ch15-assets.tgz) <ch15-assets.tgz>`_"
+msgstr ""
+
+#: ../../assets/index.rst:29
+msgid "`Chapter 16 examples (ch16-assets.tgz) <ch16-assets.tgz>`_"
+msgstr ""
+
