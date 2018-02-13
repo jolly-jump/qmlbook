@@ -1,24 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This
-# work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-# International License
-# This file is distributed under the same license as the Qt5 Cadaques Book
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Qt5 Cadaques Book 2015-03\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 22:07+0100\n"
+"POT-Creation-Date: 2018-01-25 23:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Portuguese (https://www.transifex.com/qmlbook/teams/82765/pt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../ch09/index.rst:3
 msgid "Shader Effects"
@@ -43,7 +40,8 @@ msgid "http://www.opengl.org/registry/doc/GLSLangSpec.4.20.6.clean.pdf"
 msgstr ""
 
 #: ../../ch09/index.rst:21
-msgid "http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf"
+msgid ""
+"http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf"
 msgstr ""
 
 #: ../../ch09/index.rst:22
@@ -67,18 +65,18 @@ msgstr ""
 #: ../../ch09/index.rst:28
 msgid ""
 "Shaders allows us to create awesome rendering effects on top to the "
-"SceneGraph API leveraging directly the power of OpenGL running on the "
-"GPU. Shaders are implemented using the ShaderEffect and "
-"ShaderEffectSource elements. The shader algorithm itself is implemented "
-"using the OpenGL Shading Language."
+"SceneGraph API leveraging directly the power of OpenGL running on the GPU. "
+"Shaders are implemented using the ShaderEffect and ShaderEffectSource "
+"elements. The shader algorithm itself is implemented using the OpenGL "
+"Shading Language."
 msgstr ""
 
 #: ../../ch09/index.rst:30
 msgid ""
-"Practically it means you mix QML code with shader code. On execution will"
-" the shader code be sent over to the GPU and compiled and executed on the"
-" GPU. The shader QML elements allow you to interact through properties "
-"with the OpenGL shader implementation."
+"Practically it means you mix QML code with shader code. On execution will "
+"the shader code be sent over to the GPU and compiled and executed on the "
+"GPU. The shader QML elements allow you to interact through properties with "
+"the OpenGL shader implementation."
 msgstr ""
 
 #: ../../ch09/index.rst:32
@@ -98,14 +96,14 @@ msgstr ""
 #: ../../ch09/index.rst:43
 msgid ""
 "The vertex shader receives vertex data and must assign it to the "
-"*gl_Position* at the end of the routine. In the next stage the vertexes "
-"are clipped, transformed and rasterized for pixel output. From there the "
+"*gl_Position* at the end of the routine. In the next stage the vertexes are "
+"clipped, transformed and rasterized for pixel output. From there the "
 "fragments (pixels) arrive in the fragment shader and can further be "
-"manipulated and the resulting color needs to be assigned to "
-"*gl_FragColor*. The vertex shader is called for each corner point of your"
-" polygon (vertex = point in 3D) and is responsible of any 3D manipulation"
-" of these points. The fragment (fragment = pixel) shader is called for "
-"each pixel and determines the color of that pixel."
+"manipulated and the resulting color needs to be assigned to *gl_FragColor*. "
+"The vertex shader is called for each corner point of your polygon (vertex = "
+"point in 3D) and is responsible of any 3D manipulation of these points. The "
+"fragment (fragment = pixel) shader is called for each pixel and determines "
+"the color of that pixel."
 msgstr ""
 
 #: ../../ch09/index.rst:46
@@ -115,11 +113,11 @@ msgstr ""
 #: ../../ch09/index.rst:50
 msgid ""
 "For programing shaders Qt Quick provides two elements. The "
-"ShaderEffectSource and the ShaderEffect. The shader effect applies custom"
-" shaders and the shader effect source renders a QML item into a texture "
-"and renders it. As shader effect can apply a custom shaders to it's "
-"rectangular shape and can use sources for the shader operation. A source "
-"can be an image, which is used as a texture or a shader effect source."
+"ShaderEffectSource and the ShaderEffect. The shader effect applies custom "
+"shaders and the shader effect source renders a QML item into a texture and "
+"renders it. As shader effect can apply a custom shaders to it's rectangular "
+"shape and can use sources for the shader operation. A source can be an "
+"image, which is used as a texture or a shader effect source."
 msgstr ""
 
 #: ../../ch09/index.rst:52
@@ -128,18 +126,17 @@ msgstr ""
 
 #: ../../ch09/index.rst:60
 msgid ""
-"In the above example we have a row of 3 images. The first is the real "
-"image. The second is rendered using the default shader and the third is "
-"rendered using the default shader code for the fragment and vertex "
-"extracted from the Qt 5 source code."
+"In the above example we have a row of 3 images. The first is the real image."
+" The second is rendered using the default shader and the third is rendered "
+"using the default shader code for the fragment and vertex extracted from the"
+" Qt 5 source code."
 msgstr ""
 
 #: ../../ch09/index.rst:64
 msgid ""
-"If you don't want to see the source image and only the effected image you"
-" can set the *Image* to invisible (``visible : false``). The shader "
-"effects will still use the image data just the *Image* element will not "
-"be rendered."
+"If you don't want to see the source image and only the effected image you "
+"can set the *Image* to invisible (``visible : false``). The shader effects "
+"will still use the image data just the *Image* element will not be rendered."
 msgstr ""
 
 #: ../../ch09/index.rst:66
@@ -148,10 +145,10 @@ msgstr ""
 
 #: ../../ch09/index.rst:80
 msgid ""
-"Both shaders are from the Qt side a string bound to the *vertexShader* "
-"and *fragmentShader* property. Every shader code has to have a *main() { "
-"... }* function, which is executed by the GPU. Variable starting with "
-"*qt_* are provided by default by Qt already."
+"Both shaders are from the Qt side a string bound to the *vertexShader* and "
+"*fragmentShader* property. Every shader code has to have a *main() { ... }* "
+"function, which is executed by the GPU. Variable starting with *qt_* are "
+"provided by default by Qt already."
 msgstr ""
 
 #: ../../ch09/index.rst:82
@@ -260,29 +257,29 @@ msgstr ""
 #: ../../ch09/index.rst:105
 msgid ""
 "So we have available the projection matrix, the current vertex and the "
-"texture coordinate. The texture coordinate relates to the texture given "
-"as source. In the *main()* function we store the texture coordinate for "
-"later use in the fragment shader. Every vertex shader need to assign the "
-"*gl_Position* this is done using here by multiplying the project matrix "
-"with the vertex, our point in 3D."
+"texture coordinate. The texture coordinate relates to the texture given as "
+"source. In the *main()* function we store the texture coordinate for later "
+"use in the fragment shader. Every vertex shader need to assign the "
+"*gl_Position* this is done using here by multiplying the project matrix with"
+" the vertex, our point in 3D."
 msgstr ""
 
 #: ../../ch09/index.rst:107
 msgid ""
-"The fragment shader receives our texture coordinate from the vertex "
-"shader and also the texture from our QML source property. It shall be "
-"noted how easy it is to pass variable between the shader code and QML. "
-"Beautiful. Additional we have the opacity of the shader effect available "
-"as *qt_Opacity*. Every fragment shader needs to assign the *gl_FragColor*"
-" variable, this is done in the default shader code by picking the pixel "
-"from the source texture and multiplying it with the opacity."
+"The fragment shader receives our texture coordinate from the vertex shader "
+"and also the texture from our QML source property. It shall be noted how "
+"easy it is to pass variable between the shader code and QML. Beautiful. "
+"Additional we have the opacity of the shader effect available as "
+"*qt_Opacity*. Every fragment shader needs to assign the *gl_FragColor* "
+"variable, this is done in the default shader code by picking the pixel from "
+"the source texture and multiplying it with the opacity."
 msgstr ""
 
 #: ../../ch09/index.rst:120
 msgid ""
 "During the next examples we will playing around with some simple shader "
-"mechanics. First we concentrate on the fragment shader and then we will "
-"come back to the vertex shader."
+"mechanics. First we concentrate on the fragment shader and then we will come"
+" back to the vertex shader."
 msgstr ""
 
 #: ../../ch09/index.rst:123
@@ -292,8 +289,8 @@ msgstr ""
 #: ../../ch09/index.rst:127
 msgid ""
 "The fragment shader is called for every pixel to be rendered. We will "
-"develop a small red lens, which will increase the red color channel value"
-" of the image."
+"develop a small red lens, which will increase the red color channel value of"
+" the image."
 msgstr ""
 
 #: ../../ch09/index.rst:130 ../../ch09/index.rst:229
@@ -302,8 +299,8 @@ msgstr ""
 
 #: ../../ch09/index.rst:131
 msgid ""
-"First we setup our scene, with a grid centered in the field and our "
-"source image be displayed."
+"First we setup our scene, with a grid centered in the field and our source "
+"image be displayed."
 msgstr ""
 
 #: ../../ch09/index.rst:140
@@ -312,15 +309,15 @@ msgstr ""
 
 #: ../../ch09/index.rst:141
 msgid ""
-"Next we will add a shader, which displays a red rectangle by providing "
-"for each fragment a red color value."
+"Next we will add a shader, which displays a red rectangle by providing for "
+"each fragment a red color value."
 msgstr ""
 
 #: ../../ch09/index.rst:147
 msgid ""
-"In the fragment shader we simply assign a *vec4(1.0, 0.0, 0.0, 1.0)* "
-"which represents a red color with full opacity (alpha=1.0) to the "
-"*gl_FragColor* for each fragment."
+"In the fragment shader we simply assign a *vec4(1.0, 0.0, 0.0, 1.0)* which "
+"represents a red color with full opacity (alpha=1.0) to the *gl_FragColor* "
+"for each fragment."
 msgstr ""
 
 #: ../../ch09/index.rst:152
@@ -329,16 +326,16 @@ msgstr ""
 
 #: ../../ch09/index.rst:153
 msgid ""
-"Now we want to apply the red color to each texture pixel. For this we "
-"need the texture back in the vertex shader. As we don't do anything else "
-"in the vertex shader the default vertex shader is enough for us."
+"Now we want to apply the red color to each texture pixel. For this we need "
+"the texture back in the vertex shader. As we don't do anything else in the "
+"vertex shader the default vertex shader is enough for us."
 msgstr ""
 
 #: ../../ch09/index.rst:159
 msgid ""
-"The full shader contains now back our image source as variant property "
-"and we have left out the vertex shader, which if not specified is the "
-"default vertex shader."
+"The full shader contains now back our image source as variant property and "
+"we have left out the vertex shader, which if not specified is the default "
+"vertex shader."
 msgstr ""
 
 #: ../../ch09/index.rst:161
@@ -353,19 +350,18 @@ msgstr ""
 
 #: ../../ch09/index.rst:167
 msgid ""
-"It's not really nice to hard code the red channel value, so we would like"
-" to control the value from the QML side. For this we add a *redChannel* "
+"It's not really nice to hard code the red channel value, so we would like to"
+" control the value from the QML side. For this we add a *redChannel* "
 "property to our shader effect and also declare a *uniform lowp float "
-"redChannel* inside our fragment shader. That's all to make a value from "
-"the shader code available to the QML side. Very simple."
+"redChannel* inside our fragment shader. That's all to make a value from the "
+"shader code available to the QML side. Very simple."
 msgstr ""
 
 #: ../../ch09/index.rst:173
 msgid ""
 "To make the lens really a lens, we change the *vec4* color to be "
-"*vec4(redChannel, 1.0, 1.0, 1.0)* so that the other colors are multiplied"
-" by 1.0 and only the red portion is multiplied by our *redChannel* "
-"variable."
+"*vec4(redChannel, 1.0, 1.0, 1.0)* so that the other colors are multiplied by"
+" 1.0 and only the red portion is multiplied by our *redChannel* variable."
 msgstr ""
 
 #: ../../ch09/index.rst:178
@@ -375,8 +371,8 @@ msgstr ""
 #: ../../ch09/index.rst:179
 msgid ""
 "As the *redChannel* property is just a normal property it can also be "
-"animated as all properties in QML. So we can use QML properties to "
-"animate values on the GPU to influence our shaders. How cool is that!"
+"animated as all properties in QML. So we can use QML properties to animate "
+"values on the GPU to influence our shaders. How cool is that!"
 msgstr ""
 
 #: ../../ch09/index.rst:185
@@ -385,9 +381,9 @@ msgstr ""
 
 #: ../../ch09/index.rst:189
 msgid ""
-"The shader effect on the 2nd row is animated from 0.0 to 1.0 with a "
-"duration of 4 seconds. So the image goes from no red information (0.0 "
-"red) over to a normal image (1.0 red)."
+"The shader effect on the 2nd row is animated from 0.0 to 1.0 with a duration"
+" of 4 seconds. So the image goes from no red information (0.0 red) over to a"
+" normal image (1.0 red)."
 msgstr ""
 
 #: ../../ch09/index.rst:192
@@ -396,9 +392,9 @@ msgstr ""
 
 #: ../../ch09/index.rst:196
 msgid ""
-"In this more complex example we will create a wave effect with the "
-"fragment shader. The wave form is based on the sinus curve and it "
-"influences the texture coordinates used for the color."
+"In this more complex example we will create a wave effect with the fragment "
+"shader. The wave form is based on the sinus curve and it influences the "
+"texture coordinates used for the color."
 msgstr ""
 
 #: ../../ch09/index.rst:202
@@ -410,8 +406,8 @@ msgstr ""
 
 #: ../../ch09/index.rst:206
 msgid ""
-"Without the time factor we would just have a distortion but not a "
-"traveling distortion, like waves are."
+"Without the time factor we would just have a distortion but not a traveling "
+"distortion, like waves are."
 msgstr ""
 
 #: ../../ch09/index.rst:208
@@ -436,12 +432,11 @@ msgstr ""
 
 #: ../../ch09/index.rst:224
 msgid ""
-"The vertex shader can be used to manipulated the vertexes provided by the"
-" shader effect. In normal cases the shader effect has 4 vertexes (top-"
-"left, top-right, bottom-left and bottom-right). Each vertex reported is "
-"from type vec4. To visualize the vertex shader we will program a genie "
-"effect. This effect is often used to let a rectangular window area vanish"
-" into one point."
+"The vertex shader can be used to manipulated the vertexes provided by the "
+"shader effect. In normal cases the shader effect has 4 vertexes (top-left, "
+"top-right, bottom-left and bottom-right). Each vertex reported is from type "
+"vec4. To visualize the vertex shader we will program a genie effect. This "
+"effect is often used to let a rectangular window area vanish into one point."
 msgstr ""
 
 #: ../../ch09/index.rst:230
@@ -450,11 +445,11 @@ msgstr ""
 
 #: ../../ch09/index.rst:236
 msgid ""
-"This provides as a scene with a dark background and a shader effect using"
-" an image as the source texture. The original image is not visible on the"
-" image produced by our genie effect. Additional we added a dark rectangle"
-" on the same geometry as the shader effect so we can better detect where "
-"we need to click to revert the effect."
+"This provides as a scene with a dark background and a shader effect using an"
+" image as the source texture. The original image is not visible on the image"
+" produced by our genie effect. Additional we added a dark rectangle on the "
+"same geometry as the shader effect so we can better detect where we need to "
+"click to revert the effect."
 msgstr ""
 
 #: ../../ch09/index.rst:240
@@ -472,44 +467,44 @@ msgstr ""
 #: ../../ch09/index.rst:244
 msgid ""
 "After we have setup the scene, we define a property of type real called "
-"*minimize*, the property will contain the current value of our "
-"minimization. The value will vary from 0.0 to 1.0 and is controlled by a "
-"sequential animation."
+"*minimize*, the property will contain the current value of our minimization."
+" The value will vary from 0.0 to 1.0 and is controlled by a sequential "
+"animation."
 msgstr ""
 
 #: ../../ch09/index.rst:250
 msgid ""
-"The animation is triggered by the togling of the *minimized* property. "
-"Now that we have setup all our surroundings we finally can look at our "
-"vertex shader."
+"The animation is triggered by the togling of the *minimized* property. Now "
+"that we have setup all our surroundings we finally can look at our vertex "
+"shader."
 msgstr ""
 
 #: ../../ch09/index.rst:256
 msgid ""
-"The vertex shader is called for each vertex so four times, in our case. "
-"The default qt defined parameters are provided, like *qt_Matrix*, "
-"*qt_Vertex*, *qt_MultiTexCoord0*, *qt_TexCoord0*. We have discussed the "
-"variable already earlier. Additional we link the *minimize*, *width* and "
-"*height* variables from our shader effect into our vertex shader code. In"
-" the main function we store the current texture coordinate in our "
-"*qt_TexCoord0* to make it available to the fragment shader. Now we copy "
-"the current position and modify the x and y position of the vertex::"
+"The vertex shader is called for each vertex so four times, in our case. The "
+"default qt defined parameters are provided, like *qt_Matrix*, *qt_Vertex*, "
+"*qt_MultiTexCoord0*, *qt_TexCoord0*. We have discussed the variable already "
+"earlier. Additional we link the *minimize*, *width* and *height* variables "
+"from our shader effect into our vertex shader code. In the main function we "
+"store the current texture coordinate in our *qt_TexCoord0* to make it "
+"available to the fragment shader. Now we copy the current position and "
+"modify the x and y position of the vertex::"
 msgstr ""
 
 #: ../../ch09/index.rst:262
 msgid ""
-"The *mix(...)* function provides a linear interpolation between the first"
-" 2 parameters on the point (0.0-1.0) provided by the 3rd parameter. So in"
-" our case we interpolate for y between the current y position and the "
-"hight based on the current minimize value, similar for x. Bear in mind "
-"the minimize value is animated by our sequential animation and travels "
-"from 0.0 to 1.0 (or vice versa)."
+"The *mix(...)* function provides a linear interpolation between the first 2 "
+"parameters on the point (0.0-1.0) provided by the 3rd parameter. So in our "
+"case we interpolate for y between the current y position and the hight based"
+" on the current minimize value, similar for x. Bear in mind the minimize "
+"value is animated by our sequential animation and travels from 0.0 to 1.0 "
+"(or vice versa)."
 msgstr ""
 
 #: ../../ch09/index.rst:267
 msgid ""
-"The resulting effect is not really the genie effect but is already a "
-"great step towards it."
+"The resulting effect is not really the genie effect but is already a great "
+"step towards it."
 msgstr ""
 
 #: ../../ch09/index.rst:269
@@ -522,18 +517,18 @@ msgstr ""
 
 #: ../../ch09/index.rst:273
 msgid ""
-"So minimized the x and y components of our vertexes. Now we would like to"
-" slightly modify the x manipulation and make it depending of the current "
-"y value. The needed changes are pretty small. The y-position is "
-"calculated as before. The interpolation of the x-position depends now on "
-"the vertexes y-position::"
+"So minimized the x and y components of our vertexes. Now we would like to "
+"slightly modify the x manipulation and make it depending of the current y "
+"value. The needed changes are pretty small. The y-position is calculated as "
+"before. The interpolation of the x-position depends now on the vertexes "
+"y-position::"
 msgstr ""
 
 #: ../../ch09/index.rst:278
 msgid ""
 "This results into an x-position tending towards the width when the "
-"y-position is larger. In other words the upper 2 vertexes are not affect "
-"ed at all as they have an y-position of 0 and the lower two vertexes "
+"y-position is larger. In other words the upper 2 vertexes are not affect ed "
+"at all as they have an y-position of 0 and the lower two vertexes "
 "x-positions both bend towards the width, so they bend towards the same "
 "x-position."
 msgstr ""
@@ -544,18 +539,18 @@ msgstr ""
 
 #: ../../ch09/index.rst:289
 msgid ""
-"As the bending is not really satisfying currently we will add several "
-"parts to improve the situation. First we enhance our animation to support"
-" an own bending property. This is necessary as the bending should happen "
-"immediately and the y-minimization should be delayed shortly. Both "
-"animation have in the sum the same duration (300+700+1000 and 700+1300)."
+"As the bending is not really satisfying currently we will add several parts "
+"to improve the situation. First we enhance our animation to support an own "
+"bending property. This is necessary as the bending should happen immediately"
+" and the y-minimization should be delayed shortly. Both animation have in "
+"the sum the same duration (300+700+1000 and 700+1300)."
 msgstr ""
 
 #: ../../ch09/index.rst:296
 msgid ""
-"Additional to make the bending a smooth curve the y-effect on the "
-"x-position is not modified by a curved function from 0..1 and the "
-"``pos.x`` depends now on the new bend property animation::"
+"Additional to make the bending a smooth curve the y-effect on the x-position"
+" is not modified by a curved function from 0..1 and the ``pos.x`` depends "
+"now on the new bend property animation::"
 msgstr ""
 
 #: ../../ch09/index.rst:302
@@ -592,9 +587,9 @@ msgstr ""
 #: ../../ch09/index.rst:318
 msgid ""
 "As a final enhancement we want to be able to switch sides. The side is "
-"towards which point the genie effect vanishes. Till now it vanishes "
-"always towards the width. By adding a *side* property we are able to "
-"modify the point between 0 and width."
+"towards which point the genie effect vanishes. Till now it vanishes always "
+"towards the width. By adding a *side* property we are able to modify the "
+"point between 0 and width."
 msgstr ""
 
 #: ../../ch09/index.rst:338
@@ -603,11 +598,11 @@ msgstr ""
 
 #: ../../ch09/index.rst:339
 msgid ""
-"The last thing to-do is package our effect nicely. For this we extract "
-"our genie effect code into an own component called *GenieEffect*. It has "
-"the shader effect as the root element. We removed the mouse area as this "
-"should not be inside the component as the triggering of the effect can be"
-" toggled by the *minimized* property."
+"The last thing to-do is package our effect nicely. For this we extract our "
+"genie effect code into an own component called *GenieEffect*. It has the "
+"shader effect as the root element. We removed the mouse area as this should "
+"not be inside the component as the triggering of the effect can be toggled "
+"by the *minimized* property."
 msgstr ""
 
 #: ../../ch09/index.rst:345
@@ -617,8 +612,8 @@ msgstr ""
 #: ../../ch09/index.rst:351
 msgid ""
 "We have simplified the code by removing our background rectangle and we "
-"assigned the image directly to the effect, instead of loading it inside a"
-" standalone image element."
+"assigned the image directly to the effect, instead of loading it inside a "
+"standalone image element."
 msgstr ""
 
 #: ../../ch09/index.rst:356
@@ -627,9 +622,9 @@ msgstr ""
 
 #: ../../ch09/index.rst:360
 msgid ""
-"In the last example for custom shader effects I would like to bring you "
-"the curtain effect. This effect was published first in May 2011 as part "
-"of `Qt labs for shader effects <http://labs.qt.nokia.com/2011/05/03/qml-"
+"In the last example for custom shader effects I would like to bring you the "
+"curtain effect. This effect was published first in May 2011 as part of `Qt "
+"labs for shader effects <http://labs.qt.nokia.com/2011/05/03/qml-"
 "shadereffectitem-on-qgraphicsview/>`_."
 msgstr ""
 
@@ -642,39 +637,37 @@ msgstr ""
 
 #: ../../ch09/index.rst:366
 msgid ""
-"I took the code and adapted it towards Qt 5, which was straightforward. "
-"Also O did some simplifications to be able to use it better for a "
-"showcase. So if you are interested in the full example, please visit the "
-"labs blog."
+"I took the code and adapted it towards Qt 5, which was straightforward. Also"
+" O did some simplifications to be able to use it better for a showcase. So "
+"if you are interested in the full example, please visit the labs blog."
 msgstr ""
 
 #: ../../ch09/index.rst:368
 msgid ""
 "Just a little bot for the background, the curtain is actually an image "
 "called *fabric.jpg* and it is the source for a shader effect. The effect "
-"uses the vertex shader to swing the curtain and uses the fragment shader "
-"to provide some shades. Here is a simple diagram to make you hopefully "
-"better understand the code."
+"uses the vertex shader to swing the curtain and uses the fragment shader to "
+"provide some shades. Here is a simple diagram to make you hopefully better "
+"understand the code."
 msgstr ""
 
 #: ../../ch09/index.rst:372
 msgid ""
 "The waved shades of the curtain are computed through a sin curve with 7 "
-"up/downs (7*PI=21.99...) on the width of the curtain. The other important"
-" part is the swing. The *topWidth* of the curtain is animated when the "
-"curtain is opened or closed. The *bottomWidth* follows the *topWidth* "
-"with a *SpringAnimation*. By this we create the effect of the swinging "
-"bottom part of the curtain. The calculated *swing* provides the strength "
-"of this swing interpolated over the y-component of the vertexes."
+"up/downs (7*PI=21.99...) on the width of the curtain. The other important "
+"part is the swing. The *topWidth* of the curtain is animated when the "
+"curtain is opened or closed. The *bottomWidth* follows the *topWidth* with a"
+" *SpringAnimation*. By this we create the effect of the swinging bottom part"
+" of the curtain. The calculated *swing* provides the strength of this swing "
+"interpolated over the y-component of the vertexes."
 msgstr ""
 
 #: ../../ch09/index.rst:374
 msgid ""
-"The curtain effect is located in the ``CurtainEffect.qml`` component "
-"where the fabric image act as the texture source. There is nothing new on"
-" the use of shaders here, only a different way to manipulate the "
-"*gl_Position* in the vertex shader and the *gl_FragColor* in the fragment"
-" shader."
+"The curtain effect is located in the ``CurtainEffect.qml`` component where "
+"the fabric image act as the texture source. There is nothing new on the use "
+"of shaders here, only a different way to manipulate the *gl_Position* in the"
+" vertex shader and the *gl_FragColor* in the fragment shader."
 msgstr ""
 
 #: ../../ch09/index.rst:380
@@ -694,15 +687,15 @@ msgstr ""
 
 #: ../../ch09/index.rst:394
 msgid ""
-"The graphics effect library is a collection of shader effects. Ready made"
-" by the Qt developers. It's a great tool-set to be used in your "
-"application but also a great source to learn how to build shaders."
+"The graphics effect library is a collection of shader effects. Ready made by"
+" the Qt developers. It's a great tool-set to be used in your application but"
+" also a great source to learn how to build shaders."
 msgstr ""
 
 #: ../../ch09/index.rst:396
 msgid ""
-"The graphics effects library comes with a so called manual testbed which "
-"is a great tool to interactively discover the different effects."
+"The graphics effects library comes with a so called manual testbed which is "
+"a great tool to interactively discover the different effects."
 msgstr ""
 
 #: ../../ch09/index.rst:398
@@ -713,8 +706,8 @@ msgstr ""
 
 #: ../../ch09/index.rst:402
 msgid ""
-"The effects library contains ca 20 effects. A list of the effect and a "
-"short description can be found below."
+"The effects library contains ca 20 effects. A list of the effect and a short"
+" description can be found below."
 msgstr ""
 
 #: ../../ch09/index.rst:405 ../../ch09/index.rst:406
@@ -843,8 +836,8 @@ msgstr ""
 
 #: ../../ch09/assets/graphicseffects.csv:1
 msgid ""
-"moves the pixels of the source item according to the specified "
-"displacement source"
+"moves the pixels of the source item according to the specified displacement "
+"source"
 msgstr ""
 
 #: ../../ch09/assets/graphicseffects.csv:1
@@ -972,13 +965,13 @@ msgid "masks the source item with another item and applies a threshold value"
 msgstr ""
 
 #: ../../ch09/index.rst:411
-msgid "Here is a example using the *FastBlur* effect from the *Blur* category:"
+msgid ""
+"Here is a example using the *FastBlur* effect from the *Blur* category:"
 msgstr ""
 
 #: ../../ch09/index.rst:417
 msgid ""
-"The image to the left is the original image. Clicking the image on the "
-"right will toggle blurred property and animated the blur radius from 0 to"
-" 32 during 1 second. The image on the left show the blurred image."
+"The image to the left is the original image. Clicking the image on the right"
+" will toggle blurred property and animated the blur radius from 0 to 32 "
+"during 1 second. The image on the left show the blurred image."
 msgstr ""
-

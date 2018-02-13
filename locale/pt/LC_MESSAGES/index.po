@@ -1,24 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This
-# work is licensed under a Creative Commons Attribution-NonCommercial 4.0
-# International License
-# This file is distributed under the same license as the Qt5 Cadaques Book
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Qt5 Cadaques Book 2015-03\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-13 22:07+0100\n"
+"POT-Creation-Date: 2018-01-25 23:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Portuguese (https://www.transifex.com/qmlbook/teams/82765/pt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../index.rst:9
 msgid "A Book about Qt5"
@@ -30,18 +27,18 @@ msgstr ""
 
 #: ../../index.rst:19
 msgid ""
-"Welcome to the online book of Qt5 Cadaques! Why Qt5? Because Qt5 is "
-"awesome! Why cadaques? Because one of the authors had a great holiday in "
-"this rocky coast line in the north-east of spain."
+"Welcome to the online book of Qt5 Cadaques! Why Qt5? Because Qt5 is awesome!"
+" Why cadaques? Because one of the authors had a great holiday in this rocky "
+"coast line in the north-east of spain."
 msgstr ""
 
 #: ../../index.rst:21
 msgid ""
 "The entire collection of chapters covering Qt5 programming, written by "
 "Juergen Bocklage-Ryannel and Johan Thelin, is available here. All book "
-"content is licensed under the `Creative Commons Attribution Non "
-"Commercial Share Alike 4.0  <http://creativecommons.org/licenses/by-"
-"nc/4.0>`_ license and examples are licensed under the `BSD "
+"content is licensed under the `Creative Commons Attribution Non Commercial "
+"Share Alike 4.0  <http://creativecommons.org/licenses/by-nc/4.0>`_ license "
+"and examples are licensed under the `BSD "
 "<http://en.wikipedia.org/wiki/BSD_licenses>`_ license."
 msgstr ""
 
@@ -51,21 +48,21 @@ msgstr ""
 
 #: ../../index.rst:25
 msgid ""
-"**It's not done**. We will be releasing new chapters from time to time "
-"and updating existing chapters on the go."
+"**It's not done**. We will be releasing new chapters from time to time and "
+"updating existing chapters on the go."
 msgstr ""
 
 #: ../../index.rst:26
 msgid ""
-"**We love your support**. If you find any errors or have suggestions, "
-"please use our feedback system (the |issues| links). It will create a new"
-" ticket-entry in our ticket system and help us to keep track."
+"**We love your support**. If you find any errors or have suggestions, please"
+" use our feedback system (the |issues| links). It will create a new ticket-"
+"entry in our ticket system and help us to keep track."
 msgstr ""
 
 #: ../../index.rst:27
 msgid ""
-"**Be patient.** We are working in our spare time on the book and we "
-"depend on the support of our companies and family."
+"**Be patient.** We are working in our spare time on the book and we depend "
+"on the support of our companies and family."
 msgstr ""
 
 #: ../../index.rst:29
@@ -82,7 +79,6 @@ msgstr ""
 
 #: ../../index.rst:61
 msgid ""
-"The chapter queue are the chapters we are working on. They might be "
-"almost ready or in an infante state. Give it a try if you like."
+"The chapter queue are the chapters we are working on. They might be almost "
+"ready or in an infante state. Give it a try if you like."
 msgstr ""
-
