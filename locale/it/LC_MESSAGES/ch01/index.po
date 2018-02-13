@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch01/index.rst:3
 msgid "Meet Qt 5"
-msgstr ""
+msgstr "Introduzione a Qt 5"
 
 #: ../../ch01/index.rst:11
 msgid ""
@@ -131,6 +131,11 @@ msgid ""
 "graphic effects combined with an ease of use never seen before in this "
 "field."
 msgstr ""
+"**Grafica eccellente**: Qt Quick 2 si appoggia su OpenGL (ES) e utilizza "
+"un'implementazione basata su scene graph. Questa nuova composizione dello "
+"stack grafico consente di raggiungere nuovi livelli in termini di effetti "
+"grafici, combinati ad una semplicità di utilizzo mai vista prima in questo "
+"campo."
 
 #: ../../ch01/index.rst:34
 msgid ""
@@ -156,12 +161,21 @@ msgid ""
 "and Add-ons, which allows OS developer to focus on the essentials modules "
 "and leads to a smaller runtime altogether."
 msgstr ""
+"**Portabilità cross-platform**: Con la tecnologia consolidata della Qt "
+"Platform Abstraction, è ora possibile portare Qt su una gamma più ampia di "
+"piattaforme in maniera più semplice e rapida. Qt 5 si fonda sul concetto di "
+"Qt Essentials e di Add-ons, che consente agli sviluppatori OS di "
+"concentrarsi sui moduli essenziali e permette inoltre di ottenere dei "
+"runtime di dimensioni inferiori."
 
 #: ../../ch01/index.rst:38
 msgid ""
 "**Open Development**: Qt is now a truly open-governance project hosted at "
 "`qt.io <http://qt.io>`_. The development is open and community driven."
 msgstr ""
+"**Sviluppo Open**: Qt è ora veramente un progetto di tipo open-governance, "
+"ospitato su `Qt-Project <http://qt-project.org>`_. Lo sviluppo è open e "
+"guidato dalla community."
 
 #: ../../ch01/index.rst:43
 msgid "Qt 5 Introduction"
@@ -266,6 +280,9 @@ msgid ""
 "we use an ``Image`` element with the source property set to our background "
 "image as the root element."
 msgstr ""
+"Poiché il QML non pone alcun tipo di restrizione sul tipo di elemento che "
+"può essere l'elemento radice, utilizziamo un elemento ``Image`` con la "
+"proprietà source (sorgente) settata all'immagine di background."
 
 #: ../../ch01/index.rst:92
 msgid ""
@@ -365,6 +382,12 @@ msgid ""
 "available to all the other anchors. Please consult the documentation for a "
 "full list of anchors properties."
 msgstr ""
+"A volte sarà necessario effettuare piccoli aggiustamenti rispetto alla "
+"centratura esatta. Questa operazione è resa possibile dalle proprietà "
+"``anchors.horizontalCenterOffset`` e ``anchors.verticalCenterOffset``. "
+"Proprietà di aggiustamento simili sono disponibili anche per tutti gli altri"
+" punti di ancoraggio. Per una lista completa delle proprietà di ancoraggio, "
+"consultare la documentazione."
 
 #: ../../ch01/index.rst:140
 msgid ""
@@ -374,6 +397,12 @@ msgid ""
 "layer (our rectangle) is drawn first and the child layers are drawn on top "
 "of it in the local coordinate system of the containing element."
 msgstr ""
+"Posizionare un'immagine come elemento figlio del rettangolo radice mostra un"
+" aspetto importante dei linguaggi dichiarativi. L'interfaccia utente viene "
+"descritta seguendo l'ordine di livelli e gruppi, dove il livello più alto "
+"(il nostro rettangolo) è il primo ad essere disegnato, mentre i livelli "
+"figli vengono disegnati davanti ad esso, secondo il sistema di coordinate "
+"locale dell'elemento contenitore."
 
 #: ../../ch01/index.rst:142
 msgid ""
@@ -381,11 +410,16 @@ msgid ""
 "the scene interactive. The idea is to rotate the wheel when the user pressed"
 " the mouse somewhere in the scene."
 msgstr ""
+"Per rendere questa dimostrazione più interessante, potremmo ora rendere la "
+"scena interattiva. L'idea è quella di rotare la girandola quando l'utente "
+"preme il tasto del mouse da qualche parte nella scena."
 
 #: ../../ch01/index.rst:145
 msgid ""
 "We use the ``MouseArea`` element and make it as big as our root element."
 msgstr ""
+"Per fare questo, utilizziamo l'elemento ``MouseArea`` e gli attribuiamo le "
+"stesse dimensioni dell'elemento radice."
 
 #: ../../ch01/index.rst:159
 msgid ""
@@ -393,6 +427,10 @@ msgid ""
 "can hook onto this signal overriding the ``onClicked`` function. In this "
 "case the reference the wheel image and change its rotation by +90 degree."
 msgstr ""
+"L'area del mouse emette dei segnali (signals) quando l'utente clicca al suo "
+"interno. E' possibile intercettare questo segnale sovrascrivendo la funzione"
+" ``onClicked``. Nel caso specifico, facciamo riferimento alla girandola e ne"
+" modifichiamo la rotazione di +90 gradi."
 
 #: ../../ch01/index.rst:163
 msgid ""
@@ -400,16 +438,22 @@ msgid ""
 "cases. Also all properties emit a signal when their value changed. The "
 "naming is:"
 msgstr ""
+"Questo meccanismo funziona per ogni segnale, la convenzione per il nome "
+"della funzione è ``on`` + ``NomeDelSegnale``. Inoltre, tutte le proprietà "
+"emettono un segnale una volta che il loro valore è cambiato. La convenzione "
+"per il nome è:"
 
 #: ../../ch01/index.rst:165
 msgid "``on`` + ``PropertyName`` + ``Changed``"
-msgstr ""
+msgstr "``on`` + ``NomeProprietà`` + ``Changed``"
 
 #: ../../ch01/index.rst:167
 msgid ""
 "If a ``width`` property is changing you can observe it with "
 "``onWidthChanged: print(width)`` for example."
 msgstr ""
+"Per esempio, se una proprietà ``width`` cambia, è possibile osservarla con "
+"``onWidthChanged: print(width)``."
 
 #: ../../ch01/index.rst:169
 msgid ""
@@ -422,6 +466,16 @@ msgid ""
 "property. In short every time the property changes, the animation is run. "
 "This is only one of several ways of declaring an animation in QML."
 msgstr ""
+"Ora la girandola ruota, ma non in modo fluido. La proprietà rotation cambia "
+"immediatamente. Invece, vorremmo che la proprietà cambiasse di 90 gradi in "
+"un arco di tempo. A questo punto entrano in gioco le animazioni. "
+"Un'animazione definisce come il cambio di una proprietà debba essere "
+"distribuito lungo un periodo di tempo. Per abilitare questo comportamento, "
+"utilizziamo un tipo di animazione chiamato property behavior. Il "
+"``Behaviour`` (comportamento) specifica un'animazione per una certa "
+"proprietà che si applica ad ogni cambiamento di quella proprietà. In breve, "
+"ogni volta che la proprietà cambia, l'animazione viene lanciata. Questo è "
+"solo uno dei tanti modi che esistono per dichiarare un'animazione in QML."
 
 #: ../../ch01/index.rst:185
 msgid ""
@@ -429,6 +483,9 @@ msgid ""
 "using a ``NumberAnimation`` with a duration of 250 ms. So each 90 degree "
 "turn will take 250 ms."
 msgstr ""
+"Ora, ogniqualvolta la proprietà rotation della girandola cambia, essa verrà "
+"animata utilizzando una ``NumberAnimation`` della durata di 250 ms. Ovvero, "
+"ogni rotazione di 90 gradi impiegherà 250 ms."
 
 #: ../../ch01/index.rst:190
 msgid ""
@@ -436,16 +493,22 @@ msgid ""
 "rotation. But a blurred wheel is in the assets folder. Maybe you want to try"
 " to use that."
 msgstr ""
+"In realtà, la girandola non apparirà sfocata. Lo sfocamento serve solo ad "
+"indicare la rotazione. Tuttavia, nella cartella degli assets è presente una "
+"girandola sfocata. Forse vuoi provare ad utilizzarla."
 
 #: ../../ch01/index.rst:193
 msgid ""
 "Now the wheel looks already much better. I hope this has given you a short "
 "idea of how Qt Quick programming works."
 msgstr ""
+"Ora la girandola ha già un aspetto molto migliore. Spero che questo esempio "
+"ti abbia dato una prima impressione di come funzioni la programmazione in Qt"
+" Quick."
 
 #: ../../ch01/index.rst:196
 msgid "Qt Building Blocks"
-msgstr ""
+msgstr "Gli ingredienti di Qt"
 
 #: ../../ch01/index.rst:198
 msgid ""
@@ -456,125 +519,142 @@ msgid ""
 "of developers will not have the need to use them, but it's good to know them"
 " as they provide invaluable solutions to common challenges."
 msgstr ""
+"Qt 5 consiste di una grande quantità di moduli. Generalmente, un modulo è "
+"una libreria che può essere utilizzata dallo sviluppatore. Alcuni moduli "
+"sono obbligatori per ogni piattaforma che supporta Qt. Tali moduli formano "
+"un insieme chiamato *Qt Essentials Modules*. Molti moduli sono opzionali e "
+"formano i *Qt Add-On Modules*. E' probabile che la maggior parte degli "
+"sviluppatori non abbia bisogno di tali moduli, ma conoscerli è buona cosa in"
+" quanto essi forniscono soluzioni egregie a problemi ricorrenti."
 
 #: ../../ch01/index.rst:201
 msgid "Qt Modules"
-msgstr ""
+msgstr "I moduli Qt"
 
 #: ../../ch01/index.rst:203
 msgid ""
 "The Qt Essentials modules are mandatory for a Qt enabled platform. They "
 "offer the foundation to develop a modern Qt 5 Application using Qt Quick 2."
 msgstr ""
+"I Qt Essentials modules sono obbligatori per ogni piattaforma che supporta "
+"Qt. Essi forniscono le basi per sviluppare un'applicazione Qt 5 moderna "
+"utilizzando Qt Quick 2."
 
 #: ../../ch01/index.rst:206
 msgid "Core-Essential Modules"
-msgstr ""
+msgstr "Core-Essential Modules"
 
 #: ../../ch01/index.rst:207
 msgid "The minimal set of Qt 5 modules to start QML programming."
-msgstr ""
+msgstr "Il set minimo di moduli Qt 5 per iniziare la programmazione in QML."
 
 #: ../../ch01/index.rst:213
 msgid "Module"
-msgstr ""
+msgstr "Modulo"
 
 #: ../../ch01/index.rst:214
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #: ../../ch01/index.rst:215
 msgid "Qt Core"
-msgstr ""
+msgstr "Qt Core"
 
 #: ../../ch01/index.rst:216
 msgid "Core non-graphical classes used by other modules"
-msgstr ""
+msgstr "Le classi fondamentali non grafiche utilizzate dagli altri moduli"
 
 #: ../../ch01/index.rst:217
 msgid "Qt GUI"
-msgstr ""
+msgstr "Qt GUI"
 
 #: ../../ch01/index.rst:218
 msgid ""
 "Base classes for graphical user interface (GUI) components. Includes OpenGL."
 msgstr ""
+"Classi base per componenti di interfaccia grafica utente (GUI). Include "
+"OpenGL."
 
 #: ../../ch01/index.rst:219
 msgid "Qt Multimedia"
-msgstr ""
+msgstr "Qt Multimedia"
 
 #: ../../ch01/index.rst:220
 msgid "Classes for audio, video, radio and camera functionality."
-msgstr ""
+msgstr "Classi per funzionalità audio, video, radio e camera."
 
 #: ../../ch01/index.rst:221
 msgid "Qt Network"
-msgstr ""
+msgstr "Qt Network"
 
 #: ../../ch01/index.rst:222
 msgid "Classes to make network programming easier and more portable."
 msgstr ""
+"Classi che rendono la programmazione di rete più semplice e portabile."
 
 #: ../../ch01/index.rst:223
 msgid "Qt QML"
-msgstr ""
+msgstr "Qt QML"
 
 #: ../../ch01/index.rst:224
 msgid "Classes for QML and JavaScript languages."
-msgstr ""
+msgstr "Classi per i linguaggi QML e JavaScript."
 
 #: ../../ch01/index.rst:226
 msgid ""
 "declarative framework for building highly dynamic applications with custom "
 "user interfaces."
 msgstr ""
+"Framework dichiarativo per la costruzione di applicazioni altamente "
+"dinamiche con interfacce utente personalizzate."
 
 #: ../../ch01/index.rst:227
 msgid "Qt SQL"
-msgstr ""
+msgstr "Qt SQL"
 
 #: ../../ch01/index.rst:228
 msgid "Classes for database integration using SQL."
-msgstr ""
+msgstr "Classi per l'integrazione di database utilizzando SQL."
 
 #: ../../ch01/index.rst:229
 msgid "Qt Test"
-msgstr ""
+msgstr "Qt Test"
 
 #: ../../ch01/index.rst:230
 msgid "Classes for unit testing Qt applications and libraries."
-msgstr ""
+msgstr "Classi per lo unit testing di applicazioni e librerie Qt."
 
 #: ../../ch01/index.rst:231
 msgid "Qt WebKit"
-msgstr ""
+msgstr "Qt WebKit"
 
 #: ../../ch01/index.rst:232
 msgid ""
 "Classes for a WebKit2 based implementation and a new QML API. See also Qt "
 "WebKit Widgets in the add-on modules."
 msgstr ""
+"Classi per un'implementazione basata su WebKit2 ed una nuova API in QML. "
+"Vedi anche Qt WebKit Widgets nei moduli add-on."
 
 #: ../../ch01/index.rst:233
 msgid "Qt WebKit Widgets"
-msgstr ""
+msgstr "Qt WebKit Widgets"
 
 #: ../../ch01/index.rst:234
 msgid "WebKit1 and QWidget-based classes from Qt 4."
-msgstr ""
+msgstr "Classi di Qt 4 basate su WebKit1 e QWidget."
 
 #: ../../ch01/index.rst:235
 msgid "Qt Widgets"
-msgstr ""
+msgstr "Qt Widgets"
 
 #: ../../ch01/index.rst:236
 msgid "Classes to extend Qt GUI with C++ widgets."
-msgstr ""
+msgstr "Classi per estendere Qt GUI con widget C++."
 
 #: ../../ch01/index.rst:250
 msgid "Qt Addon Modules"
-msgstr ""
+msgstr "Moduli Addon Qt"
 
 #: ../../ch01/index.rst:251
 msgid ""
@@ -582,71 +662,90 @@ msgid ""
 "developers, which are not part of the release. Here is a short list of add-"
 "on modules available."
 msgstr ""
+"Oltre ai moduli essenziali, Qt offre agli sviluppatori software moduli "
+"addizionali che non fanno parte della distribuzione. Ecco un breve elenco di"
+" moduli addizionali disponibili."
 
 #: ../../ch01/index.rst:253
 msgid ""
 "Qt 3D - A set of APIs to make 3D graphics programming easy and declarative."
 msgstr ""
+"Qt 3D - Una serie di API che rendono la programmazione grafica 3D semplice e"
+" dichiarativa."
 
 #: ../../ch01/index.rst:254
 msgid ""
 "Qt Bluetooth - C++ and QML APIs for platforms using Bluetooth wireless "
 "technology."
 msgstr ""
+"Qt Bluetooth - API in C++ e QML per piattaforme che utilizzano la tecnologia"
+" wireless Bluetooth."
 
 #: ../../ch01/index.rst:255
 msgid ""
 "Qt Contacts - C++ and QML APIs for accessing addressbooks / contact "
 "databases"
 msgstr ""
+"Qt Contacts - API in C++ e QML per accedere alle rubriche e ai database dei "
+"contatti."
 
 #: ../../ch01/index.rst:256
 msgid ""
 "Qt Location - Provides location positioning, mapping, navigation and place "
 "search via QML and C++ interfaces. NMEA backend for positioning"
 msgstr ""
+"Qt Location - Mette a disposizione posizionamento, mappe, navigazione e "
+"ricerca dei luoghi tramite interfacce QML e C++. back-end NMEA per il "
+"posizionamento"
 
 #: ../../ch01/index.rst:257
 msgid ""
 "Qt Organizer - C++ and QML APIs for accessing organizer events (todos, "
 "events, etc.)"
 msgstr ""
+"Qt Organizer - API in C++ e QML per accedere agli eventi dell'agenda (memo, "
+"eventi, etc.)."
 
 #: ../../ch01/index.rst:258
 msgid "Qt Publish and Subscribe"
-msgstr ""
+msgstr "Qt Publish and Subscribe"
 
 #: ../../ch01/index.rst:259
 msgid "Qt Sensors - Access to sensors via QML and C++ interfaces."
-msgstr ""
+msgstr "Qt Sensors - Accesso ai sensori tramite interfacce QML e C++."
 
 #: ../../ch01/index.rst:260
 msgid ""
 "Qt Service Framework -  Enables applications to read, navigate and subscribe"
 " to change notifications."
 msgstr ""
+"Qt Service Framework - Permette alle applicazioni di leggere, sfogliare e "
+"sottoscrivere notifiche di cambiamento."
 
 #: ../../ch01/index.rst:261
 msgid "Qt System Info - Discover system related information and capabilities."
 msgstr ""
+"Qt System Info - Per accedere alle informazioni e capacità del sistema."
 
 #: ../../ch01/index.rst:262
 msgid "Qt Versit - Support for vCard and iCalendar formats"
-msgstr ""
+msgstr "Qt Versit - Supporto per i formati vCard e iCalendar."
 
 #: ../../ch01/index.rst:263
 msgid ""
 "Qt Wayland - Linux only. Includes Qt Compositor API (server), and Wayland "
 "platform plugin (clients)"
 msgstr ""
+"Qt Wayland - Solo per Linux. Include l'API Qt Compositor (server), e il "
+"plugin per piattaforme Wayland (clients)."
 
 #: ../../ch01/index.rst:264
 msgid "Qt Feedback - Tactile and audio feedback to user actions."
-msgstr ""
+msgstr "Qt Feedback - Riscontro tattile e audio alle azioni degli utenti."
 
 #: ../../ch01/index.rst:265
 msgid "Qt JSON DB - A no-SQL object store for Qt."
-msgstr ""
+msgstr "Qt JSON DB - Un sistema di immagazzinamento dati non basato su SQL."
 
 #: ../../ch01/index.rst:269
 msgid ""
@@ -654,10 +753,13 @@ msgid ""
 "modules, depending how many contributors are active and how well it's get "
 "tested."
 msgstr ""
+"Poiché questi moduli non fanno parte della distribuzione, il loro stato "
+"varia, a seconda di quanti contributori siano attivi e di quanto vengano "
+"testati."
 
 #: ../../ch01/index.rst:272
 msgid "Supported Platforms"
-msgstr ""
+msgstr "Piattaforme Supportate"
 
 #: ../../ch01/index.rst:274
 msgid ""
@@ -665,6 +767,9 @@ msgid ""
 " are supported. Through the Qt Application Abstraction, nowadays it's easier"
 " to port Qt over to your own platform if required."
 msgstr ""
+"Qt supporta numerose piattaforme. Tutte le maggiori piattaforme sia desktop "
+"che embedded sono supportate. Tramite la Qt Application Abstraction, oggi "
+"risulta più semplice portare Qt sulla tua piattaforma, se necessario."
 
 #: ../../ch01/index.rst:276
 msgid ""
@@ -673,14 +778,19 @@ msgid ""
 "platforms are thoroughly tested through the system testing to ensure the "
 "best quality. Mind you though: no code is error free."
 msgstr ""
+"Testare Qt 5 su una piattaforma è dispendioso in termini di tempo. Un "
+"sottoinsieme delle piattaforme è stato selezionato dal qt-project per "
+"costituire il gruppo delle piattaforme di riferimento. Queste piattaforme "
+"vengono testate approfonditamente per assicurarne la qualità. Ma attenzione:"
+" non esiste codice completamente privo di errori."
 
 #: ../../ch01/index.rst:282
 msgid "Qt Project"
-msgstr ""
+msgstr "Il Qt Project"
 
 #: ../../ch01/index.rst:284
 msgid "From the `Qt Project wiki <http://wiki.qt.io/>`_:"
-msgstr ""
+msgstr "Dalla `wiki del qt-project <http://wiki.qt-project.org>`_:"
 
 #: ../../ch01/index.rst:286
 msgid ""
@@ -688,6 +798,9 @@ msgid ""
 "Qt. Anyone who shares that interest can join the community, participate in "
 "its decision making processes, and contribute to Qt’s development.\""
 msgstr ""
+"\"Il Qt Project è una community meritocratica e basata sul consenso "
+"interessata a Qt. Chiunque sia interessato può unirsi alla community, "
+"partecipare ai processi decisionali, e contribuire allo sviluppo di Qt.\""
 
 #: ../../ch01/index.rst:288
 msgid ""
@@ -695,6 +808,10 @@ msgid ""
 "the Qt further. It forms the base for other users to contribute. The biggest"
 " contributor is DIGIA, which holds also the comercial rights to Qt."
 msgstr ""
+"Il Qt-Project è un'organizzazione che porta avanti lo sviluppo della parte "
+"open-source di Qt. Costituisce la base a cui altri utenti possono "
+"contribuire. Il contributore maggiore è DIGIA, che detiene anche i diritti "
+"commerciali di Qt."
 
 #: ../../ch01/index.rst:290
 msgid ""
@@ -704,6 +821,11 @@ msgid ""
 " be able to use Qt and it would not allow DIGIA to contribute so much code "
 "to the Qt Project."
 msgstr ""
+"Qt ha un lato open-source e un lato commerciale. Il lato commerciale è "
+"riservato a quelle aziende che non soddisfano le licenze di tipo open-"
+"source. Senza l'aspetto commerciale, queste aziende non sarebbero in grado "
+"di usare Qt, e DIGIA non sarebbe in grado di contribuire con così tanto "
+"codice al Qt-Project."
 
 #: ../../ch01/index.rst:292
 msgid ""
@@ -714,7 +836,13 @@ msgid ""
 " community and to work with this awesome tools and libraries. Does it make "
 "you a better person? Maybe:-)"
 msgstr ""
+"Ci sono molte aziende in tutto il modo che sussistono grazie alle consulenze"
+" e allo sviluppo di prodotti con Qt sule varie piattaforme. Ci sono molti "
+"progetti e sviluppatori open-source che si affidano a Qt come libreria "
+"principale per lo sviluppo. E' bello far parte di questa comunità molto "
+"attiva e lavorare con tool e librerie eccezionali. Questo ti rende una "
+"persona migliore? Forse :-)"
 
 #: ../../ch01/index.rst:294
 msgid "**Contribute here: http://wiki.qt.io/**"
-msgstr ""
+msgstr "**Contribuisci qui: http://wiki.qt-project.org**"
