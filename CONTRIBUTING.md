@@ -55,6 +55,33 @@ by someone with the knowledge of git, not necessarily the translator.
 Last but not least, when the changes are merged, the language updates
 should automatically appear in the book.
 
+### Adding a language (for the admins)
+
+-   Build the pot-files (either adding a new language, or when the english source changed):
+```
+# make gettext
+```
+-   (optional) Create or update language-specific "po"-files using sphinx-intl (install it first):
+```
+# sphinx-intl update -p _build/locale -l it
+ON_QTHELP: False
+Project name loaded from .tx/config: qt5-cadaques
+Create: locale/it/LC_MESSAGES/index.po
+Create: locale/it/LC_MESSAGES/ch01/index.po
+```
+    The po-file will only be changed if the english source changed.
+-   Pull the recently updated online po-files (resources):
+```
+# tx pull -l it
+```
+    And use "-f" if you need to overwrite locally what was written online.
+-   Last not least: try to build the html for your language:
+```
+# make -e SPHINXOPTS="-D language='it'" html
+```
+    which will make the html for the italian language - as far as it is translated. All untranslated strings stay english.
+-   There are (after building a local version) binary "mo"-files within the "locale/"-folder, which should not be commited and merged to git. Only the "po"-files should be commited. If you added them to be commited, get them unstaged via "git reset path/to/mo-file" and if they are unstaged you can get rid of them using "git clean -f *.mo".
+
 ~Note: The infrastructure is not yet there, but soon we should be ready for translations.~
 
 // JRyannel, JThelin

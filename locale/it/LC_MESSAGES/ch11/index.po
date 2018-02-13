@@ -1,0 +1,880 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qt5 Cadaques Book 2015-03\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-25 23:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Italian (https://www.transifex.com/qmlbook/teams/82765/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../ch11/index.rst:3
+msgid "Networking"
+msgstr ""
+
+#: ../../ch11/index.rst:11
+msgid "Last Build: |today|"
+msgstr ""
+
+#: ../../ch11/index.rst:13
+msgid ""
+"The source code for this chapter can be found in the `assets folder "
+"<../../assets>`_."
+msgstr ""
+
+#: ../../ch11/index.rst:16
+msgid ""
+"Qt 5 comes with a rich set of networking classes on the C++ side. There are "
+"for example high level classes on the http protocol layer in a request-reply"
+" fashion such as ``QNetworkRequest``, ``QNetworkReply`` and "
+"``QNetworkAccessManager``. But also lower levels classes on the TCP/IP or "
+"UDP protocol layer such as ``QTcpSocket``, ``QTcpServer`` and "
+"``QUdpSocket``. Additional classes exists to manage proxies, network cache "
+"and also the systems network configuration."
+msgstr ""
+
+#: ../../ch11/index.rst:18
+msgid ""
+"This chapter will not be about C++ networking, this chapter is about Qt "
+"Quick and networking. So how can I connect my QML/JS user interface directly"
+" with a network service or how can I serve my user interface via a network "
+"service. There are good books and references out there to cover network "
+"programming with Qt/C++. Then it is just a manner to read the chapter about "
+"C++ integration to come up with an integration layer to feed your data into "
+"the Qt Quick world."
+msgstr ""
+
+#: ../../ch11/index.rst:21
+msgid "Serving UI via HTTP"
+msgstr ""
+
+#: ../../ch11/index.rst:25
+msgid ""
+"To load a simple user interface via HTTP we need to have a web-server, which"
+" serves the UI documents. We start of with our own simple web-server using a"
+" python one-liner. But first we need to have our demo user interface. For "
+"this we create a small ``main.qml`` file in our project folder and create a "
+"red rectangle inside."
+msgstr ""
+
+#: ../../ch11/index.rst:31
+msgid "To serve this file we launch a small python script::"
+msgstr ""
+
+#: ../../ch11/index.rst:36
+msgid ""
+"Now our file should be reachable via ``http://localhost:8080/main.qml``. You"
+" can test it with::"
+msgstr ""
+
+#: ../../ch11/index.rst:40
+msgid ""
+"Or just point your browser to the location. Your browser does not understand"
+" QML and will not be able to render the document through. We need to create "
+"now such a browser for QML documents. To render the document we need to "
+"point our ``qmlscene`` to the location. Unfortunately the ``qmlscene`` is "
+"limited to local files only. We could overcome this limitation by writing "
+"our own ``qmlscene`` replacement or simple dynamically load it using QML. We"
+" choose the dynamic loading as it works just fine. For this we use a loader "
+"element to retrieve for us the remote document."
+msgstr ""
+
+#: ../../ch11/index.rst:46
+msgid ""
+"Now we can ask the ``qmlscene`` to load the local ``remote.qml`` loader "
+"document. There is one glitch still. The loader will resize to the size of "
+"the loaded item. And our ``qmlscene`` needs also to adapt to that size. This"
+" can be accomplished using the ``--resize-to-root`` option to the "
+"``qmlscene``::"
+msgstr ""
+
+#: ../../ch11/index.rst:50
+msgid ""
+"Resize to root tells the qml scene to resize its window to the size of the "
+"root element. The remote is now loading the ``main.qml`` from our local "
+"server and resizes itself to the loaded user interface. Sweet and simple."
+msgstr ""
+
+#: ../../ch11/index.rst:54
+msgid ""
+"If you do not want to run a local server you can also use the gist service "
+"from GitHub. Gist is a clipboard like online service like PasteBin and "
+"others. It is available under https://gist.github.com . I created for this "
+"example a small gist under the url https://gist.github.com/jryannel/7983492 "
+". This will reveal a green rectangle. As the gist url will provide the web-"
+"site as HTML code we need to attach a ``/raw`` to the url to retrieve the "
+"raw file and not the HTML code."
+msgstr ""
+
+#: ../../ch11/index.rst:60
+msgid ""
+"To load another file over the network you just need to reference the "
+"component name. For example a ``Button.qml`` can be accessed as normal, as "
+"long it is in the same remote folder."
+msgstr ""
+
+#: ../../ch11/index.rst:62
+msgid "Is this true? What are the rules?"
+msgstr ""
+
+#: ../../ch11/index.rst:66
+msgid "Networked Components"
+msgstr ""
+
+#: ../../ch11/index.rst:68
+msgid ""
+"Let us create a small experiment. We add to our remote side a small button "
+"as a reusable component."
+msgstr ""
+
+#: ../../ch11/index.rst:75
+msgid ""
+"We modify our ``main.qml`` to use the button and save it as ``main2.qml``::"
+msgstr ""
+
+#: ../../ch11/index.rst:91
+msgid "And launch our web-server again::"
+msgstr ""
+
+#: ../../ch11/index.rst:97
+msgid "And our remote loader loads the main QML via http again::"
+msgstr ""
+
+#: ../../ch11/index.rst:101
+msgid "What we see is an error::"
+msgstr ""
+
+#: ../../ch11/index.rst:105
+msgid ""
+"So QML can not resolve the button component when it is loaded remotely. If "
+"the code would be locally ``qmlscene src/main.qml`` this would be no issue. "
+"Locally Qt can parse the directory and detect which components are available"
+" but remotely there is no \"list-dir\" function for http. We can force QML "
+"to load the element using the import statement inside ``main.qml``::"
+msgstr ""
+
+#: ../../ch11/index.rst:113
+msgid "This will work then when the ``qmlscene`` is run again::"
+msgstr ""
+
+#: ../../ch11/index.rst:117
+msgid "Here the full code:"
+msgstr ""
+
+#: ../../ch11/index.rst:124
+msgid ""
+"A better option is to use the ``qmldir`` file on the server side to control "
+"the export."
+msgstr ""
+
+#: ../../ch11/index.rst:128
+msgid "And then updating the ``main.qml``::"
+msgstr ""
+
+#: ../../ch11/index.rst:136
+msgid "Loading"
+msgstr ""
+
+#: ../../ch11/index.rst:138
+msgid ""
+"When using components from a local file system, they are created immediately"
+" without a latency. When components are loaded via the network they are "
+"created asynchronously. This has the effect that the time of creation is "
+"unknown and an element may not yet be fully loaded when others are already "
+"completed. Take this into account when working with components loaded over "
+"the network."
+msgstr ""
+
+#: ../../ch11/index.rst:141
+msgid "Templating"
+msgstr ""
+
+#: ../../ch11/index.rst:145
+msgid ""
+"When working with HTML projects they often use template driven development. "
+"A small HTML stub is expanded on the server side with code generated by the "
+"server using a template mechanism. For example for a photo list the list "
+"header would be coded in HTML and the dynamic image list would be "
+"dynamically generated using a template mechanism. In general this can also "
+"be done using QML but there are some issues with it."
+msgstr ""
+
+#: ../../ch11/index.rst:147
+msgid ""
+"First it is not necessary. The reason HTML developers are doing this is to "
+"overcome limitations on the HTML backend. There is no component model yet in"
+" HTML so dynamic aspects have to be covered using these mechanism or using "
+"programmatically javascript on the client side. Many JS frameworks are out "
+"there (jQuery, dojo, backbone, angular, ...) to solve this issue and put "
+"more logic into the client-side browser to connect with a network service. "
+"The client would then just use a web-service API (e.g. serving JSON or XML "
+"data) to communicate with the server. This seems also the better approach "
+"for QML."
+msgstr ""
+
+#: ../../ch11/index.rst:149
+msgid ""
+"The second issue is the component cache from QML. When QML accesses a "
+"component it caches the render-tree and just loads the cached version for "
+"rendering. A modified version on disk or remote would not be detected "
+"without restarting the client. To overcome this issue we could use a trick. "
+"We could use URL fragments to load the url (e.g. "
+"http://localhost:8080/main.qml#1234), where '#1234' is the fragment. The "
+"HTTP server serves always the same document but QML would store this "
+"document using the full URL, including the fragment. Every time we would "
+"access this URL the fragment would need to change and the QML cache would "
+"not get a positive hit. A fragment could be for example the current time in "
+"milli seconds or a random number."
+msgstr ""
+
+#: ../../ch11/index.rst:157
+msgid ""
+"In summary templating is possible but not really recommended and does not "
+"play to the strength of QML. A better approach is to use web-services which "
+"serve JSON or XML data."
+msgstr ""
+
+#: ../../ch11/index.rst:160
+msgid "HTTP Requests"
+msgstr ""
+
+#: ../../ch11/index.rst:164
+msgid ""
+"A http request is in Qt typically done using ``QNetworkRequest`` and "
+"``QNetworkReply`` from the c++ site and then the response would be pushed "
+"using the Qt/C++ integration into the QML space. So we try to push the "
+"envelope here a little bit to use the current tools Qt Quick gives us to "
+"communicate with a network endpoint. For this we use a helper object to make"
+" http request, response cycle. It comes in the form of the java script "
+"``XMLHttpRequest`` object."
+msgstr ""
+
+#: ../../ch11/index.rst:166
+msgid ""
+"The ``XMLHttpRequest`` object allows the user to register a response handle "
+"function and a url. A request can be sent using one of the http verbs (get, "
+"post, put, delete, ...) to make the request. When the response arrive the "
+"handle function is called. The handle function is called several times. "
+"Every-time the request state has changed (for example headers have arrived "
+"or request is done)."
+msgstr ""
+
+#: ../../ch11/index.rst:168
+msgid "Here a short example::"
+msgstr ""
+
+#: ../../ch11/index.rst:183
+msgid ""
+"For a response you can get the XML format or just the raw text. It is "
+"possible to iterate over the resulting XML but more commonly used is the raw"
+" text nowadays for a JSON formatted response. The JSON document will be used"
+" to convert text to a JS object using ``JSON.parse(text)``."
+msgstr ""
+
+#: ../../ch11/index.rst:193
+msgid ""
+"In the response handler, we access the raw response text and convert it into"
+" a javascript object. This JSON object is now a valid JS object (in "
+"javascript an object can be an object or an array)."
+msgstr ""
+
+#: ../../ch11/index.rst:197
+msgid ""
+"It seems the ``toString()`` conversion first makes the code more stable. "
+"Without the explicit conversion I had several times parser errors. Not sure "
+"what the cause it."
+msgstr ""
+
+#: ../../ch11/index.rst:200
+msgid "Flickr Calls"
+msgstr ""
+
+#: ../../ch11/index.rst:202
+msgid ""
+"Let us have a look on a more real world example. A typical example is to use"
+" the Flickr service to retrieve a public feed of the new uploaded pictures. "
+"For this we can use the "
+"``http://api.flickr.com/services/feeds/photos_public.gne`` url. "
+"Unfortunately it returns by default an XML stream, which could be easily "
+"parsed by the ``XmlListModel`` in qml. For the sake of the example we would "
+"like to concentrate on JSON data. To become a clean JSON response we need to"
+" attach some parameters to the request: "
+"``http://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1``."
+" This will return a JSON response without the JSON callback."
+msgstr ""
+
+#: ../../ch11/index.rst:206
+msgid ""
+"A JSON callback wraps the JSON response into a function call. This is a "
+"shortcut used on HTML programming where a script tag is used to make a JSON "
+"request. The response will trigger a local function defined by the callback."
+" There is no mechanism which works with JSON callbacks in QML."
+msgstr ""
+
+#: ../../ch11/index.rst:208
+msgid "Let us first examine the response by using curl:"
+msgstr ""
+
+#: ../../ch11/index.rst:214
+msgid "The response will be something like this:"
+msgstr ""
+
+#: ../../ch11/index.rst:235
+msgid ""
+"The returned JSON document has a defined structure. An object which has a "
+"title and an items property. Where the title is a string and items is an "
+"array of objects. When converting this text into a JSON document you can "
+"access the individual entries, as it is a valid JS object/array structure."
+msgstr ""
+
+#: ../../ch11/index.rst:248
+msgid ""
+"As a valid JS array we can use the ``obj.items`` array also as a model for a"
+" list view. We will try to accomplish this now. First we need to retrieve "
+"the response and convert it into a valid JS object. And then we can just set"
+" the ``response.items`` property as a model to a list view."
+msgstr ""
+
+#: ../../ch11/index.rst:268
+msgid ""
+"Here is the full source code, where we create the request, when the "
+"component is loaded. The request response is then used as model for our "
+"simple list view."
+msgstr ""
+
+#: ../../ch11/index.rst:273
+msgid ""
+"When the document is fully loaded ( ``Component.onCompleted`` ) we request "
+"the latest feed content from Flickr. On arrival we parse the JSON response "
+"and set the ``items`` array as the model for our view. The list view has a "
+"delegate, which displays the thumbnail icon and the title text in a row."
+msgstr ""
+
+#: ../../ch11/index.rst:275
+msgid ""
+"An other option would be to have a placeholder ``ListModel`` and append each"
+" item onto the list model. To support larger models it is required to "
+"support pagination (e.g page 1 of 10) and lazy content retrieval."
+msgstr ""
+
+#: ../../ch11/index.rst:279
+msgid "Local files"
+msgstr ""
+
+#: ../../ch11/index.rst:283
+msgid ""
+"Is it also possible to load local (XML/JSON) files using the XMLHttpRequest."
+" For example a local file named \"colors.json\" can be loaded using:"
+msgstr ""
+
+#: ../../ch11/index.rst:289
+msgid ""
+"We use this to read a color table and display it as a grid. It is not "
+"possible to modify the file from the Qt Quick side. To store data back to "
+"the source we would need a small REST based HTTP server or a native Qt Quick"
+" extension for file access."
+msgstr ""
+
+#: ../../ch11/index.rst:293
+msgid ""
+"Instead of using the ``XMLHttpRequest`` is is also possible to use the "
+"XmlListModel to access local files."
+msgstr ""
+
+#: ../../ch11/index.rst:306
+msgid ""
+"With the XmlListModel it is only possible to read XML files and not JSON "
+"files."
+msgstr ""
+
+#: ../../ch11/index.rst:310
+msgid "REST API"
+msgstr ""
+
+#: ../../ch11/index.rst:314
+msgid ""
+"To use a web-service, we first need to create one. We will use Flask "
+"(http://flask.pocoo.org) a simple HTTP app server based on python to create "
+"a simple color web-service. You could also use every other web server which "
+"accepts and returns JSON data. The idea is to have a list of named colors, "
+"which can be managed via the web-service. Managed in this case means CRUD "
+"(create-read-update-delete)."
+msgstr ""
+
+#: ../../ch11/index.rst:316
+msgid ""
+"A simple web-service in Flask can be written in one file. We start with an "
+"empty ``server.py`` file. Inside this file, we create some boiler-code and "
+"load our initial colors from an external JSON file. See also the Flask "
+"`quickstart <http://flask.pocoo.org/docs/quickstart/>`_ documentation."
+msgstr ""
+
+#: ../../ch11/index.rst:333
+msgid ""
+"When you run this script, it will provide a web-server at "
+"http://localhost:5000, which does not serve anything useful yet."
+msgstr ""
+
+#: ../../ch11/index.rst:335
+msgid ""
+"We will now start adding our CRUD (Create,Read,Update,Delete) endpoints to "
+"our little web-service."
+msgstr ""
+
+#: ../../ch11/index.rst:338
+msgid "Read Request"
+msgstr ""
+
+#: ../../ch11/index.rst:340
+msgid ""
+"To read data from our web-server, we will provide a GET method for all "
+"colors."
+msgstr ""
+
+#: ../../ch11/index.rst:348
+msgid ""
+"This will return the colors under the '/colors' endpoint. To test this we "
+"can use curl to create a http request."
+msgstr ""
+
+#: ../../ch11/index.rst:354
+msgid "Which will return us the list of colors as JSON data."
+msgstr ""
+
+#: ../../ch11/index.rst:357 ../../ch11/index.rst:457
+msgid "Read Entry"
+msgstr ""
+
+#: ../../ch11/index.rst:359
+msgid ""
+"To read an individual color by name we provide the details endpoint, which "
+"is located under '/colors/<name>'. The name is a parameter to the endpoint, "
+"which identifies an individual color."
+msgstr ""
+
+#: ../../ch11/index.rst:370
+msgid ""
+"And we can test it with using curl again. For example to get the red color "
+"entry."
+msgstr ""
+
+#: ../../ch11/index.rst:376
+msgid "It will return one color entry as JSON data."
+msgstr ""
+
+#: ../../ch11/index.rst:379 ../../ch11/index.rst:454
+msgid "Create Entry"
+msgstr ""
+
+#: ../../ch11/index.rst:381
+msgid ""
+"Till now we have just used HTTP GET methods. To create an entry on the "
+"server side, we will use a POST method and pass the new color information "
+"with the POST data. The endpoint location is the same as to get all colors. "
+"But this time we expect a POST request."
+msgstr ""
+
+#: ../../ch11/index.rst:394
+msgid ""
+"Curl is flexible enough to allow us to provide JSON data as the new entry "
+"inside the POST request."
+msgstr ""
+
+#: ../../ch11/index.rst:401 ../../ch11/index.rst:460
+msgid "Update Entry"
+msgstr ""
+
+#: ../../ch11/index.rst:403
+msgid ""
+"To update an individual entry we use the PUT HTTP method. The endpoint is "
+"the same as to retrieve an individual color entry. When the color was "
+"updated successfully we return the updated color as JSON data."
+msgstr ""
+
+#: ../../ch11/index.rst:414
+msgid ""
+"In the curl request we only provide the values to be updated as JSON data "
+"and the a named endpoint to identify the color to be updated."
+msgstr ""
+
+#: ../../ch11/index.rst:421 ../../ch11/index.rst:463
+msgid "Delete Entry"
+msgstr ""
+
+#: ../../ch11/index.rst:423
+msgid ""
+"Deleting an entry is done using the DELETE HTTP verb. It also uses the same "
+"endpoint for an individual color, but this time the DELETE HTTP verb."
+msgstr ""
+
+#: ../../ch11/index.rst:436
+msgid ""
+"This request looks similar like the GET request for an individual color."
+msgstr ""
+
+#: ../../ch11/index.rst:442
+msgid ""
+"Now we can read all colors, read a specific color, create a new color, "
+"update a color and delete a color. Also we know the HTTP endpoints to our "
+"API."
+msgstr ""
+
+#: ../../ch11/index.rst:448
+msgid "Action"
+msgstr ""
+
+#: ../../ch11/index.rst:449
+msgid "HTTP"
+msgstr ""
+
+#: ../../ch11/index.rst:450
+msgid "Endpoint"
+msgstr ""
+
+#: ../../ch11/index.rst:451
+msgid "Read All"
+msgstr ""
+
+#: ../../ch11/index.rst:452 ../../ch11/index.rst:458
+msgid "GET"
+msgstr ""
+
+#: ../../ch11/index.rst:453 ../../ch11/index.rst:456
+msgid "http://localhost:5000/colors"
+msgstr ""
+
+#: ../../ch11/index.rst:455
+msgid "POST"
+msgstr ""
+
+#: ../../ch11/index.rst:459 ../../ch11/index.rst:462 ../../ch11/index.rst:465
+msgid "http://localhost:5000/colors/<name>"
+msgstr ""
+
+#: ../../ch11/index.rst:461
+msgid "PUT"
+msgstr ""
+
+#: ../../ch11/index.rst:464
+msgid "DELETE"
+msgstr ""
+
+#: ../../ch11/index.rst:467
+msgid ""
+"Our little REST server is complete now and we can focus on QML and the "
+"client side. To create an easy to use API we need to map each action to an "
+"individual HTTP request and provide a simple API to our users."
+msgstr ""
+
+#: ../../ch11/index.rst:470
+msgid "Client REST"
+msgstr ""
+
+#: ../../ch11/index.rst:472
+msgid ""
+"To demonstrate a REST client we write a small color grid. The color grid "
+"displays the colors retrieved from the web-service via HTTP requests. Our "
+"user interface provides the following commands:"
+msgstr ""
+
+#: ../../ch11/index.rst:474
+msgid "Get color list"
+msgstr ""
+
+#: ../../ch11/index.rst:475
+msgid "Create color"
+msgstr ""
+
+#: ../../ch11/index.rst:476
+msgid "Read last color"
+msgstr ""
+
+#: ../../ch11/index.rst:477
+msgid "Update last color"
+msgstr ""
+
+#: ../../ch11/index.rst:478
+msgid "Delete last color"
+msgstr ""
+
+#: ../../ch11/index.rst:480
+msgid ""
+"We bundle our API into an own JS file called ``colorservice.js`` and import "
+"it into our UI as ``Service``. Inside the service module we create a helper "
+"function to make the HTTP requests for us:"
+msgstr ""
+
+#: ../../ch11/index.rst:504
+msgid ""
+"It takes four arguments. The ``verb``, which defines the HTTP verb to be "
+"used (GET, POST, PUT, DELETE). The second parameter is the endpoint to be "
+"used as postfix to the BASE address (e.g. 'http://localhost:5000/colors'). "
+"The third parameter is the optional obj, to be send as JSON data to the "
+"service. The last parameter defines a callback to be called, when the "
+"response returns. The callback receives a response object with the response "
+"data. Before we send the request, we indicate that we send and accept JSON "
+"data by modifying the request header."
+msgstr ""
+
+#: ../../ch11/index.rst:506
+msgid ""
+"Using this request helper function we can implement the simple commands we "
+"defined earlier (create, read, update, delete):"
+msgstr ""
+
+#: ../../ch11/index.rst:536
+msgid ""
+"This code resides in the service implementation. In the UI we use the "
+"service to implement our commands. We have a ``ListModel`` with the id "
+"``gridModel`` as data provider for the ``GridView``. The commands are "
+"indicated using a ``Button`` ui element."
+msgstr ""
+
+#: ../../ch11/index.rst:538
+msgid "Reading the color list from the server."
+msgstr ""
+
+#: ../../ch11/index.rst:561
+msgid "Create a new color entry on the server."
+msgstr ""
+
+#: ../../ch11/index.rst:585
+msgid "Reading a color based on its name."
+msgstr ""
+
+#: ../../ch11/index.rst:605
+msgid "Update a color entry on the server based on the color name."
+msgstr ""
+
+#: ../../ch11/index.rst:629
+msgid "Delete a color by the color name."
+msgstr ""
+
+#: ../../ch11/index.rst:647
+msgid ""
+"This concludes the CRUD (create, read, update, delete) operations using a "
+"REST API. There are also other possibilities to generate a Web-Service API. "
+"One could be module based and each module would have an one endpoint. And "
+"the API could be defined using JSON RPC (http://www.jsonrpc.org/). Sure also"
+" XML based API are possible and but the JSON approach has great advantages "
+"as the parsing is build into the QML/JS as part of JavaScript."
+msgstr ""
+
+#: ../../ch11/index.rst:650
+msgid "Authentication using OAuth"
+msgstr ""
+
+#: ../../ch11/index.rst:654
+msgid ""
+"OAuth is an open protocol to allow secure authorization in a simple and "
+"standard method from web, mobile and desktop applications. OAuth is used to "
+"authenticate a client against common web-services such as Google, Facebook "
+"and Twitter."
+msgstr ""
+
+#: ../../ch11/index.rst:658
+msgid ""
+"For a custom web-service you could also use the standard HTTP authentication"
+" for example by using the ``XMLHttpRequest`` username and password in the "
+"get method (e.g. ``xhr.open(verb, url, true, username, password)``)"
+msgstr ""
+
+#: ../../ch11/index.rst:661
+msgid ""
+"OAuth is currently not part of a QML/JS API. So you would need to write some"
+" C++ code and export the authentication to QML/JS. Another issue would be "
+"the secure storage of the access token."
+msgstr ""
+
+#: ../../ch11/index.rst:663
+msgid "Here are some links which we find useful:"
+msgstr ""
+
+#: ../../ch11/index.rst:665
+msgid "http://oauth.net/"
+msgstr ""
+
+#: ../../ch11/index.rst:666
+msgid "http://hueniverse.com/oauth/"
+msgstr ""
+
+#: ../../ch11/index.rst:667
+msgid "https://github.com/pipacs/o2"
+msgstr ""
+
+#: ../../ch11/index.rst:668
+msgid "http://www.johanpaul.com/blog/2011/05/oauth2-explained-with-qt-quick/"
+msgstr ""
+
+#: ../../ch11/index.rst:671
+msgid "Engin IO"
+msgstr ""
+
+#: ../../ch11/index.rst:675
+msgid ""
+"Engin.IO is a web-service run by DIGIA. It enables to access from inside "
+"Qt/QML application to the NoSQL storage from Engin.IO. It is a cloud based "
+"storage object store with an easy access Qt/QML API and an administration "
+"console. If you want to store some data in the cloud from a QML application,"
+" this would be an easy entry path with an excellent QML/JS support."
+msgstr ""
+
+#: ../../ch11/index.rst:677
+msgid ""
+"Please refer to the `EnginIO <http://engin.io>`_ documentation for further "
+"help."
+msgstr ""
+
+#: ../../ch11/index.rst:680
+msgid "Web Sockets"
+msgstr ""
+
+#: ../../ch11/index.rst:684
+msgid ""
+"The WebSockets module provides an impementation of the WebSockets protocol "
+"for WebSockets clients and servers. It mirrors the Qt CPP module. It allows "
+"to send string and binary messages using a full duplex communication "
+"channel. A websocket is normally established by making a HTTP connection to "
+"the server and the server then \"upgrades\" the connection to a WebSocket "
+"connection."
+msgstr ""
+
+#: ../../ch11/index.rst:686
+msgid ""
+"In Qt/QML you can also simple use the `WebSocket` and `WebSocketServer` "
+"objects to creates direct websocket connection. The websocket protocol uses "
+"the \"ws\" url schema or \"wss\" for a secure connection."
+msgstr ""
+
+#: ../../ch11/index.rst:688
+msgid "You can use the web socket qml module by importing it first."
+msgstr ""
+
+#: ../../ch11/index.rst:698
+msgid ""
+"To test your web socket we will use the echo server from "
+"http://websocket.org."
+msgstr ""
+
+#: ../../ch11/index.rst:702
+msgid ""
+"You should see the ping message we send ``socket.sendTextMessage(\"ping\")``"
+" as response in the text field."
+msgstr ""
+
+#: ../../ch11/index.rst:708
+msgid "WS Server"
+msgstr ""
+
+#: ../../ch11/index.rst:710
+msgid ""
+"You can easily create your own WS server using the C++ part of the Qt "
+"WebSocket or use a different WS implementation, which I find very "
+"interesting. It is interesting because it allows to connect the amazing "
+"rendering quality of QML with the great expanding web application servers. "
+"In this example we will use a Node JS based web socket server using the `ws "
+"<https://npmjs.org/package/ws>`_ module. For this you first need to install "
+"`node js <http://nodejs.org/>`_. Afterwards create a ``ws_server`` folder "
+"and install the ws package using the node package manager (npm)."
+msgstr ""
+
+#: ../../ch11/index.rst:712
+msgid ""
+"The code shall create a simple echo server in NodeJS to echo our messages "
+"back to our QML client."
+msgstr ""
+
+#: ../../ch11/index.rst:721
+msgid ""
+"The npm tool downloads and installs the ws package and dependencies into you"
+" local folder."
+msgstr ""
+
+#: ../../ch11/index.rst:723
+msgid ""
+"A ``server.js`` file will be our server implementation. The server code will"
+" create a web socket server on port 3000 and listens to an incoming "
+"connection. On an incoming connection it will send out a greeting and waits "
+"for client messages. Each message a client sends on a socket will be send "
+"back to the client."
+msgstr ""
+
+#: ../../ch11/index.rst:727
+msgid ""
+"You need to get used to the notation of JavaScript and the function "
+"callbacks."
+msgstr ""
+
+#: ../../ch11/index.rst:730
+msgid "WS Client"
+msgstr ""
+
+#: ../../ch11/index.rst:732
+msgid ""
+"On the client side we need a list view to display the messages and a "
+"TextInput for the user to enter a new chat message."
+msgstr ""
+
+#: ../../ch11/index.rst:734
+msgid "We will use a label with white color in the example."
+msgstr ""
+
+#: ../../ch11/index.rst:738
+msgid ""
+"Our chat view is a list view, where the text is appended to a list model. "
+"Each entry is displayed using a row of prefix and message label. We use a "
+"cell width ``cw`` factor to split the with into 24 columns."
+msgstr ""
+
+#: ../../ch11/index.rst:742
+msgid ""
+"The chat input is just a simple text input wrapped with a colored border."
+msgstr ""
+
+#: ../../ch11/index.rst:746
+msgid ""
+"When the web socket receives a message it appends the message to the chat "
+"view. Same applies for a status change. Also when the user enters a chat "
+"message a copy is appended to the chat view on the client side and the "
+"message is send to the server."
+msgstr ""
+
+#: ../../ch11/index.rst:750
+msgid ""
+"You need first run the server and then the client. There is no retry "
+"connection mechanism in our simple client."
+msgstr ""
+
+#: ../../ch11/index.rst:752
+msgid "Running the server"
+msgstr ""
+
+#: ../../ch11/index.rst:759
+msgid "Running the client"
+msgstr ""
+
+#: ../../ch11/index.rst:767
+msgid ""
+"When entering text and pressing enter you should see something like this."
+msgstr ""
+
+#: ../../ch11/index.rst:772
+msgid "Summary"
+msgstr ""
+
+#: ../../ch11/index.rst:774
+msgid ""
+"This concludes our chapter about QML networking. Please bear in mind Qt has "
+"on the native side a much richer networking API as on the QML side "
+"currently. But the idea of the chapter is to push the boundaries of QML "
+"networking and how to integrate with cloud based services."
+msgstr ""

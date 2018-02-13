@@ -1,0 +1,509 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012-2014 Jürgen Bocklage-Ryannel and Johan Thelin. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License
+# This file is distributed under the same license as the Qt5 Cadaques Book package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qt5 Cadaques Book 2015-03\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-25 23:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Italian (https://www.transifex.com/qmlbook/teams/82765/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../ch02/index.rst:3
+msgid "Get Started"
+msgstr ""
+
+#: ../../ch02/index.rst:11
+msgid ""
+"This chapter will introduce you to developing with Qt 5. We will show you "
+"how to install the Qt SDK and how you can create as well as run a simple "
+"*hello world* application using the Qt Creator IDE."
+msgstr ""
+
+#: ../../ch02/index.rst:15
+msgid ""
+"The source code of this chapter can be found in the `assets folder "
+"<../../assets>`_."
+msgstr ""
+
+#: ../../ch02/index.rst:19
+msgid "Installing Qt 5 SDK"
+msgstr ""
+
+#: ../../ch02/index.rst:23
+msgid ""
+"The Qt SDK include the tools needed to build desktop or embedded "
+"applications. The latest version can be grabbed from the `Qt-Company "
+"<http://qt.io>`_ homepage. There are offline and online installer. The "
+"author personally prefers the online installer package as it allows you to "
+"install and update several Qt releases. This is would be the recommended way"
+" to start. The SDK itself has a maintenance tool which will allow you to "
+"update the SDK to the latest version."
+msgstr ""
+
+#: ../../ch02/index.rst:25
+msgid ""
+"The Qt SDK is easy to install and comes with its own IDE for rapid "
+"development called *Qt Creator*. The IDE is a highly productive environment "
+"for Qt coding and recommended to all readers. Many developers use Qt from "
+"the command line and you are free to use a code editor of your choice."
+msgstr ""
+
+#: ../../ch02/index.rst:27
+msgid ""
+"When installing the SDK, you should select the default option and ensure "
+"that Qt 5.x is enabled. Then you are ready to go."
+msgstr ""
+
+#: ../../ch02/index.rst:30
+msgid "Hello World"
+msgstr ""
+
+#: ../../ch02/index.rst:34
+msgid ""
+"To test your installation, we will create a small *hello world* application."
+" Please open Qt Creator and create a Qt Quick UI Project ( "
+":menuselection:`File --> New File or Project --> Qt Quick Project --> Qt "
+"Quick UI` ) and name the project ``HelloWorld``."
+msgstr ""
+
+#: ../../ch02/index.rst:38
+msgid ""
+"The Qt Creator IDE allows you to create various types of applications. If "
+"not otherwise stated, we always use a :guilabeL:`Qt Quick UI` project."
+msgstr ""
+
+#: ../../ch02/index.rst:42
+msgid ""
+"A typical Qt Quick application is made out of a runtime called the QmlEngine"
+" which loads the initial QML code. The developer can register C++ types with"
+" the runtime to interface with the native code. These C++ types can also be "
+"bundled into a plugin and then dynamically loaded using an import statement."
+" The ``qmlscene`` and ``qml`` tool are pre-made runtimes, which can be used "
+"directly. For the beginning we will not cover the native side of development"
+" and focus only on the QML aspects of Qt 5."
+msgstr ""
+
+#: ../../ch02/index.rst:44
+msgid ""
+"Qt Creator will create several files for you. The ``HelloWorld.qmlproject`` "
+"file is the project file where the relevant project configuration is stored."
+" This file is managed by Qt Creator so don't edit."
+msgstr ""
+
+#: ../../ch02/index.rst:46
+msgid ""
+"Another file, ``HelloWorld.qml``, is our application code. Open it and try "
+"to guess what the application does and then continue to read on."
+msgstr ""
+
+#: ../../ch02/index.rst:69
+msgid ""
+"The ``HelloWord.qml`` is written in the QML language. We will discuss the "
+"QML language in more depth in the next chapter. QML describes the user "
+"interface as a tree of hierarchical elements. In this case, a rectangle of "
+"360 x 360 pixels with a centered text reading \"Hello World\". To capture "
+"user clicks a mouse area spans the whole rectangle and when the user clicks "
+"it, the application quits."
+msgstr ""
+
+#: ../../ch02/index.rst:71
+msgid ""
+"To run the application on your own, please press the |creatorrun| "
+":guilabel:`Run` tool on the left side or select :menuselection:`Build --> "
+"Run` from the menu."
+msgstr ""
+
+#: ../../ch02/index.rst:73
+msgid ""
+"Qt Creator will start the ``qmlscene`` and passes the QML document as the "
+"first argument. The ``qmlscene`` will parse the document and launch the user"
+" interface. Now you should see something like this:"
+msgstr ""
+
+#: ../../ch02/index.rst:78
+msgid "Qt 5 seems to be working and we are ready to continue."
+msgstr ""
+
+#: ../../ch02/index.rst:82
+msgid ""
+"If you are a system integrator, you'll want to have Qt SDK installed to get "
+"the latest stable Qt release as well as a Qt version compiled from source "
+"code for your specific device target."
+msgstr ""
+
+#: ../../ch02/index.rst:86
+msgid ""
+"If you'd like to build Qt 5 from the command line, you'll first need to grab"
+" a copy of the code repository and build it."
+msgstr ""
+
+#: ../../ch02/index.rst:97
+msgid ""
+"After a successful compilation and 2 cups of coffee, Qt 5 will be available "
+"in the ``qtbase`` folder. Any beverage will suffice, however, we suggest "
+"coffee for best results."
+msgstr ""
+
+#: ../../ch02/index.rst:99
+msgid ""
+"If you want to test your compilation, simply start ``qtbase/bin/qmlscene`` "
+"and select a Qt Quick example to run it ...or follow just us into the next "
+"chapter."
+msgstr ""
+
+#: ../../ch02/index.rst:102
+msgid ""
+"To test your installation, we will create a small hello world application. "
+"Please create a simple ``example.qml`` file using your favorite text editor "
+"and paste the following content inside:"
+msgstr ""
+
+#: ../../ch02/index.rst:125
+msgid ""
+"You can run now the example by using the default runtime which comes with Qt"
+" 5::"
+msgstr ""
+
+#: ../../ch02/index.rst:130
+msgid "Application Types"
+msgstr ""
+
+#: ../../ch02/index.rst:134
+msgid ""
+"This section is a run through of the different possible application types "
+"someone could write with Qt 5. It's not limited to the presented selection "
+"but it should give the reader a better idea about what can be done with Qt 5"
+" in general."
+msgstr ""
+
+#: ../../ch02/index.rst:137
+msgid "Console Application"
+msgstr ""
+
+#: ../../ch02/index.rst:141
+msgid ""
+"A console application does not provide any graphical user interface and will"
+" normally be called as part of a system service or from the command line. Qt"
+" 5 comes with a series of ready-made components which help you to create "
+"console cross platform applications very efficiently. For example the "
+"networking file APIs. Also string handling and, since Qt 5.1, efficient "
+"command line parser. As Qt is a high-level API on top of C++, you get "
+"programming speed paired with execution speed. Don't think of Qt as being "
+"*just* a UI toolkit -- it has so much more to offer."
+msgstr ""
+
+#: ../../ch02/index.rst:144
+msgid "String Handling"
+msgstr ""
+
+#: ../../ch02/index.rst:145
+msgid ""
+"In the first example we demonstrate how someone could very simply add 2 "
+"constant strings. This is not a very useful application but it gives you an "
+"idea of what a native C++ application, without an event loop, could look "
+"like."
+msgstr ""
+
+#: ../../ch02/index.rst:169
+msgid "Container Classes"
+msgstr ""
+
+#: ../../ch02/index.rst:170
+msgid ""
+"This example adds a list and list iteration to the application. Qt comes "
+"with a large collections of container classes which are easy to use and use "
+"the same API paradigms as the rest of Qt classes."
+msgstr ""
+
+#: ../../ch02/index.rst:189
+msgid ""
+"Here we show some advanced list function, which allow you to join a list of "
+"strings into one string. This is very handy when you need to proceed line "
+"based text input. The inverse (string to string-list) is also possible using"
+" ``QString::split()`` function."
+msgstr ""
+
+#: ../../ch02/index.rst:205
+msgid "File IO"
+msgstr ""
+
+#: ../../ch02/index.rst:206
+msgid ""
+"In the next snippet we read a CSV file from the local directory and loop "
+"over the rows to extract the cells from each row. Doing this we get the "
+"table data from the CSV file in ca. 20 lines of code. File reading gives us "
+"just a byte stream, to be able to convert it into a valid Unicode text we "
+"need to use the text stream and pass in the file as a lower-level stream. "
+"For writing CSV files you would just need to open the file in the write mode"
+" and pipe the lines into the text stream."
+msgstr ""
+
+#: ../../ch02/index.rst:237
+msgid "This concludes our section about console based application with Qt."
+msgstr ""
+
+#: ../../ch02/index.rst:240
+msgid "Widget Application"
+msgstr ""
+
+#: ../../ch02/index.rst:244
+msgid ""
+"Console based applications are very handy but sometimes you need to have a "
+"UI to show. In addition, UI-based applications will likely need a back-end "
+"to read/write files, communicate over the network, or keep data in a "
+"container."
+msgstr ""
+
+#: ../../ch02/index.rst:247
+msgid ""
+"In this first snippet for widget-based applications we do as little as "
+"needed to create a window and show it. A widget without a parent in the Qt "
+"world is a window. We use the scoped pointer to ensure the widget is deleted"
+" when the scoped pointer goes out of scope. The application object "
+"encapsulates the Qt runtime and with the ``exec()`` call we start the event "
+"loop. From there on the application reacts only on events triggered by mouse"
+" or keyboard or other event providers like networking or file IO. The "
+"application will only exit when the event loop is exited.  This is done by "
+"calling ``quit()`` on the application or by closing the window."
+msgstr ""
+
+#: ../../ch02/index.rst:249
+msgid ""
+"When you run the code you will see a window with the size of 240 x 120 "
+"pixel. That's all."
+msgstr ""
+
+#: ../../ch02/index.rst:265
+msgid "Custom Widgets"
+msgstr ""
+
+#: ../../ch02/index.rst:266
+msgid ""
+"When you work on user interfaces, you will need to create custom made "
+"widgets. Typically a widget is a window area filled with painting calls. "
+"Additional the widget has internal knowledge of how to handle keyboard or "
+"mouse input and how to react to external triggers. To do this in Qt we need "
+"to derive from `QWidget` and overwrite several functions for painting and "
+"event handling."
+msgstr ""
+
+#: ../../ch02/index.rst:290
+msgid ""
+"In the implementation, we draw a small border on our widget and a small "
+"rectangle on the last mouse position. This is very typical for a low-level "
+"custom widget. Mouse or keyboard events change the internal state of the "
+"widget and trigger a painting update. We don't want to go into to much "
+"detail into this code, but it is good to know that you have the ability. Qt "
+"comes with a large set of ready-made desktop widgets, so that the "
+"probability is high that you don't have to do this."
+msgstr ""
+
+#: ../../ch02/index.rst:331
+msgid "Desktop Widgets"
+msgstr ""
+
+#: ../../ch02/index.rst:332
+msgid ""
+"The Qt developers have done all of this for you already and provide a set of"
+" desktop widgets, which will look native on different operating systems. "
+"Your job is then to arrange these different widgets in a widget container "
+"into larger panels. A widget in Qt can also be a container for other "
+"widgets. This is accomplished by the parent-child relationship. This mean we"
+" need to make our ready-made widgets like buttons, check boxes, radio button"
+" but also lists and grids a child of another widget. One way to accomplish "
+"this is displayed below."
+msgstr ""
+
+#: ../../ch02/index.rst:334
+msgid "Here is the header file for a so called widget container."
+msgstr ""
+
+#: ../../ch02/index.rst:352
+msgid ""
+"In the implementation, we use layouts to better arrange our widgets. Layout "
+"managers re-layout the widgets according to some size policies when the "
+"container widget is re-sized. In this example we have a list, a line edit, "
+"and a button arranged vertically to allow to edit a list of cities. We use "
+"Qt's ``signal`` and ``slots`` to connect sender and receiver objects."
+msgstr ""
+
+#: ../../ch02/index.rst:396
+msgid "Drawing Shapes"
+msgstr ""
+
+#: ../../ch02/index.rst:397
+msgid ""
+"Some problems are better visualized. If the problem at hand looks faintly "
+"like geometrical objects, qt graphics view is a good candidate. A graphics "
+"view arranges simple geometrical shapes on a scene.  The user can interact "
+"with these shapes or they are positioned using an algorithm. To populate a "
+"graphics view you need a graphics view and a graphics scene. The scene is "
+"attached to the view and populates with graphics items. Here is a short "
+"example. First the header file with the declaration of the view and scene."
+msgstr ""
+
+#: ../../ch02/index.rst:413
+msgid ""
+"In the implementation the scene gets attached to the view first. The view is"
+" a widget and get arranged in our container widget. At the end we add a "
+"small rectangle to the scene, which then is rendered on the view."
+msgstr ""
+
+#: ../../ch02/index.rst:436
+msgid "Adapting Data"
+msgstr ""
+
+#: ../../ch02/index.rst:441
+msgid ""
+"Up to now we have mostly covered basic data types and how to use widgets and"
+" graphic views. Often in your application you will need larger amount of "
+"structured data, which also has to be persistently stored. The data also "
+"needs to be displayed. For this Qt uses models. A simple model is the string"
+" list model, which gets filled with strings and then attached to a list "
+"view."
+msgstr ""
+
+#: ../../ch02/index.rst:453
+msgid ""
+"Another popular way to store or retrieve data is SQL. Qt comes with SQLite "
+"embedded and also has support for other database engines (MySQL, "
+"PostgresSQL, ...). First you need to create your database using a schema, "
+"like this:"
+msgstr ""
+
+#: ../../ch02/index.rst:462
+msgid "To use sql we need to add the sql module to our .pro file"
+msgstr ""
+
+#: ../../ch02/index.rst:468
+msgid ""
+"And then we can open our database using C++. First we need to retrieve a new"
+" database object for the specified database engine. With this database "
+"object we open the database. For SQLite it's enough to specify the path to "
+"the database file. Qt provides some high-level database model, one of them "
+"is the table model, which uses a table identifier and an option where clause"
+" to select the data. The resulting model can be attached to a list view as "
+"the other model before."
+msgstr ""
+
+#: ../../ch02/index.rst:486
+msgid ""
+"For higher level of model operations Qt provides a sort file proxy model, "
+"which allows you in the basic form to sort and filter another model."
+msgstr ""
+
+#: ../../ch02/index.rst:495
+msgid ""
+"Filtering is done based on the column to be filters and a string as filter "
+"argument."
+msgstr ""
+
+#: ../../ch02/index.rst:503
+msgid ""
+"The filter proxy model is much more powerful than demonstrated here. For now"
+" it is enough to remember its exists."
+msgstr ""
+
+#: ../../ch02/index.rst:508
+msgid ""
+"This was an overview of the different kind of classical application you "
+"could develop with Qt 5. The desktop is moving and soon the mobile devices "
+"will be our desktop of tomorrow. Mobile devices have a different user "
+"interface design. They are much more simplistic than desktop applications. "
+"They do one thing and they do simply and focused. Animations are an "
+"important part of the experience. A user interface needs to feel alive and "
+"fluent. The traditional Qt technologies are not well suited for this market."
+msgstr ""
+
+#: ../../ch02/index.rst:510
+msgid "Coming next: Qt Quick for the rescue."
+msgstr ""
+
+#: ../../ch02/index.rst:513
+msgid "Qt Quick Application"
+msgstr ""
+
+#: ../../ch02/index.rst:517
+msgid ""
+"There is an inherent conflict in modern software development. The user "
+"interface is moving much faster than our back-end services. In a traditional"
+" technology you develop the so called front-end at the same pace as the "
+"back-end. This results in conflicts when customers want to change the user "
+"interface during a project, or develop the idea of an user interface during "
+"the project. Agile projects, require agile methods."
+msgstr ""
+
+#: ../../ch02/index.rst:519
+msgid ""
+"Qt Quick provides a declarative environment where your user interface (the "
+"front-end) is declared like HTML and your back-end is in native C++ code. "
+"This allows you to get the best of both worlds."
+msgstr ""
+
+#: ../../ch02/index.rst:521
+msgid "This is a simple Qt Quick UI below"
+msgstr ""
+
+#: ../../ch02/index.rst:536
+msgid ""
+"The declaration language is called QML and it needs a runtime to execute in."
+" Qt provides a standard runtime called ``qmlscene`` but it's also not so "
+"difficult to write a custom runtime. For this we need a quick view and set "
+"the main QML document as source. The only thing left is to show the user "
+"interface."
+msgstr ""
+
+#: ../../ch02/index.rst:545
+msgid ""
+"Coming back to our earlier examples. In one example we used a C++ city "
+"model. It would be great if we could use this model inside our declarative "
+"QML code."
+msgstr ""
+
+#: ../../ch02/index.rst:547
+msgid ""
+"To enable this, we first code our front-end to see how we would want to use "
+"a city model. In this case the front-end expects a object named "
+"``cityModel`` which we can use inside a list view."
+msgstr ""
+
+#: ../../ch02/index.rst:563
+msgid ""
+"To enable the ``cityModel`` we can mostly re-use our previous model and add "
+"a context property to our root context (the root context is the other root-"
+"element in the main document)"
+msgstr ""
+
+#: ../../ch02/index.rst:577
+msgid ""
+"This is not completely correct, as the SQL table model contains the data in "
+"columns and a QML model expects the data as roles. So there needs to be a "
+"mapping between columns and roles. Please see `QML and QSqlTableModel "
+"<http://wiki.qt.io/QML_and_QSqlTableModel>`_ wiki page."
+msgstr ""
+
+#: ../../ch02/index.rst:581
+msgid "Summary"
+msgstr ""
+
+#: ../../ch02/index.rst:585
+msgid ""
+"We have seen how to install the Qt SDK and how to create our first "
+"application. Then we walked you through the different application types to "
+"give you an overview of Qt, showing off some features Qt offers for "
+"application development. I hope you got a good impression that Qt is a very "
+"rich user interface toolkit and offers everything an application developer "
+"can hope for and more. Still, Qt does not lock you into specific libraries, "
+"as you always can use other libraries or extend Qt yourself. It is also rich"
+" when it comes to supporting different application models: console, "
+"classical desktop user interface and touch user interface."
+msgstr ""
