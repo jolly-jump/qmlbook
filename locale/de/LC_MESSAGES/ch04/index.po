@@ -1057,7 +1057,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:420
 msgid "Positioning Elements"
-msgstr ""
+msgstr "Positionierungselemente"
 
 #: ../../ch04/index.rst:426
 msgid ""
@@ -1066,6 +1066,11 @@ msgid ""
 "``Column``, ``Grid`` and ``Flow``. They can be seen showing the same "
 "contents in the illustration below."
 msgstr ""
+"Es gibt eine Reihe von QML Elementen, die man zur Positionierung von anderen"
+" Elementen verwendet. Diese nennt man \"positioner\" und die folgenden "
+"``Row``, ``Column``, ``Grid`` und ``Flow`` sind in QtQuick enthalten. In der"
+" nächsten Illustration kann man deren Wirkung an der Darstellung desselben "
+"Inhalts erkenn."
 
 #: ../../ch04/index.rst:432
 msgid ""
