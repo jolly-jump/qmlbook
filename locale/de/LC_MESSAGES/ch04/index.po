@@ -1215,7 +1215,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:490
 msgid "Layout Items"
-msgstr ""
+msgstr "Layout Elemente"
 
 #: ../../ch04/index.rst:496
 msgid "do we need to remove all uses of anchors earlier?"
@@ -1229,6 +1229,13 @@ msgid ""
 "than competing geometry changes. Anchors are expressions of relativeness, "
 "you always need a related element to anchor with."
 msgstr ""
+"QML bietet eine flexible Möglichkeit Elemente mit Hilfe von Fixpunkten "
+"(anchor = Anker) festzulegen. Das Konzept der Fixpunkte ist Teil der "
+"Basiseigenschaften eines ``Item``-Elements und für alle sichtbaren QML "
+"Elemente verfügbar. Ein Fixpunkt wirkt wie ein Vertrag und ist stärker als "
+"andere konkurrierende Geometrieänderungen. Fixpunkte sind Ausdrücke der "
+"relativen Beziehungen, man braucht immer ein Element an das man etwas "
+"fixiert."
 
 #: ../../ch04/index.rst:502
 msgid ""
@@ -1238,18 +1245,27 @@ msgid ""
 "case of top, bottom, left and right they are called margins. For "
 "horizontalCenter, verticalCenter and baseline they are called offsets."
 msgstr ""
+"Ein Element hat 6 hauptsächliche fixierende Achsen (\"top\", \"bottom\", "
+"\"left\", \"right\", \"horizontalCenter\", \"verticalCenter\"). Zusätzlich "
+"gibt es eine Achse (\"baseline\") für Text in ``Text``-Elementen. Jede der "
+"fixierenden Achesn hat einen offset. Im Fall von \"top\", \"bottom\", "
+"\"left\" und \"right\" werden sie \"margins\" genannt. Für "
+"\"horizontalCenter\", \"verticalCenter\" und \"baseline\" werden sie "
+"\"offsets\" genannt."
 
 #: ../../ch04/index.rst:506
 msgid "An element fills a parent element"
-msgstr ""
+msgstr "Ein Element füllt ein Elternelement aus."
 
 #: ../../ch04/index.rst:513
 msgid "An element is left aligned to the parent"
-msgstr ""
+msgstr "in Element wird linksbündig am Elternelement ausgerichtet."
 
 #: ../../ch04/index.rst:519
 msgid "An element left side is aligned to the parents right side"
 msgstr ""
+"Eines Elementes linke Seite wird an des Elternelements rechter Seite "
+"ausgerichtet."
 
 #: ../../ch04/index.rst:525
 msgid ""
@@ -1257,16 +1273,22 @@ msgid ""
 "``Blue2`` is also horizontal centered but on ``Blue1`` and it's top is "
 "aligned to the ``Blue1`` bottom line."
 msgstr ""
+"Mittig ausgerichtete Elemente. ``blue1`` wird horizontal bezüglich des "
+"Elternelements zentriert. ``blue2`` wird auch horizontal zentriert aber "
+"bezüglich ``blue1`` und die Oberseite von ``blue2`` wird an der Unterseite "
+"von ``blue1`` ausgerichtet."
 
 #: ../../ch04/index.rst:532
 msgid "An element is centered on a parent element"
-msgstr ""
+msgstr "Ein Element wird zentriert bezüglich des Elternelements."
 
 #: ../../ch04/index.rst:539
 msgid ""
 "An element is centered with an left-offset on a parent element using "
 "horizontal and vertical center lines"
 msgstr ""
+"Ein Element wird zentriert mit einem linken offset bezüglich des "
+"Elternelements und verwendet dabei die horizontalen und vertikalen Achsen."
 
 #: ../../ch04/index.rst:545
 msgid ""
@@ -1281,6 +1303,19 @@ msgid ""
 "``x,y``, dragging is restricted by the anchored lines. We will see this "
 "effect later when we discuss animations."
 msgstr ""
+"Unsere Quadrate wurden erweitert um sie ziehbar zu machen. Teste die "
+"Beispiele aus und ziehe ein paar Quadrate herum. Du wirst sehen, dass (1) "
+"nicht gezogen werden kann, weil es auf allen Seiten fixiert wurde, dagegen "
+"kannst du natürlich das Elternelement von (1) ziehen, weil es überhaupt "
+"nicht verankert wurde. (2) kann man vertikal ziehen weil nur die linke Seite"
+" verankert wurde. Ähnliches gilt für (3). (4) kann nur vertikal gezogen "
+"werde weil beide Quadrate horizontal zentriert wurden. (5) ist mittig "
+"bezüglich des Elternelements fixiert und kann als solches nicht verschoben "
+"werden, ähnliches gilt für (6). Ziehen eines Elements bedeutet, die ``x,y`` "
+"Position verändern zu wollen. Weil Verankern stärker ist als geometrische "
+"Änderungen, wie ``x,y``-Änderungen, ist das Ziehen durch die fixierenden "
+"Achsen eingeschränkt möglich. Wir werden diesen Effekt später sehen, wenn "
+"wir Animationen diskutieren."
 
 #: ../../ch04/index.rst:548
 msgid "Input Elements"
