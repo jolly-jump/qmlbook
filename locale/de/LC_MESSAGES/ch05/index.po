@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch05/index.rst:3
 msgid "Fluid Elements"
-msgstr "Elemente die sich Bewegen"
+msgstr "Elemente die sich Bewegen (engl.)"
 
 #: ../../ch05/index.rst:13
 msgid "Last Build: |today|"

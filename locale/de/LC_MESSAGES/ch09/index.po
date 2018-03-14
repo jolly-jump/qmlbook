@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch09/index.rst:3
 msgid "Shader Effects"
-msgstr "Effekte mit OpenGL"
+msgstr "Effekte mit OpenGL (engl.)"
 
 #: ../../ch09/index.rst:12
 msgid "Last Build: |today|"

@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch08/index.rst:3
 msgid "Particle Simulations"
-msgstr "Partikel Simulieren"
+msgstr "Partikel Simulieren (engl.)"
 
 #: ../../ch08/index.rst:12
 msgid "Last Build: |today|"

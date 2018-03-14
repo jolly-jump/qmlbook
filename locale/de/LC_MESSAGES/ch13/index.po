@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch13/index.rst:3
 msgid "Dynamic QML"
-msgstr "Dynamisches QML"
+msgstr "Dynamisches QML (engl.)"
 
 #: ../../ch13/index.rst:11
 msgid "Last Build: |today|"

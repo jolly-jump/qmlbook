@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch14/index.rst:3
 msgid "JavaScript"
-msgstr "JavaScript programmieren"
+msgstr "JavaScript programmieren (engl.)"
 
 #: ../../ch14/index.rst:11
 msgid "Last Build: |today|"

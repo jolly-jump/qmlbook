@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch04/index.rst:3
 msgid "Quick Starter"
-msgstr "Ein Schneller Einstieg"
+msgstr "Ein Schneller Einstieg (teilweise dt.)"
 
 #: ../../ch04/index.rst:11
 msgid "Last Build: |today|"

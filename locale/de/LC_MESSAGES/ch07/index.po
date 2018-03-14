@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch07/index.rst:3
 msgid "Canvas Element"
-msgstr "Zeichnen mit Qt5"
+msgstr "Zeichnen mit Qt5 (engl.)"
 
 #: ../../ch07/index.rst:12
 msgid "Last Build: |today|"

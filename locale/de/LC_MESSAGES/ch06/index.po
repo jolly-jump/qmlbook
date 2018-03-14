@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch06/index.rst:3
 msgid "Model-View-Delegate"
-msgstr "Das Modell-Ansicht-Delegaten-Konzept"
+msgstr "Das Modell-Ansicht-Delegaten-Konzept (teilweise dt.)"
 
 #: ../../ch06/index.rst:13
 msgid "Last Build: |today|"

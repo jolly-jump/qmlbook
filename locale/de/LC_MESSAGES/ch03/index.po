@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch03/index.rst:3
 msgid "Qt Creator IDE"
-msgstr "Die Entwicklungsumgebung"
+msgstr "Die Entwicklungsumgebung (engl.)"
 
 #: ../../ch03/index.rst:9
 msgid ""

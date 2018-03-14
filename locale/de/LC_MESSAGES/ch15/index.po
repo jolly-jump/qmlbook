@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch15/index.rst:3
 msgid "Qt and C++"
-msgstr "Einführung in die C++-Programmierung mit Qt"
+msgstr "Einführung in die C++-Programmierung mit Qt (engl.)"
 
 #: ../../ch15/index.rst:11
 msgid "Last Build: |today|"

@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch16/index.rst:3
 msgid "Extending QML with C++"
-msgstr "QML Erweiterungen mit C++"
+msgstr "QML Erweiterungen mit C++ (engl.)"
 
 #: ../../ch16/index.rst:11
 msgid "Last Build: |today|"

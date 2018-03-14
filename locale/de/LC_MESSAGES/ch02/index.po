@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch02/index.rst:3
 msgid "Get Started"
-msgstr "Wir legen los"
+msgstr "Wir legen los (engl.)"
 
 #: ../../ch02/index.rst:11
 msgid ""

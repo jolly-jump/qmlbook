@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch11/index.rst:3
 msgid "Networking"
-msgstr "Netzwerkverbindungen"
+msgstr "Netzwerkverbindungen (engl.)"
 
 #: ../../ch11/index.rst:11
 msgid "Last Build: |today|"

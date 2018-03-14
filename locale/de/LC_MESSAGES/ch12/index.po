@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../ch12/index.rst:3
 msgid "Storage"
-msgstr "Daten speichern"
+msgstr "Daten speichern (engl.)"
 
 #: ../../ch12/index.rst:11
 msgid "Last Build: |today|"
